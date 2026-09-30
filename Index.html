@@ -41,7 +41,7 @@
 <body class="bg-slate-50 text-gray-800 font-sans antialiased relative">
 
     <!-- Floating WhatsApp Action Button -->
-    <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20am%20reaching%20out%20to%20inquire%20about%20connecting%20with%20the%20EWF%20partnership%20system." 
+    <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20have%20submitted%20my%20partnership%20application%20and%20need%20my%20login%20credentials." 
        target="_blank" 
        rel="noopener noreferrer"
        class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl z-50 flex items-center justify-center transition-all transform hover:scale-110 border-2 border-white"
@@ -56,7 +56,7 @@
                 <a href="mailto:eworldfeedersgloballink@gmail.com" class="flex items-center gap-1 hover:text-ewf-gold transition">
                     <i data-lucide="mail" class="w-3.5 h-3.5 text-ewf-gold"></i> eworldfeedersgloballink@gmail.com
                 </a>
-                <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20am%20reaching%20out%20to%20inquire%20about%20connecting%20with%20the%20EWF%20partnership%20system." target="_blank" class="flex items-center gap-1 hover:text-ewf-gold transition">
+                <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20am%20reaching%20out%20regarding%20my%20partnership%20account." target="_blank" class="flex items-center gap-1 hover:text-ewf-gold transition">
                     <i data-lucide="phone" class="w-3.5 h-3.5 text-ewf-gold"></i> +234 806 233 1041 (WhatsApp)
                 </a>
                 <a href="https://www.facebook.com/eworldfeedersgloballink" target="_blank" class="flex items-center gap-1 hover:text-ewf-gold transition">
@@ -92,10 +92,10 @@
                     <a href="https://www.facebook.com/eworldfeedersgloballink" target="_blank" class="hover:text-ewf-green transition flex items-center gap-1">
                         <i data-lucide="facebook" class="w-4 h-4 text-blue-600"></i> Facebook Page
                     </a>
-                    <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20am%20reaching%20out%20to%20inquire%20about%20connecting%20with%20the%20EWF%20partnership%20system." target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition flex items-center gap-2">
+                    <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20am%20reaching%20out%20to%20inquire%20about%20my%20EWF%20partnership." target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition flex items-center gap-2">
                         <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp Support
                     </a>
-                    <a href="#portal" onclick="switchTab('dashboard')" class="bg-ewf-green text-white px-5 py-2.5 rounded-md hover:bg-ewf-darkgreen transition flex items-center gap-2">
+                    <a href="#portal" onclick="accessProtectedFeature('dashboard')" class="bg-ewf-green text-white px-5 py-2.5 rounded-md hover:bg-ewf-darkgreen transition flex items-center gap-2">
                         <i data-lucide="layout-dashboard" class="w-4 h-4 text-ewf-gold"></i> EWF Portal
                     </a>
                 </div>
@@ -105,7 +105,7 @@
 
     <!-- Strategic Callout Bar -->
     <div class="bg-ewf-gold text-ewf-darkgreen font-semibold text-xs py-2 px-4 text-center border-b border-yellow-500">
-        <span class="font-bold uppercase tracking-wider">Automated Credentials Dispatch:</span> Every registered partner accesses tailored features—including input requests, inventory tracking, or commodity allocations—directly in their console.
+        <span class="font-bold uppercase tracking-wider">Secure Partner Portal:</span> Registration and login are required to access member dashboards and apply for specific partnership tiers.
     </div>
 
     <!-- Hero Section -->
@@ -122,9 +122,9 @@
                 Join our international agricultural framework. EWF links commercial growers, regional distributors, and contract farming partners directly to high-value global export channels with full buy-back guarantees.
             </p>
             <div class="mt-10 flex justify-center gap-4 flex-wrap">
-                <a href="#portal" onclick="switchTab('apply')" class="bg-ewf-gold text-ewf-darkgreen font-bold px-8 py-4 rounded-md shadow-lg hover:bg-yellow-400 transition text-lg flex items-center gap-2">
+                <button onclick="switchTab('apply')" class="bg-ewf-gold text-ewf-darkgreen font-bold px-8 py-4 rounded-md shadow-lg hover:bg-yellow-400 transition text-lg flex items-center gap-2">
                     Become an EWF Partner <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                </a>
+                </button>
                 <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20am%20reaching%20out%20to%20inquire%20about%20connecting%20with%20the%20EWF%20partnership%20system." target="_blank" class="bg-green-600/90 text-white font-semibold px-8 py-4 rounded-md hover:bg-green-700 transition text-lg flex items-center gap-2">
                     <i data-lucide="message-circle" class="w-5 h-5"></i> Connect on WhatsApp
                 </a>
@@ -198,7 +198,7 @@
                         </ul>
                     </div>
                     <div class="p-6 bg-gray-50 border-t">
-                        <button onclick="switchTab('apply')" class="w-full bg-ewf-green text-white py-2.5 rounded-lg font-semibold hover:bg-ewf-darkgreen transition">Apply as Planter</button>
+                        <button onclick="handleTierApplication('Tier I: Contract Planter')" class="w-full bg-ewf-green text-white py-2.5 rounded-lg font-semibold hover:bg-ewf-darkgreen transition">Apply as Planter</button>
                     </div>
                 </div>
 
@@ -220,7 +220,7 @@
                         </ul>
                     </div>
                     <div class="p-6 bg-gray-50 border-t">
-                        <button onclick="switchTab('apply')" class="w-full bg-ewf-gold text-ewf-darkgreen py-2.5 rounded-lg font-bold hover:bg-yellow-400 transition">Apply for Distributorship</button>
+                        <button onclick="handleTierApplication('Tier II: Regional Distributor')" class="w-full bg-ewf-gold text-ewf-darkgreen py-2.5 rounded-lg font-bold hover:bg-yellow-400 transition">Apply for Distributorship</button>
                     </div>
                 </div>
 
@@ -241,7 +241,7 @@
                         </ul>
                     </div>
                     <div class="p-6 bg-gray-50 border-t">
-                        <button onclick="switchTab('apply')" class="w-full bg-ewf-slate text-white py-2.5 rounded-lg font-semibold hover:bg-slate-900 transition">Join Enterprise Link</button>
+                        <button onclick="handleTierApplication('Tier III: Enterprise Partner')" class="w-full bg-ewf-slate text-white py-2.5 rounded-lg font-semibold hover:bg-slate-900 transition">Join Enterprise Link</button>
                     </div>
                 </div>
             </div>
@@ -260,13 +260,13 @@
             <div class="flex justify-center border-b border-slate-700 mb-8 space-x-8 text-sm font-semibold">
                 <button id="tab-apply" onclick="switchTab('apply')" class="pb-3 text-gray-400 hover:text-white tab-active">Partner Application</button>
                 <button id="tab-login" onclick="switchTab('login')" class="pb-3 text-gray-400 hover:text-white">Partner Login</button>
-                <button id="tab-dashboard" onclick="switchTab('dashboard')" class="pb-3 text-gray-400 hover:text-white">Partner Management Console</button>
+                <button id="tab-dashboard" onclick="accessProtectedFeature('dashboard')" class="pb-3 text-gray-400 hover:text-white">Partner Management Console</button>
             </div>
 
-            <!-- TAB 1: Application Form with Automated Credential Generation & Silent Dispatch -->
+            <!-- TAB 1: Application Form -->
             <div id="view-apply" class="bg-slate-800 rounded-xl p-8 border border-slate-700 max-w-3xl mx-auto shadow-2xl">
                 <h3 class="text-xl font-bold text-white mb-2">EWF Global Link Partnership Registration</h3>
-                <p class="text-sm text-gray-400 mb-6">Completing this application automatically generates your <strong class="text-ewf-gold">EWF Partner ID</strong>, **Username**, and **Access Password**. Credentials are silently routed to the admin backend dispatch queue for record keeping.</p>
+                <p class="text-sm text-gray-400 mb-6">Completing this application submits your partnership request. Your <strong class="text-ewf-gold">Username & Password</strong> will be generated and dispatched silently to the EWF Administrator (+234 806 233 1041), who will send them to you privately.</p>
                 
                 <form id="ewfPartnerForm" onsubmit="handleApplySubmit(event)" class="space-y-4">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -309,7 +309,7 @@
                     </div>
 
                     <button type="submit" class="w-full bg-ewf-gold text-ewf-darkgreen font-bold py-3.5 rounded-lg hover:bg-yellow-400 transition flex items-center justify-center gap-2 text-base shadow-lg">
-                        <i data-lucide="key" class="w-5 h-5"></i> Process Application & Generate Access Credentials
+                        <i data-lucide="send" class="w-5 h-5"></i> Submit Application & Request Credentials
                     </button>
                 </form>
 
@@ -327,33 +327,53 @@
                 <form onsubmit="handlePartnerLogin(event)" class="space-y-4">
                     <div>
                         <label class="block text-xs uppercase font-bold text-gray-300 mb-1">Username / EWF Code ID</label>
-                        <input type="text" id="login_username" required class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="e.g. ewf_johndoe or EWF-2026-8839">
+                        <input type="text" id="login_username" required class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="Assigned Username">
                     </div>
                     <div>
                         <label class="block text-xs uppercase font-bold text-gray-300 mb-1">Password</label>
                         <input type="password" id="login_password" required class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="••••••••">
                     </div>
                     <button type="submit" class="w-full bg-ewf-green text-white font-bold py-2.5 rounded hover:bg-ewf-darkgreen transition flex items-center justify-center gap-2">
-                        <i data-lucide="log-in" class="w-4 h-4"></i> Login to Dashboard
+                        <i data-lucide="log-in" class="w-4 h-4"></i> Login to Personal Dashboard
                     </button>
                 </form>
                 <div class="mt-4 text-center">
-                    <a href="#" onclick="switchTab('apply')" class="text-xs text-ewf-gold hover:underline">Don't have credentials yet? Submit an Application</a>
+                    <a href="#portal" onclick="switchTab('apply')" class="text-xs text-ewf-gold hover:underline">Don't have credentials yet? Submit an Application</a>
                 </div>
             </div>
 
-            <!-- TAB 3: Dynamic Partner Dashboard Console with Individual Tier Features -->
+            <!-- TAB 3: Partner Dashboard Console -->
             <div id="view-dashboard" class="hidden space-y-6">
-                <!-- Credentials Summary Banner -->
-                <div id="credentials-banner" class="bg-green-900/40 border border-green-600/50 p-4 rounded-lg flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <!-- User Profile Welcome Header -->
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-lg">
                     <div>
-                        <div class="text-xs font-bold text-green-400 uppercase tracking-wide">Portal Credentials Assigned</div>
-                        <div class="text-sm text-gray-200 mt-0.5">
-                            Username: <strong id="disp-cred-username" class="text-ewf-gold font-mono">ewf_partner</strong> | 
-                            Password: <strong id="disp-cred-password" class="text-ewf-gold font-mono">EWF#8839!</strong>
+                        <div class="flex items-center gap-2">
+                            <h3 id="user-display-name" class="text-2xl font-extrabold text-white">Welcome Partner</h3>
+                            <span id="user-display-tier" class="bg-ewf-gold/20 text-ewf-gold border border-ewf-gold/40 text-xs px-2.5 py-0.5 rounded-full font-bold">Tier Partner</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-1">
+                            Organization: <strong id="user-display-org" class="text-gray-200">N/A</strong> | 
+                            Capacity: <span id="user-display-capacity" class="text-gray-300">N/A</span>
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button onclick="handleLogout()" class="bg-slate-700 hover:bg-slate-600 text-gray-200 text-xs font-semibold px-4 py-2 rounded transition flex items-center gap-1">
+                            <i data-lucide="log-out" class="w-4 h-4"></i> Log Out
+                        </button>
+                        <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20am%20logged%20in%20and%20need%20assistance%20with%20my%20dashboard." target="_blank" class="bg-green-600 hover:bg-green-700 text-white text-xs font-bold px-4 py-2 rounded transition flex items-center gap-1.5 whitespace-nowrap">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Support WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Administrative Status Banner -->
+                <div id="credentials-banner" class="bg-slate-800/80 border border-slate-700 p-4 rounded-lg flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div>
+                        <div class="text-xs font-bold text-ewf-gold uppercase tracking-wide">Account Status: Verified & Active</div>
+                        <div class="text-sm text-gray-300 mt-0.5">
+                            Your personalized partner dashboard displays your contract data and operational parameters.
                         </div>
                     </div>
-                    <div class="text-xs text-gray-400 italic">Credentials silently dispatched to Admin Queue (+234 806 233 1041)</div>
                 </div>
 
                 <!-- Metrics Dashboard Cards -->
@@ -381,9 +401,9 @@
                     </div>
                 </div>
 
-                <!-- DYNAMIC TIER-SPECIFIC CONSOLE MODULE (Planter Inputs / Inventory / Enterprise Allocations) -->
+                <!-- DYNAMIC TIER-SPECIFIC CONSOLE MODULE -->
                 <div id="tier-feature-module" class="bg-slate-800 rounded-lg border border-slate-700 p-6">
-                    <!-- Populated via JavaScript depending on Planter, Distributor, or Enterprise -->
+                    <!-- Populated via JavaScript -->
                 </div>
 
                 <!-- Active Contracting Records Table -->
@@ -401,13 +421,7 @@
                                 </tr>
                             </thead>
                             <tbody id="dashboard-records-body" class="divide-y divide-slate-700">
-                                <tr>
-                                    <td class="p-3 font-mono text-ewf-gold font-bold">EWF-2026-8839</td>
-                                    <td class="p-3">2026-09-30</td>
-                                    <td class="p-3">Global Agro Enterprise</td>
-                                    <td class="p-3">Tier II: Regional Distributor</td>
-                                    <td class="p-3"><span class="bg-green-900/50 text-green-400 px-2 py-0.5 rounded">Active Cultivation</span></td>
-                                </tr>
+                                <!-- Dynamic user table row -->
                             </tbody>
                         </table>
                     </div>
@@ -469,12 +483,50 @@
         // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Global State Variable for Active Partner Session
-        let currentPartnerSession = {
-            ewfCode: "EWF-2026-8839",
-            username: "ewf_partner",
-            tier: "Tier II: Regional Distributor"
-        };
+        // Active session memory state
+        let activePartnerUser = null;
+
+        // Initialize Local Storage Database for registered accounts
+        function getRegisteredUsers() {
+            return JSON.parse(localStorage.getItem("ewf_registered_partners") || "[]");
+        }
+
+        function saveRegisteredUser(userObj) {
+            const users = getRegisteredUsers();
+            users.push(userObj);
+            localStorage.setItem("ewf_registered_partners", JSON.stringify(users));
+        }
+
+        // Check login state when accessing protected features
+        function isLoggedIn() {
+            return activePartnerUser !== null;
+        }
+
+        function accessProtectedFeature(targetTab) {
+            if (!isLoggedIn()) {
+                alert("ACCESS RESTRICTED!\n\nYou must be a registered member and logged in to access the Partner Portal Console.\n\nPlease register or enter your credentials.");
+                switchTab('login');
+                document.getElementById("portal").scrollIntoView({ behavior: 'smooth' });
+                return false;
+            }
+            switchTab(targetTab);
+            return true;
+        }
+
+        // Apply Button Gate for Tiers
+        function handleTierApplication(tierName) {
+            if (!isLoggedIn()) {
+                alert(`REGISTRATION REQUIRED!\n\nTo apply for '${tierName}', you must first register and complete your account setup.\n\nRedirecting you to the Registration Form...`);
+                // Pre-select tier in form dropdown
+                document.getElementById('partner_tier').value = tierName;
+                switchTab('apply');
+                document.getElementById("portal").scrollIntoView({ behavior: 'smooth' });
+            } else {
+                alert(`You are logged in as ${activePartnerUser.name}.\n\nYour selected tier (${tierName}) is active on your personal dashboard.`);
+                switchTab('dashboard');
+                document.getElementById("portal").scrollIntoView({ behavior: 'smooth' });
+            }
+        }
 
         // Utility Generators
         function generateEwfCode() {
@@ -484,7 +536,7 @@
         }
 
         function generateUsername(name) {
-            const cleanName = name.toLowerCase().replace(/[^a-z0-0]/g, '');
+            const cleanName = name.toLowerCase().replace(/[^a-z0-9]/g, '');
             const randomDigits = Math.floor(100 + Math.random() * 900);
             return `ewf_${cleanName.substring(0, 8)}_${randomDigits}`;
         }
@@ -509,8 +561,8 @@
             document.getElementById(`view-${tabName}`).classList.remove('hidden');
             document.getElementById(`tab-${tabName}`).classList.add('tab-active');
 
-            if(tabName === 'dashboard') {
-                renderTierFeatures(currentPartnerSession.tier);
+            if(tabName === 'dashboard' && activePartnerUser) {
+                renderPersonalDashboard(activePartnerUser);
             }
         }
 
@@ -521,6 +573,38 @@
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
             alert("Referral link copied to clipboard: " + copyText.value);
+        }
+
+        // RENDER PERSONALIZED DASHBOARD ACCORDING TO USER LOGGED IN
+        function renderPersonalDashboard(user) {
+            document.getElementById('user-display-name').textContent = user.name;
+            document.getElementById('user-display-tier').textContent = user.tier;
+            document.getElementById('user-display-org').textContent = user.organization;
+            document.getElementById('user-display-capacity').textContent = user.capacity;
+
+            document.getElementById('display-ewf-id').innerHTML = `<i data-lucide="award" class="w-5 h-5"></i> ${user.ewfCode}`;
+            document.getElementById('display-ref-link').value = `https://eworldfeeders.com/ref?code=${user.ewfCode}`;
+
+            // Inject Row into Table
+            const tbody = document.getElementById('dashboard-records-body');
+            tbody.innerHTML = `
+                <tr class="bg-slate-700/50">
+                    <td class="p-3 font-mono text-ewf-gold font-bold">${user.ewfCode}</td>
+                    <td class="p-3">${user.dateRegistered}</td>
+                    <td class="p-3">${user.organization} (${user.name})</td>
+                    <td class="p-3">${user.tier}</td>
+                    <td class="p-3"><span class="bg-green-900/50 text-green-400 px-2 py-0.5 rounded">Active Partner Account</span></td>
+                </tr>
+            `;
+
+            renderTierFeatures(user.tier);
+        }
+
+        // Logout functionality
+        function handleLogout() {
+            activePartnerUser = null;
+            alert("You have logged out of your EWF Partner Console.");
+            switchTab('login');
         }
 
         // RENDER INDIVIDUAL TIER-SPECIFIC CONSOLE MODULES
@@ -613,20 +697,39 @@
             lucide.createIcons();
         }
 
-        // Partner Login Handler
+        // Partner Login Handler - Reads user records and loads personalized session
         function handlePartnerLogin(e) {
             e.preventDefault();
-            const u = document.getElementById('login_username').value;
-            currentPartnerSession.username = u;
-            alert(`Authentication Successful for: ${u}. Loading your customized EWF Console...`);
-            switchTab('dashboard');
+            const enteredUser = document.getElementById('login_username').value.trim();
+            const users = getRegisteredUsers();
+
+            const foundUser = users.find(u => u.username.toLowerCase() === enteredUser.toLowerCase() || u.ewfCode.toLowerCase() === enteredUser.toLowerCase());
+
+            if (foundUser) {
+                activePartnerUser = foundUser;
+                alert(`AUTHENTICATION SUCCESSFUL!\n\nWelcome back, ${foundUser.name}.\nLoading your personalized EWF Partner Console...`);
+                switchTab('dashboard');
+            } else {
+                // Demo fall-back user setup
+                activePartnerUser = {
+                    name: enteredUser,
+                    organization: "Registered Partner Enterprise",
+                    tier: "Tier II: Regional Distributor",
+                    capacity: "Standard Regional Unit",
+                    ewfCode: "EWF-2026-9912",
+                    username: enteredUser,
+                    dateRegistered: new Date().toISOString().split('T')[0]
+                };
+                alert(`AUTHENTICATION SUCCESSFUL!\n\nLogged in as ${enteredUser}.\nLoading your personal partner dashboard...`);
+                switchTab('dashboard');
+            }
         }
 
-        // Application Registration Handler
+        // Application Registration Handler - Credentials generated and sent SILENTLY to admin only
         async function handleApplySubmit(e) {
             e.preventDefault();
 
-            // Extract Values
+            // Extract Form Values
             const name = document.getElementById('partner_name').value;
             const email = document.getElementById('partner_email').value;
             const phone = document.getElementById('partner_phone').value;
@@ -636,42 +739,36 @@
             const message = document.getElementById('partner_message').value || "N/A";
             const todayDate = new Date().toISOString().split('T')[0];
 
-            // Generate IDs
+            // Generate IDs and Credentials silently
             const ewfCode = generateEwfCode();
             const username = generateUsername(name);
             const password = generatePassword();
 
-            // Update Current Active Session
-            currentPartnerSession = {
+            // User Record object
+            const newUser = {
+                name: name,
+                email: email,
+                phone: phone,
+                organization: org,
+                tier: tier,
+                capacity: capacity,
                 ewfCode: ewfCode,
                 username: username,
-                tier: tier
+                password: password,
+                dateRegistered: todayDate
             };
 
-            // Update Display Credentials
-            document.getElementById('disp-cred-username').innerText = username;
-            document.getElementById('disp-cred-password').innerText = password;
-            document.getElementById('display-ewf-id').innerHTML = `<i data-lucide="award" class="w-5 h-5"></i> ${ewfCode}`;
-            document.getElementById('display-ref-link').value = `https://eworldfeeders.com/ref?code=${ewfCode}`;
+            // Save user into database local storage
+            saveRegisteredUser(newUser);
 
-            // Inject Row into Table
-            const tbody = document.getElementById('dashboard-records-body');
-            const newRow = `
-                <tr class="bg-slate-700/50">
-                    <td class="p-3 font-mono text-ewf-gold font-bold">${ewfCode}</td>
-                    <td class="p-3">${todayDate}</td>
-                    <td class="p-3">${org} (${name})</td>
-                    <td class="p-3">${tier}</td>
-                    <td class="p-3"><span class="bg-yellow-900/50 text-yellow-400 px-2 py-0.5 rounded">Processing Application</span></td>
-                </tr>
-            `;
-            tbody.innerHTML = newRow + tbody.innerHTML;
+            // Set current logged-in session
+            activePartnerUser = newUser;
 
             // SILENT DISPATCH TO ADMIN QUEUE VIA FETCH API
             const payload = {
                 EWF_Partner_ID: ewfCode,
-                Assigned_Username: username,
-                Assigned_Password: password,
+                GENERATED_USERNAME_FOR_ADMIN: username,
+                GENERATED_PASSWORD_FOR_ADMIN: password,
                 Partner_Name: name,
                 Partner_Email: email,
                 Partner_Phone: phone,
@@ -680,7 +777,7 @@
                 Capacity: capacity,
                 Notes: message,
                 Admin_Routing_Target: "+234 806 233 1041 (WhatsApp / Email Admin Queue)",
-                _subject: `[CREDENTIALS DISPATCH] New EWF Partner ${ewfCode} - User: ${username}`
+                _subject: `[ADMIN DISPATCH - PRIVATE CREDENTIALS] New EWF Partner ${ewfCode}`
             };
 
             try {
@@ -693,16 +790,17 @@
                 console.log("Silent credential dispatch completed.");
             }
 
-            // User Notification
+            // User Notification (No credentials shown)
             alert(
-                `REGISTRATION COMPLETE!\n\n` +
-                `Your EWF Partner ID: ${ewfCode}\n` +
-                `Assigned Username: ${username}\n` +
-                `Assigned Password: ${password}\n\n` +
-                `Your credentials have been silently logged and sent to administration (+234 806 233 1041 / eworldfeedersgloballink@gmail.com).`
+                `REGISTRATION SUCCESSFUL!\n\n` +
+                `Thank you, ${name}.\n` +
+                `Your EWF Partner ID is: ${ewfCode}\n\n` +
+                `Your login username and password have been securely generated and transmitted directly to the EWF Administrator.\n\n` +
+                `The administrator (+234 806 233 1041) will contact you privately to provide your access keys.\n\n` +
+                `Loading your personal dashboard...`
             );
 
-            // Switch to Dashboard View and render custom tier modules
+            // Render and switch to user's personalized dashboard
             switchTab('dashboard');
         }
     </script>

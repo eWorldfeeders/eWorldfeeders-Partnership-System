@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eWorldfeeders Global Link | EWF Partnership Portal</title>
+    <title>EWF AgroTech Partnership Portal | eWorldfeeders Global Link</title>
+    <meta name="description" content="Explore agricultural partnership opportunities with eWorldfeeders Global Link, including contract planting, agricultural product distribution, and enterprise collaboration. Applications are subject to review and project-specific terms.">
+    <meta name="theme-color" content="#063B2A">
+    <meta property="og:title" content="EWF AgroTech Partnership Portal | eWorldfeeders Global Link">
+    <meta property="og:description" content="Connecting Agricultural Opportunities, Technology and Partnerships for Sustainable Growth. Applications are assessed individually and subject to project-specific terms.">
+    <meta property="og:url" content="https://ewfpartners.netlify.app">
+    <link rel="canonical" href="https://ewfpartners.netlify.app">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
@@ -14,10 +20,10 @@
                 extend: {
                     colors: {
                         ewf: {
-                            green: '#1a5d1a',
-                            darkgreen: '#123e12',
-                            gold: '#f3b61f',
-                            lightgreen: '#e8f5e9',
+                            green: '#00843D',
+                            darkgreen: '#063B2A',
+                            gold: '#D4A017',
+                            lightgreen: '#EEF7F1',
                             slate: '#2c3e50'
                         }
                     }
@@ -33,8 +39,18 @@
             background-position: center;
         }
         .tab-active {
-            border-bottom: 3px solid #f3b61f;
-            color: #f3b61f !important;
+            border-bottom: 3px solid #D4A017;
+            color: #F3C64D !important;
+        }
+        html { scroll-behavior: smooth; }
+        section[id] { scroll-margin-top: 5.5rem; }
+        a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+            outline: 3px solid #F3C64D;
+            outline-offset: 2px;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
         }
     </style>
 </head>
@@ -56,10 +72,10 @@
                 <a href="mailto:eworldfeedersgloballink@gmail.com" class="flex items-center gap-1 hover:text-ewf-gold transition">
                     <i data-lucide="mail" class="w-3.5 h-3.5 text-ewf-gold"></i> eworldfeedersgloballink@gmail.com
                 </a>
-                <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20am%20reaching%20out%20regarding%20my%20partnership%20account." target="_blank" class="flex items-center gap-1 hover:text-ewf-gold transition">
+                <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20am%20reaching%20out%20regarding%20my%20partnership%20account." target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 hover:text-ewf-gold transition">
                     <i data-lucide="phone" class="w-3.5 h-3.5 text-ewf-gold"></i> +234 806 233 1041
                 </a>
-                <a href="https://www.facebook.com/eworldfeedersgloballink" target="_blank" class="flex items-center gap-1 hover:text-ewf-gold transition">
+                <a href="https://www.facebook.com/eworldfeedersgloballink" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 hover:text-ewf-gold transition">
                     <i data-lucide="facebook" class="w-3.5 h-3.5 text-ewf-gold"></i> Facebook Official Page
                 </a>
             </div>
@@ -86,13 +102,14 @@
                 </div>
 
                 <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-gray-700">
-                    <a href="#about" class="hover:text-ewf-green transition">About EWF</a>
-                    <a href="#strategies" class="hover:text-ewf-green transition">Strategic Pillars</a>
-                    <a href="#tiers" class="hover:text-ewf-green transition">Partnership Tiers</a>
-                    <a href="https://www.facebook.com/eworldfeedersgloballink" target="_blank" class="hover:text-ewf-green transition flex items-center gap-1">
+                    <a href="#about" class="hover:text-ewf-green transition">About</a>
+                    <a href="#strategies" class="hover:text-ewf-green transition">Partnership Areas</a>
+                    <a href="#tiers" class="hover:text-ewf-green transition">Categories</a>
+                    <a href="#process" class="hover:text-ewf-green transition">How It Works</a>
+                    <a href="https://www.facebook.com/eworldfeedersgloballink" target="_blank" rel="noopener noreferrer" class="hover:text-ewf-green transition flex items-center gap-1">
                         <i data-lucide="facebook" class="w-4 h-4 text-blue-600"></i> Facebook
                     </a>
-                    <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20am%20reaching%20out%20to%20inquire%20about%20my%20EWF%20partnership." target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition flex items-center gap-2">
+                    <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20am%20reaching%20out%20to%20inquire%20about%20my%20EWF%20partnership." target="_blank" rel="noopener noreferrer" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition flex items-center gap-2">
                         <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp Desk
                     </a>
                     <a href="#portal" onclick="accessProtectedFeature('dashboard')" class="bg-ewf-green text-white px-5 py-2.5 rounded-md hover:bg-ewf-darkgreen transition flex items-center gap-2">
@@ -105,29 +122,29 @@
 
     <!-- Strategic Alert Bar -->
     <div class="bg-ewf-gold text-ewf-darkgreen font-semibold text-xs py-2 px-4 text-center border-b border-yellow-500">
-        <span class="font-bold uppercase tracking-wider">Secured Access Network:</span> Registration and account authentication are required to access member consoles and apply for agricultural tiers.
+        <span class="font-bold uppercase tracking-wider">AgroTech Partnership Portal:</span> Applications are reviewed individually. Submission does not confirm approval, allocation, distributorship, or commercial terms.
     </div>
 
     <!-- Hero Section -->
     <section id="about" class="hero-overlay text-white py-24 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto text-center">
             <span class="bg-ewf-gold/20 text-ewf-gold text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider border border-ewf-gold/30">
-                Global Agricultural Partnership & Investment Ecosystem
+                eWorldfeeders Global Link · AgroTech Partnerships
             </span>
             <h1 class="mt-6 text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
-                Empowering Sustainable Agriculture Through <br>
+                Build Agricultural Opportunities with <br>
                 <span class="text-ewf-gold">eWorldfeeders Global Link</span>
             </h1>
             <p class="mt-6 text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed">
-                Join our international agricultural framework. EWF links commercial growers, regional distributors, and contract farming partners directly to high-value global export channels with full off-take guarantees.
+                Connecting Agricultural Opportunities, Technology and Partnerships for Sustainable Growth. Explore contract planting, agricultural product distribution, and enterprise collaboration. Submit your interest for assessment and discussion of applicable project terms.
             </p>
             <div class="mt-10 flex justify-center gap-4 flex-wrap">
                 <!-- Becoming a Partner Link -> Navigates Directly to Registration Feature -->
                 <button onclick="navigateToRegistration()" class="bg-ewf-gold text-ewf-darkgreen font-bold px-8 py-4 rounded-md shadow-lg hover:bg-yellow-400 transition text-lg flex items-center gap-2 cursor-pointer">
-                    Become an EWF Partner <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    Explore AgroTech Partnership Opportunities <i data-lucide="arrow-right" class="w-5 h-5"></i>
                 </button>
-                <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20am%20reaching%20out%20to%20inquire%20about%20connecting%20with%20the%20EWF%20partnership%20system." target="_blank" class="bg-green-600/90 text-white font-semibold px-8 py-4 rounded-md hover:bg-green-700 transition text-lg flex items-center gap-2">
-                    <i data-lucide="message-circle" class="w-5 h-5"></i> WhatsApp Desk
+                <a href="#portal" onclick="navigateToRegistration(); return false;" class="bg-green-600/90 text-white font-semibold px-8 py-4 rounded-md hover:bg-green-700 transition text-lg flex items-center gap-2">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i> Apply for Agricultural Partnership
                 </a>
             </div>
         </div>
@@ -137,37 +154,29 @@
     <section id="strategies" class="py-16 bg-white border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl font-extrabold text-ewf-slate">EWF Partnership Strategic Pillars</h2>
-                <p class="text-gray-600 mt-2 text-sm">Engineered to integrate farming operations, input distribution, and global trade channels seamlessly.</p>
+                <h2 class="text-3xl font-extrabold text-ewf-slate">Agricultural Partnership Areas</h2>
+                <p class="text-gray-600 mt-2 text-sm">The portal is for agricultural enquiries and proposals. Specific projects, resources, and terms are assessed and confirmed individually.</p>
             </div>
             <div class="grid md:grid-cols-4 gap-6">
                 <div class="p-6 bg-slate-50 border border-gray-100 rounded-xl">
-                    <div class="w-10 h-10 bg-ewf-green/10 text-ewf-green rounded-lg flex items-center justify-center mb-4">
-                        <i data-lucide="handshake" class="w-6 h-6"></i>
-                    </div>
-                    <h4 class="font-bold text-slate-900 text-lg mb-2">Buy-Back Off-Take</h4>
-                    <p class="text-xs text-gray-600 leading-relaxed">Guaranteed off-take pricing structures securing farm harvest sales prior to planting seasons.</p>
+                    <div class="w-10 h-10 bg-ewf-green/10 text-ewf-green rounded-lg flex items-center justify-center mb-4"><i data-lucide="sprout" class="w-6 h-6"></i></div>
+                    <h4 class="font-bold text-slate-900 text-lg mb-2">Contract Planting</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed">Submit interest in approved crop-production or contract-planting arrangements. Land, inputs, duties, and terms depend on the specific project.</p>
                 </div>
                 <div class="p-6 bg-slate-50 border border-gray-100 rounded-xl">
-                    <div class="w-10 h-10 bg-ewf-green/10 text-ewf-green rounded-lg flex items-center justify-center mb-4">
-                        <i data-lucide="boxes" class="w-6 h-6"></i>
-                    </div>
-                    <h4 class="font-bold text-slate-900 text-lg mb-2">Input Distribution</h4>
-                    <p class="text-xs text-gray-600 leading-relaxed">Exclusive regional franchise rights for bio-fertilizers, soil conditioning kits, and organic agro-inputs.</p>
+                    <div class="w-10 h-10 bg-ewf-green/10 text-ewf-green rounded-lg flex items-center justify-center mb-4"><i data-lucide="boxes" class="w-6 h-6"></i></div>
+                    <h4 class="font-bold text-slate-900 text-lg mb-2">Product Distribution</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed">Propose distribution of agricultural products within a suggested territory. Product availability and commercial terms require written confirmation.</p>
                 </div>
                 <div class="p-6 bg-slate-50 border border-gray-100 rounded-xl">
-                    <div class="w-10 h-10 bg-ewf-green/10 text-ewf-green rounded-lg flex items-center justify-center mb-4">
-                        <i data-lucide="globe-2" class="w-6 h-6"></i>
-                    </div>
-                    <h4 class="font-bold text-slate-900 text-lg mb-2">Export Integration</h4>
-                    <p class="text-xs text-gray-600 leading-relaxed">Direct connection into international commodity trading houses and processing facility co-investments.</p>
+                    <div class="w-10 h-10 bg-ewf-green/10 text-ewf-green rounded-lg flex items-center justify-center mb-4"><i data-lucide="globe-2" class="w-6 h-6"></i></div>
+                    <h4 class="font-bold text-slate-900 text-lg mb-2">Enterprise Collaboration</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed">Discuss agricultural production, supply networks, infrastructure, irrigation, processing, logistics, market access, or institutional projects.</p>
                 </div>
                 <div class="p-6 bg-slate-50 border border-gray-100 rounded-xl">
-                    <div class="w-10 h-10 bg-ewf-green/10 text-ewf-green rounded-lg flex items-center justify-center mb-4">
-                        <i data-lucide="shield-check" class="w-6 h-6"></i>
-                    </div>
-                    <h4 class="font-bold text-slate-900 text-lg mb-2">Agronomical Support</h4>
-                    <p class="text-xs text-gray-600 leading-relaxed">On-site technical support, soil testing kits, and active monitoring through certified EWF field agronomists.</p>
+                    <div class="w-10 h-10 bg-ewf-green/10 text-ewf-green rounded-lg flex items-center justify-center mb-4"><i data-lucide="clipboard-check" class="w-6 h-6"></i></div>
+                    <h4 class="font-bold text-slate-900 text-lg mb-2">Assessment & Discussion</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed">EWF reviews proposals for fit, location, capacity, resources, and project availability before any responsibilities or terms are agreed.</p>
                 </div>
             </div>
         </div>
@@ -177,75 +186,73 @@
     <section id="tiers" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl font-extrabold text-ewf-slate">EWF Partnership Tier Structure</h2>
-                <p class="text-gray-600 mt-3">Tailored integration models designed for smallholders, large-scale commercial planters, input distributors, and international enterprise partners.</p>
+                <h2 class="text-3xl font-extrabold text-ewf-slate">AgroTech Partnership Categories</h2>
+                <p class="text-gray-600 mt-3">Choose the category that best matches your agricultural proposal. Submitting an application expresses interest only; every proposal is subject to review.</p>
             </div>
-
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Tier 1 -->
                 <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between hover:shadow-xl transition">
                     <div class="p-8">
-                        <div class="text-ewf-green font-bold uppercase tracking-wider text-xs bg-green-50 w-max px-3 py-1 rounded-full">Tier I</div>
+                        <div class="text-ewf-green font-bold uppercase tracking-wider text-xs bg-green-50 w-max px-3 py-1 rounded-full">Category I</div>
                         <h3 class="text-2xl font-bold text-gray-900 mt-4">Contract Planter</h3>
-                        <p class="text-gray-500 text-sm mt-2">For farm owners and agricultural co-operatives seeking guaranteed off-take agreements.</p>
-                        <div class="my-6 border-t border-b py-4">
-                            <span class="text-3xl font-extrabold text-ewf-darkgreen">Guaranteed</span>
-                            <span class="text-gray-500 text-sm"> Buy-back Pricing</span>
-                        </div>
+                        <p class="text-gray-600 text-sm mt-2">For applicants interested in approved agricultural production or contract-planting arrangements.</p>
+                        <div class="my-6 border-t border-b py-4"><span class="text-xl font-extrabold text-ewf-darkgreen">Project-specific</span><span class="text-gray-500 text-sm"> assessment and terms</span></div>
                         <ul class="space-y-3 text-sm text-gray-600">
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green"></i> Seedling & Soil Inputs Provided</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green"></i> On-site Agronomist Guidance</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green"></i> Direct Market Off-take Contract</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green mt-0.5"></i><span>Assessment may consider crop, location, land availability, experience, capacity, and resources.</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green mt-0.5"></i><span>Responsibilities, budget, timeline, and terms must be discussed and documented.</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green mt-0.5"></i><span>No guaranteed farm access, harvest, produce purchase, or profit.</span></li>
                         </ul>
                     </div>
-                    <div class="p-6 bg-gray-50 border-t">
-                        <button onclick="handleTierApplication('Tier I: Contract Planter')" class="w-full bg-ewf-green text-white py-2.5 rounded-lg font-semibold hover:bg-ewf-darkgreen transition">Apply as Planter</button>
-                    </div>
+                    <div class="p-6 bg-gray-50 border-t"><button onclick="handleTierApplication('Tier I: Contract Planter')" class="w-full bg-ewf-green text-white py-2.5 rounded-lg font-semibold hover:bg-ewf-darkgreen transition">Apply as Contract Planter</button></div>
                 </div>
-
-                <!-- Tier 2 -->
-                <div class="bg-white rounded-xl shadow-xl border-2 border-ewf-gold overflow-hidden flex flex-col justify-between relative">
-                    <div class="bg-ewf-gold text-ewf-darkgreen text-xs font-bold text-center py-1 uppercase tracking-widest">Most Popular</div>
+                <div class="bg-white rounded-xl shadow-md border-2 border-ewf-gold overflow-hidden flex flex-col justify-between relative">
+                    <div class="bg-ewf-gold text-ewf-darkgreen text-xs font-bold text-center py-1 uppercase tracking-widest">Agricultural Distribution</div>
                     <div class="p-8">
-                        <div class="text-ewf-green font-bold uppercase tracking-wider text-xs bg-green-50 w-max px-3 py-1 rounded-full">Tier II</div>
+                        <div class="text-ewf-green font-bold uppercase tracking-wider text-xs bg-green-50 w-max px-3 py-1 rounded-full">Category II</div>
                         <h3 class="text-2xl font-bold text-gray-900 mt-4">Regional Distributor</h3>
-                        <p class="text-gray-500 text-sm mt-2">For agricultural vendors and franchise partners distributing EWF organic fertilizers and tech.</p>
-                        <div class="my-6 border-t border-b py-4">
-                            <span class="text-3xl font-extrabold text-ewf-darkgreen">12% - 22%</span>
-                            <span class="text-gray-500 text-sm"> Margin Revenue</span>
-                        </div>
+                        <p class="text-gray-600 text-sm mt-2">For individuals or businesses proposing to distribute approved agricultural products in an agreed area.</p>
+                        <div class="my-6 border-t border-b py-4"><span class="text-xl font-extrabold text-ewf-darkgreen">Terms confirmed</span><span class="text-gray-500 text-sm"> in writing per product/project</span></div>
                         <ul class="space-y-3 text-sm text-gray-600">
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green"></i> Exclusive District Rights</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green"></i> EWF Bio-Inputs Inventory Access</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green"></i> Marketing & Tech Stack Support</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green mt-0.5"></i><span>Assessment may consider territory, customer access, market experience, storage, and delivery capacity.</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green mt-0.5"></i><span>Product availability, pricing, payment terms, margins, minimum orders, and exclusivity are not assumed.</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green mt-0.5"></i><span>A request for distribution rights is not an approved distributorship.</span></li>
                         </ul>
                     </div>
-                    <div class="p-6 bg-gray-50 border-t">
-                        <button onclick="handleTierApplication('Tier II: Regional Distributor')" class="w-full bg-ewf-gold text-ewf-darkgreen py-2.5 rounded-lg font-bold hover:bg-yellow-400 transition">Apply for Distributorship</button>
-                    </div>
+                    <div class="p-6 bg-gray-50 border-t"><button onclick="handleTierApplication('Tier II: Regional Distributor')" class="w-full bg-ewf-gold text-ewf-darkgreen py-2.5 rounded-lg font-bold hover:bg-yellow-400 transition">Apply as Regional Distributor</button></div>
                 </div>
-
-                <!-- Tier 3 -->
                 <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between hover:shadow-xl transition">
                     <div class="p-8">
-                        <div class="text-ewf-green font-bold uppercase tracking-wider text-xs bg-green-50 w-max px-3 py-1 rounded-full">Tier III</div>
+                        <div class="text-ewf-green font-bold uppercase tracking-wider text-xs bg-green-50 w-max px-3 py-1 rounded-full">Category III</div>
                         <h3 class="text-2xl font-bold text-gray-900 mt-4">Enterprise Partner</h3>
-                        <p class="text-gray-500 text-sm mt-2">For institutional investors, export houses, and research collaboration entities.</p>
-                        <div class="my-6 border-t border-b py-4">
-                            <span class="text-3xl font-extrabold text-ewf-darkgreen">Custom</span>
-                            <span class="text-gray-500 text-sm"> Revenue Share</span>
-                        </div>
+                        <p class="text-gray-600 text-sm mt-2">For organizations, businesses, project sponsors, institutional partners, and parties proposing larger collaborations.</p>
+                        <div class="my-6 border-t border-b py-4"><span class="text-xl font-extrabold text-ewf-darkgreen">Proposal-based</span><span class="text-gray-500 text-sm"> review</span></div>
                         <ul class="space-y-3 text-sm text-gray-600">
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green"></i> Processing Facility Co-investment</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green"></i> Global Off-Take Allocation</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green"></i> Dedicated Board Advisory Seat</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green mt-0.5"></i><span>Possible discussion areas include production, infrastructure, irrigation, processing, logistics, and market access.</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green mt-0.5"></i><span>Each proposal and any proposed capital or resource contribution requires separate assessment.</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-ewf-green mt-0.5"></i><span>No investment, ownership, revenue share, or returns arise from an application alone.</span></li>
                         </ul>
                     </div>
-                    <div class="p-6 bg-gray-50 border-t">
-                        <button onclick="handleTierApplication('Tier III: Enterprise Partner')" class="w-full bg-ewf-slate text-white py-2.5 rounded-lg font-semibold hover:bg-slate-900 transition">Join Enterprise Link</button>
-                    </div>
+                    <div class="p-6 bg-gray-50 border-t"><button onclick="handleTierApplication('Tier III: Enterprise Partner')" class="w-full bg-ewf-slate text-white py-2.5 rounded-lg font-semibold hover:bg-slate-900 transition">Propose Enterprise Collaboration</button></div>
                 </div>
             </div>
+            <p class="mt-8 text-center text-sm text-gray-600">Commercial terms—including wholesale prices, distributor margins, territory, payment arrangements, minimum orders, responsibilities, and any incentives—must be confirmed for the relevant product or project before activation.</p>
+        </div>
+    </section>
+
+    <!-- General application review process -->
+    <section id="process" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <h2 class="text-3xl font-extrabold text-ewf-slate">How the Partnership Process Works</h2>
+                <p class="text-gray-600 mt-3">These are general stages; the exact process may vary by project. No fixed approval timeline or acceptance is promised.</p>
+            </div>
+            <ol class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <li class="p-5 rounded-xl border border-gray-200 bg-slate-50"><strong class="text-ewf-green">1. Select a category</strong><p class="mt-2 text-sm text-gray-600">Choose Contract Planter, Regional Distributor, Enterprise Partner, or another supported category.</p></li>
+                <li class="p-5 rounded-xl border border-gray-200 bg-slate-50"><strong class="text-ewf-green">2. Submit your interest</strong><p class="mt-2 text-sm text-gray-600">Provide accurate contact details and information relevant to your agricultural proposal.</p></li>
+                <li class="p-5 rounded-xl border border-gray-200 bg-slate-50"><strong class="text-ewf-green">3. Application review</strong><p class="mt-2 text-sm text-gray-600">EWF reviews suitability, project availability, location, experience, resources, and alignment.</p></li>
+                <li class="p-5 rounded-xl border border-gray-200 bg-slate-50"><strong class="text-ewf-green">4. Verification and discussion</strong><p class="mt-2 text-sm text-gray-600">Additional information may be requested and the proposed arrangement discussed.</p></li>
+                <li class="p-5 rounded-xl border border-gray-200 bg-slate-50"><strong class="text-ewf-green">5. Written terms and approval</strong><p class="mt-2 text-sm text-gray-600">If suitable, the parties clarify responsibilities, costs, commercial terms, timelines, and conditions.</p></li>
+                <li class="p-5 rounded-xl border border-gray-200 bg-slate-50"><strong class="text-ewf-green">6. Activation</strong><p class="mt-2 text-sm text-gray-600">Work begins only after required approvals, documentation, and other applicable requirements are complete.</p></li>
+            </ol>
         </div>
     </section>
 
@@ -253,46 +260,47 @@
     <section id="portal" class="py-16 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
-                <span class="text-ewf-gold text-xs font-bold uppercase tracking-widest">Global Operations Interface</span>
-                <h2 class="text-3xl font-extrabold mt-1">EWF Global Link Partnership Portal</h2>
+                <span class="text-ewf-gold text-xs font-bold uppercase tracking-widest">Agricultural Partnership Applications</span>
+                <h2 class="text-3xl font-extrabold mt-1">Apply for an AgroTech Partnership</h2>
+                <p class="text-gray-300 text-sm mt-3 max-w-2xl mx-auto">This portal is for agricultural proposals. An application is an expression of interest only and does not confirm approval or create an agreement.</p>
             </div>
 
             <!-- Dashboard Navigation Tabs -->
-            <div class="flex justify-center border-b border-slate-700 mb-8 space-x-8 text-sm font-semibold">
-                <button id="tab-apply" onclick="switchTab('apply')" class="pb-3 text-gray-400 hover:text-white tab-active">Partnership Registration</button>
-                <button id="tab-login" onclick="switchTab('login')" class="pb-3 text-gray-400 hover:text-white">Partner Sign-In</button>
-                <button id="tab-dashboard" onclick="accessProtectedFeature('dashboard')" class="pb-3 text-gray-400 hover:text-white">Partner Console</button>
+            <div class="flex flex-wrap justify-center border-b border-slate-700 mb-8 gap-x-8 gap-y-2 text-sm font-semibold" role="tablist" aria-label="Partner portal sections">
+                <button id="tab-apply" role="tab" aria-controls="view-apply" aria-selected="true" onclick="switchTab('apply')" class="pb-3 text-gray-400 hover:text-white tab-active">Partnership Registration</button>
+                <button id="tab-login" role="tab" aria-controls="view-login" aria-selected="false" onclick="switchTab('login')" class="pb-3 text-gray-400 hover:text-white">Partner Sign-In</button>
+                <button id="tab-dashboard" role="tab" aria-controls="view-dashboard" aria-selected="false" onclick="accessProtectedFeature('dashboard')" class="pb-3 text-gray-400 hover:text-white">Partner Console</button>
             </div>
 
             <!-- TAB 1: Partnership Registration Form -->
             <div id="view-apply" class="bg-slate-800 rounded-xl p-8 border border-slate-700 max-w-3xl mx-auto shadow-2xl">
-                <h3 class="text-xl font-bold text-white mb-2">EWF Global Link Partnership Application</h3>
-                <p class="text-sm text-gray-400 mb-6">Complete the official registration form to submit your profile for partner account verification and credential allocation.</p>
+                <h3 class="text-xl font-bold text-white mb-2">Agricultural Partnership Enquiry</h3>
+                <p class="text-sm text-gray-300 mb-6">Share your proposal for assessment. Only provide information relevant to your enquiry; do not submit passwords, bank details, or sensitive identity documents.</p>
                 
                 <form id="ewfPartnerForm" onsubmit="handleApplySubmit(event)" class="space-y-4">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs uppercase font-bold text-gray-300 mb-1">Full Name</label>
-                            <input type="text" id="partner_name" name="name" required class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="e.g. John Doe">
+                            <label for="partner_name" class="block text-xs uppercase font-bold text-gray-300 mb-1">Full Name</label>
+                            <input type="text" id="partner_name" name="name" autocomplete="name" required class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="e.g. John Doe">
                         </div>
                         <div>
-                            <label class="block text-xs uppercase font-bold text-gray-300 mb-1">Email Address</label>
-                            <input type="email" id="partner_email" name="email" required class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="john@example.com">
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs uppercase font-bold text-gray-300 mb-1">Phone / Mobile</label>
-                            <input type="tel" id="partner_phone" name="phone" required class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="+234 800 000 0000">
-                        </div>
-                        <div>
-                            <label class="block text-xs uppercase font-bold text-gray-300 mb-1">Organization / Enterprise Name</label>
-                            <input type="text" id="partner_org" name="organization" required class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="Agro Enterprise Ltd">
+                            <label for="partner_email" class="block text-xs uppercase font-bold text-gray-300 mb-1">Email Address</label>
+                            <input type="email" id="partner_email" name="email" autocomplete="email" required class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="john@example.com">
                         </div>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs uppercase font-bold text-gray-300 mb-1">Target Partnership Tier</label>
+                            <label for="partner_phone" class="block text-xs uppercase font-bold text-gray-300 mb-1">Phone / Mobile</label>
+                            <input type="tel" id="partner_phone" name="phone" autocomplete="tel" required class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="+234 800 000 0000">
+                        </div>
+                        <div>
+                            <label for="partner_org" class="block text-xs uppercase font-bold text-gray-300 mb-1">Organization / Enterprise Name</label>
+                            <input type="text" id="partner_org" name="organization" autocomplete="organization" class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="Agro Enterprise Ltd">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="partner_tier" class="block text-xs uppercase font-bold text-gray-300 mb-1">Target Partnership Tier</label>
                             <select id="partner_tier" name="tier" class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm">
                                 <option value="Tier I: Contract Planter">Tier I: Contract Planter</option>
                                 <option value="Tier II: Regional Distributor">Tier II: Regional Distributor</option>
@@ -300,23 +308,28 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs uppercase font-bold text-gray-300 mb-1">Operational Capacity / Land Area</label>
-                            <input type="text" id="partner_capacity" name="capacity" required class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="e.g. 50 Hectares / 5,000 Units">
+                            <label for="partner_capacity" class="block text-xs uppercase font-bold text-gray-300 mb-1">Operational Capacity / Land Area</label>
+                            <input type="text" id="partner_capacity" name="capacity" required class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="Relevant land, equipment, market, or operating capacity">
                         </div>
                     </div>
                     <div>
-                        <label class="block text-xs uppercase font-bold text-gray-300 mb-1">Project Summary / Requirements</label>
-                        <textarea id="partner_message" name="message" rows="3" class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="Provide additional details on your location, operational history, or partnership target..."></textarea>
+                        <label for="partner_message" class="block text-xs uppercase font-bold text-gray-300 mb-1">Project Summary / Requirements</label>
+                        <textarea id="partner_message" name="message" rows="4" class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="Describe your location or proposed territory, agricultural activity or product, relevant experience/resources, and the collaboration you have in mind."></textarea>
                     </div>
 
-                    <button type="submit" class="w-full bg-ewf-gold text-ewf-darkgreen font-bold py-3.5 rounded-lg hover:bg-yellow-400 transition flex items-center justify-center gap-2 text-base shadow-lg cursor-pointer">
-                        <i data-lucide="shield-check" class="w-5 h-5"></i> Submit Official Application
+                    <div class="space-y-3 rounded-lg border border-slate-600 bg-slate-900/50 p-4 text-sm text-gray-200">
+                        <label class="flex items-start gap-3"><input id="application_consent" name="application_consent" type="checkbox" required class="mt-1 accent-yellow-400"><span>I consent to EWF using the details I submit to review this agricultural enquiry and contact me about it. I will not include unnecessary sensitive personal information.</span></label>
+                        <label class="flex items-start gap-3"><input id="application_review_ack" name="application_review_ack" type="checkbox" required class="mt-1 accent-yellow-400"><span>I understand this is an expression of interest only, subject to assessment; it does not guarantee acceptance, land, products, distribution rights, income, or an investment return.</span></label>
+                    </div>
+                    <p id="application-feedback" class="hidden text-sm rounded-lg p-3" role="status" aria-live="polite"></p>
+                    <button id="application-submit" type="submit" class="w-full bg-ewf-gold text-ewf-darkgreen font-bold py-3.5 rounded-lg hover:bg-yellow-400 transition flex items-center justify-center gap-2 text-base shadow-lg cursor-pointer">
+                        <i data-lucide="send" class="w-5 h-5"></i> Submit Partnership Enquiry
                     </button>
                 </form>
 
                 <div class="mt-6 pt-6 border-t border-slate-700 text-center">
                     <p class="text-xs text-gray-400">Direct Facebook Desk Inquiry:</p>
-                    <a href="https://www.facebook.com/eworldfeedersgloballink" target="_blank" class="mt-3 inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs px-5 py-2.5 rounded-md transition">
+                    <a href="https://www.facebook.com/eworldfeedersgloballink" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs px-5 py-2.5 rounded-md transition">
                         <i data-lucide="facebook" class="w-4 h-4"></i> Contact Facebook Operations
                     </a>
                 </div>
@@ -325,108 +338,53 @@
             <!-- TAB 2: Partner Sign-In Screen -->
             <div id="view-login" class="hidden bg-slate-800 rounded-xl p-8 border border-slate-700 max-w-md mx-auto shadow-2xl">
                 <h3 class="text-xl font-bold text-white mb-4 text-center">Partner Portal Sign-In</h3>
-                <form onsubmit="handlePartnerLogin(event)" class="space-y-4">
-                    <div>
-                        <label class="block text-xs uppercase font-bold text-gray-300 mb-1">Partner Username / EWF Code</label>
-                        <input type="text" id="login_username" required class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="Assigned Access Key">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase font-bold text-gray-300 mb-1">Password</label>
-                        <input type="password" id="login_password" required class="w-full bg-slate-700 border border-slate-600 rounded px-3 py-2 text-white focus:outline-none focus:border-ewf-gold text-sm" placeholder="••••••••">
-                    </div>
-                    <button type="submit" class="w-full bg-ewf-green text-white font-bold py-2.5 rounded hover:bg-ewf-darkgreen transition flex items-center justify-center gap-2 cursor-pointer">
-                        <i data-lucide="log-in" class="w-4 h-4"></i> Sign In to Dashboard
-                    </button>
-                </form>
+                <div class="rounded-lg border border-yellow-700 bg-yellow-900/20 p-4 text-sm text-gray-200" role="status">
+                    <strong class="text-ewf-gold">Secure partner sign-in is not connected on this standalone page.</strong>
+                    <p class="mt-2">The supplied source has no verified authentication service. Do not enter a password here. Submitting an enquiry does not create an account or grant portal access.</p>
+                    <a href="mailto:eworldfeedersgloballink@gmail.com?subject=AgroTech%20Partnership%20Enquiry" class="mt-4 inline-flex items-center gap-2 text-ewf-gold hover:underline"><i data-lucide="mail" class="w-4 h-4"></i> Contact EWF about your enquiry</a>
+                </div>
                 <div class="mt-4 text-center">
                     <a href="#portal" onclick="navigateToRegistration()" class="text-xs text-ewf-gold hover:underline">New Partner? Submit Registration Form</a>
                 </div>
             </div>
 
             <!-- TAB 3: Partner Management Console -->
-            <div id="view-dashboard" class="hidden space-y-6">
-                <!-- User Profile Welcome Header -->
-                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-lg">
-                    <div>
-                        <div class="flex items-center gap-2">
-                            <h3 id="user-display-name" class="text-2xl font-extrabold text-white">Welcome Partner</h3>
-                            <span id="user-display-tier" class="bg-ewf-gold/20 text-ewf-gold border border-ewf-gold/40 text-xs px-2.5 py-0.5 rounded-full font-bold">Tier Partner</span>
-                        </div>
-                        <p class="text-xs text-gray-400 mt-1">
-                            Organization: <strong id="user-display-org" class="text-gray-200">N/A</strong> | 
-                            Capacity: <span id="user-display-capacity" class="text-gray-300">N/A</span>
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <button onclick="handleLogout()" class="bg-slate-700 hover:bg-slate-600 text-gray-200 text-xs font-semibold px-4 py-2 rounded transition flex items-center gap-1 cursor-pointer">
-                            <i data-lucide="log-out" class="w-4 h-4"></i> Sign Out
-                        </button>
-                        <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20am%20logged%20in%20and%20need%20assistance%20with%20my%20dashboard." target="_blank" class="bg-green-600 hover:bg-green-700 text-white text-xs font-bold px-4 py-2 rounded transition flex items-center gap-1.5 whitespace-nowrap">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Desk
-                        </a>
-                    </div>
+            <div id="view-dashboard" class="hidden max-w-3xl mx-auto rounded-xl border border-slate-700 bg-slate-800 p-8 shadow-2xl" role="status">
+                <h3 class="text-xl font-bold text-white">Partner Console</h3>
+                <p class="mt-3 text-sm text-gray-300">A secure account service and live partner database are not connected in the supplied standalone page. No account status, farm allocation, inventory, sales, earnings, contracts, or project records can be verified here.</p>
+                <p class="mt-3 text-sm text-gray-300">Please contact EWF using the official details below for assistance. Do not rely on locally displayed account information as evidence of approval or commercial terms.</p>
+                <div class="mt-5 flex flex-wrap gap-3">
+                    <a href="mailto:eworldfeedersgloballink@gmail.com?subject=AgroTech%20Partnership%20Enquiry" class="rounded-md bg-ewf-gold px-4 py-2 font-semibold text-ewf-darkgreen">Email EWF</a>
+                    <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders%20Global%20Link.%20I%20am%20interested%20in%20the%20AgroTech%20Partnership%20Programme%20and%20would%20like%20more%20information%20about%20the%20available%20agricultural%20opportunities%20and%20application%20process." target="_blank" rel="noopener noreferrer" class="rounded-md bg-green-600 px-4 py-2 font-semibold text-white">WhatsApp EWF</a>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Administrative Status Banner -->
-                <div class="bg-slate-800/80 border border-slate-700 p-4 rounded-lg flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                    <div>
-                        <div class="text-xs font-bold text-ewf-gold uppercase tracking-wide">Account Status: Verified & Active</div>
-                        <div class="text-sm text-gray-300 mt-0.5">
-                            Your personal partner console displays live contractual data and operational parameters.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Metrics Dashboard Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                    <div class="bg-slate-800 p-5 rounded-lg border border-slate-700">
-                        <div class="text-xs text-gray-400 uppercase font-bold">Assigned EWF Code</div>
-                        <div id="display-ewf-id" class="text-xl font-bold text-ewf-gold mt-1 flex items-center gap-2">
-                            <i data-lucide="award" class="w-5 h-5"></i> EWF-2026-0000
-                        </div>
-                    </div>
-                    <div class="bg-slate-800 p-5 rounded-lg border border-slate-700">
-                        <div class="text-xs text-gray-400 uppercase font-bold">Total Network Reach</div>
-                        <div id="disp-referral-count" class="text-2xl font-bold text-white mt-1">1 Partner</div>
-                    </div>
-                    <div class="bg-slate-800 p-5 rounded-lg border border-slate-700">
-                        <div class="text-xs text-gray-400 uppercase font-bold">Cleared Yield Earnings</div>
-                        <div id="disp-earnings" class="text-2xl font-bold text-green-400 mt-1">$0.00 (Active)</div>
-                    </div>
-                    <div class="bg-slate-800 p-5 rounded-lg border border-slate-700">
-                        <div class="text-xs text-gray-400 uppercase font-bold">Partner Referral Link</div>
-                        <div class="mt-2 flex">
-                            <input id="display-ref-link" type="text" readonly value="https://eworldfeeders.com/ref?code=EWF-2026-0000" class="bg-slate-900 text-xs px-2 py-1 border border-slate-700 rounded-l text-gray-300 w-full">
-                            <button onclick="copyRefLink()" class="bg-ewf-green text-xs px-3 rounded-r font-bold hover:bg-ewf-darkgreen transition cursor-pointer">Copy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TIER-SPECIFIC CONSOLE MODULE -->
-                <div id="tier-feature-module" class="bg-slate-800 rounded-lg border border-slate-700 p-6">
-                    <!-- Loaded dynamically via JavaScript -->
-                </div>
-
-                <!-- Active Contracting Records Table -->
-                <div class="bg-slate-800 rounded-lg border border-slate-700 p-6">
-                    <h4 class="text-lg font-bold text-white mb-4">Active Off-Take & Account Records</h4>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left text-xs text-gray-300">
-                            <thead class="bg-slate-900 text-gray-400 uppercase">
-                                <tr>
-                                    <th class="p-3">Partner ID</th>
-                                    <th class="p-3">Registration Date</th>
-                                    <th class="p-3">Organization / Details</th>
-                                    <th class="p-3">Assigned Tier</th>
-                                    <th class="p-3">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody id="dashboard-records-body" class="divide-y divide-slate-700">
-                                <!-- Dynamic User Row -->
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+    <!-- Business-protection, privacy, and cross-site information -->
+    <section id="before-you-apply" class="py-16 bg-ewf-lightgreen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8">
+            <div class="rounded-xl bg-white p-7 shadow-sm border border-green-100">
+                <h2 class="text-2xl font-extrabold text-ewf-darkgreen">Important Partnership Information</h2>
+                <ul class="mt-4 space-y-3 text-sm text-gray-700 list-disc pl-5">
+                    <li>All applications are subject to review and approval. An application alone creates no partnership, agency, employment, distributorship, investment, or ownership relationship.</li>
+                    <li>No applicant is automatically entitled to farm allocation, a distribution territory, commission, salary, profit share, or investment return.</li>
+                    <li>Any payment, margin, fee, revenue share, or other compensation, and each party’s responsibilities, deliverables, timing, and risks, must be expressly agreed in writing by authorized representatives before work begins.</li>
+                    <li>Availability and terms may vary by location, product, season, budget, and operational capacity. No agricultural outcome, yield, sales, profit, or return is guaranteed.</li>
+                    <li>Provide accurate information and use EWF’s name, logo, or materials only with appropriate authorization.</li>
+                </ul>
+                <p class="mt-4 text-xs text-gray-600">Website content is general information. Specific rights and obligations are determined by the applicable signed agreement. Have final legal terms reviewed by a qualified legal professional familiar with the relevant jurisdiction.</p>
+            </div>
+            <div class="rounded-xl bg-white p-7 shadow-sm border border-green-100">
+                <h2 class="text-2xl font-extrabold text-ewf-darkgreen">Privacy and Contact</h2>
+                <p class="mt-3 text-sm text-gray-700">Information submitted through the enquiry form is intended for assessment and follow-up about your proposal. Do not submit passwords, banking information, or unnecessary sensitive identity information. Contact EWF to ask about handling of your application information.</p>
+                <p class="mt-4 text-sm text-gray-700"><strong>Email:</strong> <a class="text-ewf-green underline" href="mailto:eworldfeedersgloballink@gmail.com">eworldfeedersgloballink@gmail.com</a></p>
+                <p class="mt-2 text-sm text-gray-700"><strong>WhatsApp:</strong> <a class="text-ewf-green underline" href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders%20Global%20Link.%20I%20am%20interested%20in%20the%20AgroTech%20Partnership%20Programme%20and%20would%20like%20more%20information%20about%20the%20available%20agricultural%20opportunities%20and%20application%20process." target="_blank" rel="noopener noreferrer">+234 806 233 1041</a></p>
+                <p class="mt-2 text-sm text-gray-700"><strong>Facebook:</strong> <a class="text-ewf-green underline" href="https://www.facebook.com/eworldfeedersgloballink" target="_blank" rel="noopener noreferrer">Official EWF page</a></p>
+            </div>
+            <div class="lg:col-span-2 rounded-xl bg-ewf-darkgreen p-7 text-white flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+                <div><h2 class="text-xl font-bold">Looking for opportunities beyond agriculture?</h2><p class="mt-2 text-sm text-gray-200">This portal is for agricultural partnerships. Visit the main eWorldfeeders Global Link website for general partnerships, Active Ads & Marketing, technology solutions, learning opportunities, clean energy, and other collaborations.</p></div>
+                <a href="https://eworldfeedersgloballink.netlify.app" target="_blank" rel="noopener noreferrer" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-md bg-ewf-gold px-5 py-3 font-bold text-ewf-darkgreen">Visit Main EWF Website <i data-lucide="external-link" class="h-4 w-4"></i></a>
             </div>
         </div>
     </section>
@@ -435,73 +393,51 @@
     <footer class="bg-slate-950 text-gray-400 py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
             <div>
-                <span class="text-xl font-black text-white block">eWorldfeeders</span>
-                <p class="mt-2 text-xs text-gray-500">Connecting global markets with sustainable agriculture through contract farming, processing innovation, and bio-technologies.</p>
+                <span class="text-xl font-black text-white block">eWorldfeeders Global Link</span>
+                <p class="mt-2 text-xs text-gray-300">Living for Humanity Is Our Number One.</p>
+                <p class="mt-2 text-xs text-gray-400">Connecting agricultural opportunities, technology, and partnerships. Project availability and terms are confirmed individually.</p>
                 <div class="flex items-center space-x-4 mt-4">
-                    <a href="https://www.facebook.com/eworldfeedersgloballink" target="_blank" class="text-gray-400 hover:text-ewf-gold transition">
-                        <i data-lucide="facebook" class="w-5 h-5"></i>
-                    </a>
-                    <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20am%20reaching%20out%20to%20inquire%20about%20connecting%20with%20the%20EWF%20partnership%20system." target="_blank" class="text-gray-400 hover:text-ewf-gold transition">
-                        <i data-lucide="message-circle" class="w-5 h-5"></i>
-                    </a>
+                    <a href="https://www.facebook.com/eworldfeedersgloballink" target="_blank" rel="noopener noreferrer" aria-label="EWF Official Facebook page" class="text-gray-400 hover:text-ewf-gold transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders%20Global%20Link.%20I%20am%20interested%20in%20the%20AgroTech%20Partnership%20Programme%20and%20would%20like%20more%20information%20about%20the%20available%20agricultural%20opportunities%20and%20application%20process." target="_blank" rel="noopener noreferrer" aria-label="Contact EWF on WhatsApp" class="text-gray-400 hover:text-ewf-gold transition"><i data-lucide="message-circle" class="w-5 h-5"></i></a>
                 </div>
             </div>
             <div>
                 <h5 class="text-white font-bold mb-3">Quick Navigation</h5>
                 <ul class="space-y-2 text-xs">
-                    <li><a href="#about" class="hover:underline">About EWF Partnership</a></li>
-                    <li><a href="#strategies" class="hover:underline">Strategic Pillars</a></li>
-                    <li><a href="#tiers" class="hover:underline">Distributorship Models</a></li>
-                    <li><a href="#portal" onclick="switchTab('login')" class="hover:underline">Partner Sign-In</a></li>
+                    <li><a href="#about" class="hover:underline">About this portal</a></li>
+                    <li><a href="#strategies" class="hover:underline">Partnership areas</a></li>
+                    <li><a href="#tiers" class="hover:underline">Partnership categories</a></li>
+                    <li><a href="#process" class="hover:underline">How the process works</a></li>
+                    <li><a href="#before-you-apply" class="hover:underline">Important information</a></li>
+                    <li><a href="#portal" onclick="navigateToRegistration(); return false;" class="hover:underline">Apply for partnership</a></li>
                 </ul>
             </div>
             <div>
-                <h5 class="text-white font-bold mb-3">Official Desks</h5>
+                <h5 class="text-white font-bold mb-3">Official Contact</h5>
                 <ul class="space-y-2 text-xs">
-                    <li>
-                        <a href="https://www.facebook.com/eworldfeedersgloballink" target="_blank" class="hover:underline text-blue-400 flex items-center gap-1">
-                            <i data-lucide="facebook" class="w-3.5 h-3.5"></i> Facebook Desk
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20am%20reaching%20out%20to%20inquire%20about%20connecting%20with%20the%20EWF%20partnership%20system." target="_blank" class="hover:underline text-green-400 flex items-center gap-1">
-                            <i data-lucide="message-square" class="w-3.5 h-3.5"></i> WhatsApp Operations Desk
-                        </a>
-                    </li>
+                    <li><a href="mailto:eworldfeedersgloballink@gmail.com" class="hover:underline">eworldfeedersgloballink@gmail.com</a></li>
+                    <li><a href="https://wa.me/2348062331041" target="_blank" rel="noopener noreferrer" class="hover:underline">WhatsApp: +234 806 233 1041</a></li>
+                    <li><a href="https://www.facebook.com/eworldfeedersgloballink" target="_blank" rel="noopener noreferrer" class="hover:underline">Facebook Official Page</a></li>
                 </ul>
             </div>
             <div>
-                <h5 class="text-white font-bold mb-3">Global Contact</h5>
-                <p class="text-xs">eWorldfeeders Global Link Secretariat</p>
-                <p class="text-xs text-gray-500 mt-1">Email: eworldfeedersgloballink@gmail.com</p>
-                <p class="text-xs text-gray-500 mt-1">WhatsApp: +234 806 233 1041</p>
+                <h5 class="text-white font-bold mb-3">Other EWF Services</h5>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="https://eworldfeedersgloballink.netlify.app" target="_blank" rel="noopener noreferrer" class="hover:underline">Main EWF Website</a></li>
+                    <li><a href="https://ewfsolutionmarketplace.netlify.app" target="_blank" rel="noopener noreferrer" class="hover:underline">EWF Solution Marketplace</a></li>
+                    <li><a href="https://ewf.edu.netlify.app" target="_blank" rel="noopener noreferrer" class="hover:underline">EWF Academy</a></li>
+                </ul>
             </div>
         </div>
+        <div class="max-w-7xl mx-auto px-4 mt-8 pt-5 border-t border-slate-800 text-xs text-gray-500">© <span id="footer-year"></span> eWorldfeeders Global Link. Living for Humanity Is Our Number One.</div>
     </footer>
 
     <!-- JavaScript Application Logic -->
     <script>
-        // Initialize Lucide Icons
+        // Initialize icons and the current-year footer.
         lucide.createIcons();
-
-        // Session state tracking
-        let activePartnerUser = null;
-
-        // LocalStorage Database Operations
-        function getRegisteredUsers() {
-            return JSON.parse(localStorage.getItem("ewf_registered_partners") || "[]");
-        }
-
-        function saveRegisteredUser(userObj) {
-            const users = getRegisteredUsers();
-            users.push(userObj);
-            localStorage.setItem("ewf_registered_partners", JSON.stringify(users));
-        }
-
-        // Authentication Check
-        function isLoggedIn() {
-            return activePartnerUser !== null;
-        }
+        const footerYear = document.getElementById('footer-year');
+        if (footerYear) footerYear.textContent = new Date().getFullYear();
 
         // Navigation Helper for Registration
         function navigateToRegistration() {
@@ -512,11 +448,11 @@
             }
         }
 
-        // Access Gate for Protected Console
+        // Protected features require a real authentication service, which is not present here.
         function accessProtectedFeature(targetTab) {
-            if (!isLoggedIn()) {
-                alert("AUTHENTICATION REQUIRED\n\nAccess to the Partner Management Console requires an active session.\n\nPlease log in or complete partner registration.");
-                switchTab('login');
+            if (targetTab === 'dashboard') {
+                alert("The secure Partner Console is not connected on this page. Please contact EWF using the official contact details.");
+                switchTab('dashboard');
                 document.getElementById("portal").scrollIntoView({ behavior: 'smooth' });
                 return false;
             }
@@ -524,41 +460,13 @@
             return true;
         }
 
-        // Access Gate for Tier Apply Buttons
         function handleTierApplication(tierName) {
-            if (!isLoggedIn()) {
-                alert(`REGISTRATION REQUIRED\n\nTo apply for '${tierName}', please complete the official registration form.\n\nRedirecting to the Partnership Application...`);
-                document.getElementById('partner_tier').value = tierName;
-                navigateToRegistration();
-            } else {
-                alert(`Account Session Active: ${activePartnerUser.name}.\n\nYour target tier (${tierName}) is linked to your console.`);
-                switchTab('dashboard');
-                document.getElementById("portal").scrollIntoView({ behavior: 'smooth' });
-            }
+            const select = document.getElementById('partner_tier');
+            if (select) select.value = tierName;
+            navigateToRegistration();
         }
 
-        // Credential Generators
-        function generateEwfCode() {
-            const currentYear = new Date().getFullYear();
-            const randomDigits = Math.floor(1000 + Math.random() * 9000);
-            return `EWF-${currentYear}-${randomDigits}`;
-        }
-
-        function generateUsername(name) {
-            const cleanName = name.toLowerCase().replace(/[^a-z0-9]/g, '');
-            const randomDigits = Math.floor(100 + Math.random() * 900);
-            return `ewf_${cleanName.substring(0, 8)}_${randomDigits}`;
-        }
-
-        function generatePassword() {
-            const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-            let pwd = "EWF#";
-            for (let i = 0; i < 4; i++) {
-                pwd += chars.charAt(Math.floor(Math.random() * chars.length));
-            }
-            return pwd + "!";
-        }
-
+        // No account credentials are generated in this browser-only page.
         // Tab Switcher Logic
         function switchTab(tabName) {
             const tabs = ['apply', 'login', 'dashboard'];
@@ -566,269 +474,87 @@
                 const elemView = document.getElementById(`view-${t}`);
                 const elemTab = document.getElementById(`tab-${t}`);
                 if (elemView) elemView.classList.add('hidden');
-                if (elemTab) elemTab.classList.remove('tab-active');
+                if (elemTab) {
+                    elemTab.classList.remove('tab-active');
+                    elemTab.setAttribute('aria-selected', 'false');
+                }
             });
 
             const targetView = document.getElementById(`view-${tabName}`);
             const targetTab = document.getElementById(`tab-${tabName}`);
 
             if (targetView) targetView.classList.remove('hidden');
-            if (targetTab) targetTab.classList.add('tab-active');
-
-            if(tabName === 'dashboard' && activePartnerUser) {
-                renderPersonalDashboard(activePartnerUser);
+            if (targetTab) {
+                targetTab.classList.add('tab-active');
+                targetTab.setAttribute('aria-selected', 'true');
             }
+
         }
 
-        // Copy Referral Link Utility
-        function copyRefLink() {
-            const copyText = document.getElementById("display-ref-link");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(copyText.value);
-            alert("Partner referral link copied to clipboard: " + copyText.value);
-        }
-
-        // Dynamic Dashboard Renderer
-        function renderPersonalDashboard(user) {
-            document.getElementById('user-display-name').textContent = user.name;
-            document.getElementById('user-display-tier').textContent = user.tier;
-            document.getElementById('user-display-org').textContent = user.organization;
-            document.getElementById('user-display-capacity').textContent = user.capacity;
-
-            document.getElementById('display-ewf-id').innerHTML = `<i data-lucide="award" class="w-5 h-5"></i> ${user.ewfCode}`;
-            document.getElementById('display-ref-link').value = `https://eworldfeeders.com/ref?code=${user.ewfCode}`;
-
-            const tbody = document.getElementById('dashboard-records-body');
-            tbody.innerHTML = `
-                <tr class="bg-slate-700/50">
-                    <td class="p-3 font-mono text-ewf-gold font-bold">${user.ewfCode}</td>
-                    <td class="p-3">${user.dateRegistered}</td>
-                    <td class="p-3">${user.organization} (${user.name})</td>
-                    <td class="p-3">${user.tier}</td>
-                    <td class="p-3"><span class="bg-green-900/50 text-green-400 px-2 py-0.5 rounded">Active Partner Account</span></td>
-                </tr>
-            `;
-
-            renderTierFeatures(user.tier);
-        }
-
-        // Sign-Out
-        function handleLogout() {
-            activePartnerUser = null;
-            alert("You have signed out of your EWF Partner Console.");
-            switchTab('login');
-        }
-
-        // Render Tier Modules
-        function renderTierFeatures(tier) {
-            const moduleContainer = document.getElementById('tier-feature-module');
-
-            if(tier.includes("Tier I")) {
-                moduleContainer.innerHTML = `
-                    <div class="flex items-center justify-between mb-4 border-b border-slate-700 pb-3">
-                        <h4 class="text-lg font-bold text-white flex items-center gap-2">
-                            <i data-lucide="sprout" class="w-5 h-5 text-ewf-gold"></i> Contract Planter Management Console
-                        </h4>
-                        <span class="bg-green-900/60 text-green-400 text-xs px-3 py-1 rounded-full font-semibold">Tier I Active</span>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div class="bg-slate-900 p-4 rounded-lg border border-slate-700">
-                            <h5 class="font-bold text-ewf-gold text-sm mb-1">Seedling & Input Allocation</h5>
-                            <p class="text-xs text-gray-400 mb-3">Request bio-enhancers and crop input stock.</p>
-                            <button onclick="alert('Input dispatch request transmitted.')" class="w-full bg-ewf-green text-white text-xs font-bold py-2 rounded hover:bg-ewf-darkgreen transition cursor-pointer">Request Input Stock</button>
-                        </div>
-                        <div class="bg-slate-900 p-4 rounded-lg border border-slate-700">
-                            <h5 class="font-bold text-ewf-gold text-sm mb-1">Agronomist Consultation</h5>
-                            <p class="text-xs text-gray-400 mb-3">Schedule field inspection and soil verification.</p>
-                            <a href="https://wa.me/2348062331041?text=Hello%20EWF%20Agronomist,%20I%20would%20like%20to%20schedule%20an%20inspection%20for%20my%20farm." target="_blank" class="block text-center w-full bg-green-600 text-white text-xs font-bold py-2 rounded hover:bg-green-700 transition">Schedule Visit (WhatsApp)</a>
-                        </div>
-                        <div class="bg-slate-900 p-4 rounded-lg border border-slate-700">
-                            <h5 class="font-bold text-ewf-gold text-sm mb-1">Off-Take Harvest Schedule</h5>
-                            <p class="text-xs text-gray-400 mb-3">Next off-take harvest collection scheduled.</p>
-                            <button onclick="alert('Buy-back contract rate locked.')" class="w-full bg-slate-700 text-white text-xs font-bold py-2 rounded hover:bg-slate-600 transition cursor-pointer">View Contract Terms</button>
-                        </div>
-                    </div>
-                `;
-            } else if(tier.includes("Tier II")) {
-                moduleContainer.innerHTML = `
-                    <div class="flex items-center justify-between mb-4 border-b border-slate-700 pb-3">
-                        <h4 class="text-lg font-bold text-white flex items-center gap-2">
-                            <i data-lucide="boxes" class="w-5 h-5 text-ewf-gold"></i> Regional Distributorship Hub
-                        </h4>
-                        <span class="bg-yellow-900/60 text-ewf-gold text-xs px-3 py-1 rounded-full font-semibold">Tier II Active</span>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div class="bg-slate-900 p-4 rounded-lg border border-slate-700">
-                            <h5 class="font-bold text-ewf-gold text-sm mb-1">District Inventory</h5>
-                            <p class="text-xs text-gray-400 mb-1">Bio-Fertilizer Units: <strong class="text-white">450 Units</strong></p>
-                            <p class="text-xs text-gray-400 mb-3">Conditioning Kits: <strong class="text-white">120 Kits</strong></p>
-                            <button onclick="alert('Order request for inventory sent.')" class="w-full bg-ewf-gold text-ewf-darkgreen text-xs font-bold py-2 rounded hover:bg-yellow-400 transition cursor-pointer">Restock Warehouse</button>
-                        </div>
-                        <div class="bg-slate-900 p-4 rounded-lg border border-slate-700">
-                            <h5 class="font-bold text-ewf-gold text-sm mb-1">Sub-Distributor Network</h5>
-                            <p class="text-xs text-gray-400 mb-3">Manage sub-vendors within your assigned regional district.</p>
-                            <button onclick="navigateToRegistration()" class="w-full bg-ewf-green text-white text-xs font-bold py-2 rounded hover:bg-ewf-darkgreen transition cursor-pointer">Register Sub-Vendor</button>
-                        </div>
-                        <div class="bg-slate-900 p-4 rounded-lg border border-slate-700">
-                            <h5 class="font-bold text-ewf-gold text-sm mb-1">Margin Yield Payouts</h5>
-                            <p class="text-xs text-gray-400 mb-3">Earned Margin Commission balance: <strong class="text-green-400">$1,850.00</strong></p>
-                            <button onclick="alert('Payout request submitted to finance.')" class="w-full bg-green-600 text-white text-xs font-bold py-2 rounded hover:bg-green-700 transition cursor-pointer">Request Payout</button>
-                        </div>
-                    </div>
-                `;
-            } else {
-                moduleContainer.innerHTML = `
-                    <div class="flex items-center justify-between mb-4 border-b border-slate-700 pb-3">
-                        <h4 class="text-lg font-bold text-white flex items-center gap-2">
-                            <i data-lucide="building-2" class="w-5 h-5 text-ewf-gold"></i> Enterprise & Export Allocation Hub
-                        </h4>
-                        <span class="bg-blue-900/60 text-blue-400 text-xs px-3 py-1 rounded-full font-semibold">Tier III Institutional</span>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div class="bg-slate-900 p-4 rounded-lg border border-slate-700">
-                            <h5 class="font-bold text-ewf-gold text-sm mb-1">Export Commodity Allocation</h5>
-                            <p class="text-xs text-gray-400 mb-3">Global Off-take Allocation: <strong class="text-white">500 Metric Tons</strong></p>
-                            <button onclick="alert('Export Manifest documentation sent.')" class="w-full bg-ewf-slate text-white text-xs font-bold py-2 rounded border border-slate-600 hover:bg-slate-800 transition cursor-pointer">Download Manifest</button>
-                        </div>
-                        <div class="bg-slate-900 p-4 rounded-lg border border-slate-700">
-                            <h5 class="font-bold text-ewf-gold text-sm mb-1">Processing Plant Equity</h5>
-                            <p class="text-xs text-gray-400 mb-3">Co-investment Yield: <strong class="text-green-400">14.2% Revenue Share</strong></p>
-                            <button onclick="alert('Quarterly summary requested.')" class="w-full bg-ewf-green text-white text-xs font-bold py-2 rounded hover:bg-ewf-darkgreen transition cursor-pointer">View Dividend Summary</button>
-                        </div>
-                        <div class="bg-slate-900 p-4 rounded-lg border border-slate-700">
-                            <h5 class="font-bold text-ewf-gold text-sm mb-1">Executive Secretariat</h5>
-                            <p class="text-xs text-gray-400 mb-3">Direct link to EWF Board Secretariat.</p>
-                            <a href="mailto:eworldfeedersgloballink@gmail.com?subject=Enterprise%20Board%20Inquiry" class="block text-center w-full bg-ewf-gold text-ewf-darkgreen text-xs font-bold py-2 rounded hover:bg-yellow-400 transition">Email Executive Desk</a>
-                        </div>
-                    </div>
-                `;
-            }
-            lucide.createIcons();
-        }
+        // No live dashboard, account records, or credential controls are available without a verified backend.
 
         // Partner Login Handler
         function handlePartnerLogin(e) {
-            e.preventDefault();
-            const enteredUser = document.getElementById('login_username').value.trim();
-            const users = getRegisteredUsers();
-
-            const foundUser = users.find(u => u.username.toLowerCase() === enteredUser.toLowerCase() || u.ewfCode.toLowerCase() === enteredUser.toLowerCase());
-
-            if (foundUser) {
-                activePartnerUser = foundUser;
-                alert(`AUTHENTICATION SUCCESSFUL\n\nWelcome back, ${foundUser.name}.\nAccessing your personal EWF Partner Console...`);
-                switchTab('dashboard');
-            } else {
-                activePartnerUser = {
-                    name: enteredUser,
-                    organization: "Registered Partner Enterprise",
-                    tier: "Tier II: Regional Distributor",
-                    capacity: "Standard Operational Capacity",
-                    ewfCode: "EWF-2026-9912",
-                    username: enteredUser,
-                    dateRegistered: new Date().toISOString().split('T')[0]
-                };
-                alert(`AUTHENTICATION SUCCESSFUL\n\nWelcome back, ${enteredUser}.\nAccessing your personal EWF Partner Console...`);
-                switchTab('dashboard');
-            }
+            if (e) e.preventDefault();
+            alert("Secure sign-in is not configured on this standalone page. No credentials were checked. Please contact EWF through the official channels.");
         }
 
         // Application Submission Handler
         async function handleApplySubmit(e) {
             e.preventDefault();
+            const form = e.currentTarget;
+            if (!form.reportValidity()) return;
 
-            // Form Data Collection
-            const name = document.getElementById('partner_name').value;
-            const email = document.getElementById('partner_email').value;
-            const phone = document.getElementById('partner_phone').value;
-            const org = document.getElementById('partner_org').value;
-            const tier = document.getElementById('partner_tier').value;
-            const capacity = document.getElementById('partner_capacity').value;
-            const message = document.getElementById('partner_message').value || "N/A";
-            const todayDate = new Date().toISOString().split('T')[0];
-
-            // Silent Credential & Identification Generation
-            const ewfCode = generateEwfCode();
-            const username = generateUsername(name);
-            const password = generatePassword();
-
-            // Save user locally
-            const newUser = {
-                name: name,
-                email: email,
-                phone: phone,
-                organization: org,
-                tier: tier,
-                capacity: capacity,
-                ewfCode: ewfCode,
-                username: username,
-                password: password,
-                dateRegistered: todayDate
+            const feedback = document.getElementById('application-feedback');
+            const submitButton = document.getElementById('application-submit');
+            const showFeedback = (message, success) => {
+                feedback.textContent = message;
+                feedback.className = `text-sm rounded-lg p-3 ${success ? 'bg-green-900/50 text-green-200 border border-green-700' : 'bg-red-900/50 text-red-200 border border-red-700'}`;
+                feedback.setAttribute('role', success ? 'status' : 'alert');
+            };
+            const payload = {
+                _subject: `AgroTech Partnership Enquiry - ${document.getElementById('partner_tier').value}`,
+                Partner_Name: document.getElementById('partner_name').value.trim(),
+                Partner_Email: document.getElementById('partner_email').value.trim(),
+                Partner_Phone: document.getElementById('partner_phone').value.trim(),
+                Organization: document.getElementById('partner_org').value.trim() || 'Not provided',
+                Target_Tier: document.getElementById('partner_tier').value,
+                Capacity: document.getElementById('partner_capacity').value.trim(),
+                Project_Notes: document.getElementById('partner_message').value.trim() || 'No additional notes provided',
+                Application_Review_Acknowledged: document.getElementById('application_review_ack').checked,
+                Data_Processing_Consent: document.getElementById('application_consent').checked
             };
 
-            saveRegisteredUser(newUser);
-            activePartnerUser = newUser;
-
-            // 1. DUAL-CHANNEL DISPATCH: SILENT EMAIL NOTIFICATION TO ADMIN
-            const emailPayload = {
-                _subject: `[NEW PARTNER APPLICATION] ${ewfCode} - ${name}`,
-                EWF_Partner_ID: ewfCode,
-                GENERATED_USERNAME: username,
-                GENERATED_PASSWORD: password,
-                Partner_Name: name,
-                Partner_Email: email,
-                Partner_Phone: phone,
-                Organization: org,
-                Target_Tier: tier,
-                Capacity: capacity,
-                Project_Notes: message,
-                System_Notification: "Dispatch account access credentials to applicant."
-            };
+            submitButton.disabled = true;
+            submitButton.setAttribute('aria-busy', 'true');
+            submitButton.classList.add('opacity-70', 'cursor-wait');
+            submitButton.innerHTML = '<i data-lucide="loader-circle" class="w-5 h-5 animate-spin"></i> Sending enquiry…';
+            lucide.createIcons();
+            feedback.classList.add('hidden');
 
             try {
-                fetch("https://formspree.io/f/eworldfeedersgloballink@gmail.com", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(emailPayload)
+                const response = await fetch('https://formspree.io/f/eworldfeedersgloballink@gmail.com', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(payload)
                 });
-            } catch (err) {
-                console.log("Email dispatch processed.");
+                if (!response.ok) {
+                    let detail = '';
+                    try { const result = await response.json(); detail = result.errors?.map(item => item.message).join(' ') || ''; } catch (_) {}
+                    throw new Error(detail || `The form service returned status ${response.status}.`);
+                }
+                showFeedback('Your enquiry was received by the form service for review. This is not an approval or partnership agreement. EWF will follow up using the contact details you provided if appropriate.', true);
+                form.reset();
+            } catch (error) {
+                console.error('AgroTech enquiry submission failed:', error);
+                showFeedback('We could not confirm receipt of your enquiry. No application approval has been issued. Please try again later or contact eWorldfeeders Global Link at eworldfeedersgloballink@gmail.com or +234 806 233 1041.', false);
+            } finally {
+                submitButton.disabled = false;
+                submitButton.removeAttribute('aria-busy');
+                submitButton.classList.remove('opacity-70', 'cursor-wait');
+                submitButton.innerHTML = '<i data-lucide="send" class="w-5 h-5"></i> Submit Partnership Enquiry';
+                lucide.createIcons();
             }
-
-            // 2. DUAL-CHANNEL DISPATCH: WHATSAPP DESK NOTIFICATION
-            const adminWhatsApp = "2348062331041";
-            const waText = 
-                `*NEW EWF PARTNER REGISTRATION DISPATCH*\n\n` +
-                `*EWF Code ID:* ${ewfCode}\n` +
-                `*Target Tier:* ${tier}\n` +
-                `*Partner Name:* ${name}\n` +
-                `*Organization:* ${org}\n` +
-                `*Email:* ${email}\n` +
-                `*Phone:* ${phone}\n` +
-                `*Capacity:* ${capacity}\n` +
-                `*Project Notes:* ${message}\n\n` +
-                `*--- ASSIGNED LOGIN CREDENTIALS ---*\n` +
-                `*Username:* ${username}\n` +
-                `*Password:* ${password}\n\n` +
-                `_eWorldfeeders Global Link Operations System_`;
-
-            const encodedWa = encodeURIComponent(waText);
-            const waUrl = `https://wa.me/${adminWhatsApp}?text=${encodedWa}`;
-
-            // Professional User Notification
-            alert(
-                `APPLICATION SUBMITTED SUCCESSFULLY\n\n` +
-                `Thank you, ${name}.\n` +
-                `Your official Partner ID is: ${ewfCode}\n\n` +
-                `Your account profile has been registered and initialized. Opening administrative dispatch channel to complete verification...`
-            );
-
-            // Trigger WhatsApp Administrative Dispatch
-            window.open(waUrl, '_blank');
-
-            // Switch to Dashboard
-            switchTab('dashboard');
         }
     </script>
 </body>

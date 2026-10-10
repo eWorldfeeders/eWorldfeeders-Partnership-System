@@ -38,10 +38,6 @@
             background-size: cover;
             background-position: center;
         }
-        .tab-active {
-            border-bottom: 3px solid #D4A017;
-            color: #F3C64D !important;
-        }
         html { scroll-behavior: smooth; }
         section[id] { scroll-margin-top: 5.5rem; }
         a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
@@ -80,8 +76,6 @@
                 </a>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="#portal" onclick="switchTab('login')" class="hover:text-ewf-gold transition">Partner Login</a>
-                <span>|</span>
                 <a href="#portal" onclick="navigateToRegistration()" class="hover:text-ewf-gold transition">Register / Apply Now</a>
             </div>
         </div>
@@ -112,9 +106,6 @@
                     <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders,%20I%20am%20reaching%20out%20to%20inquire%20about%20my%20EWF%20partnership." target="_blank" rel="noopener noreferrer" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition flex items-center gap-2">
                         <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp Desk
                     </a>
-                    <a href="#portal" onclick="accessProtectedFeature('dashboard')" class="bg-ewf-green text-white px-5 py-2.5 rounded-md hover:bg-ewf-darkgreen transition flex items-center gap-2">
-                        <i data-lucide="layout-dashboard" class="w-4 h-4 text-ewf-gold"></i> EWF Portal
-                    </a>
                 </div>
             </div>
         </div>
@@ -129,7 +120,7 @@
     <section id="about" class="hero-overlay text-white py-24 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto text-center">
             <span class="bg-ewf-gold/20 text-ewf-gold text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider border border-ewf-gold/30">
-                EWF · AgroTech Partnerships
+                eWorldfeeders Global Link · AgroTech Partnerships
             </span>
             <h1 class="mt-6 text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
                 Build Agricultural Opportunities with <br>
@@ -256,7 +247,7 @@
         </div>
     </section>
 
-    <!-- EWF Portal System -->
+    <!-- Partnership Registration Portal -->
     <section id="portal" class="py-16 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
@@ -265,14 +256,8 @@
                 <p class="text-gray-300 text-sm mt-3 max-w-2xl mx-auto">This portal is for agricultural proposals. An application is an expression of interest only and does not confirm approval or create an agreement.</p>
             </div>
 
-            <!-- Dashboard Navigation Tabs -->
-            <div class="flex flex-wrap justify-center border-b border-slate-700 mb-8 gap-x-8 gap-y-2 text-sm font-semibold" role="tablist" aria-label="Partner portal sections">
-                <button id="tab-apply" role="tab" aria-controls="view-apply" aria-selected="true" onclick="switchTab('apply')" class="pb-3 text-gray-400 hover:text-white tab-active">Partnership Registration</button>
-                <button id="tab-login" role="tab" aria-controls="view-login" aria-selected="false" onclick="switchTab('login')" class="pb-3 text-gray-400 hover:text-white">Partner Sign-In</button>
-                <button id="tab-dashboard" role="tab" aria-controls="view-dashboard" aria-selected="false" onclick="accessProtectedFeature('dashboard')" class="pb-3 text-gray-400 hover:text-white">Partner Console</button>
-            </div>
 
-            <!-- TAB 1: Partnership Registration Form -->
+            <!-- Partnership Registration Form -->
             <div id="view-apply" class="bg-slate-800 rounded-xl p-8 border border-slate-700 max-w-3xl mx-auto shadow-2xl">
                 <h3 class="text-xl font-bold text-white mb-2">Agricultural Partnership Enquiry</h3>
                 <p class="text-sm text-gray-300 mb-6">Share your proposal for assessment. Only provide information relevant to your enquiry; do not submit passwords, bank details, or sensitive identity documents.</p>
@@ -335,29 +320,7 @@
                 </div>
             </div>
 
-            <!-- TAB 2: Partner Sign-In Screen -->
-            <div id="view-login" class="hidden bg-slate-800 rounded-xl p-8 border border-slate-700 max-w-md mx-auto shadow-2xl">
-                <h3 class="text-xl font-bold text-white mb-4 text-center">Partner Portal Sign-In</h3>
-                <div class="rounded-lg border border-yellow-700 bg-yellow-900/20 p-4 text-sm text-gray-200" role="status">
-                    <strong class="text-ewf-gold">Secure partner sign-in is not connected on this standalone page.</strong>
-                    <p class="mt-2">The supplied source has no verified authentication service. Do not enter a password here. Submitting an enquiry does not create an account or grant portal access.</p>
-                    <a href="mailto:eworldfeedersgloballink@gmail.com?subject=AgroTech%20Partnership%20Enquiry" class="mt-4 inline-flex items-center gap-2 text-ewf-gold hover:underline"><i data-lucide="mail" class="w-4 h-4"></i> Contact EWF about your enquiry</a>
-                </div>
-                <div class="mt-4 text-center">
-                    <a href="#portal" onclick="navigateToRegistration()" class="text-xs text-ewf-gold hover:underline">New Partner? Submit Registration Form</a>
-                </div>
-            </div>
 
-            <!-- TAB 3: Partner Management Console -->
-            <div id="view-dashboard" class="hidden max-w-3xl mx-auto rounded-xl border border-slate-700 bg-slate-800 p-8 shadow-2xl" role="status">
-                <h3 class="text-xl font-bold text-white">Partner Console</h3>
-                <p class="mt-3 text-sm text-gray-300">A secure account service and live partner database are not connected in the supplied standalone page. No account status, farm allocation, inventory, sales, earnings, contracts, or project records can be verified here.</p>
-                <p class="mt-3 text-sm text-gray-300">Please contact EWF using the official details below for assistance. Do not rely on locally displayed account information as evidence of approval or commercial terms.</p>
-                <div class="mt-5 flex flex-wrap gap-3">
-                    <a href="mailto:eworldfeedersgloballink@gmail.com?subject=AgroTech%20Partnership%20Enquiry" class="rounded-md bg-ewf-gold px-4 py-2 font-semibold text-ewf-darkgreen">Email EWF</a>
-                    <a href="https://wa.me/2348062331041?text=Hello%20eWorldfeeders%20Global%20Link.%20I%20am%20interested%20in%20the%20AgroTech%20Partnership%20Programme%20and%20would%20like%20more%20information%20about%20the%20available%20agricultural%20opportunities%20and%20application%20process." target="_blank" rel="noopener noreferrer" class="rounded-md bg-green-600 px-4 py-2 font-semibold text-white">WhatsApp EWF</a>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -441,62 +404,16 @@
 
         // Navigation Helper for Registration
         function navigateToRegistration() {
-            switchTab('apply');
             const portalElem = document.getElementById("portal");
             if (portalElem) {
                 portalElem.scrollIntoView({ behavior: 'smooth' });
             }
         }
 
-        // Protected features require a real authentication service, which is not present here.
-        function accessProtectedFeature(targetTab) {
-            if (targetTab === 'dashboard') {
-                alert("The secure Partner Console is not connected on this page. Please contact EWF using the official contact details.");
-                switchTab('dashboard');
-                document.getElementById("portal").scrollIntoView({ behavior: 'smooth' });
-                return false;
-            }
-            switchTab(targetTab);
-            return true;
-        }
-
         function handleTierApplication(tierName) {
             const select = document.getElementById('partner_tier');
             if (select) select.value = tierName;
             navigateToRegistration();
-        }
-
-        // No account credentials are generated in this browser-only page.
-        // Tab Switcher Logic
-        function switchTab(tabName) {
-            const tabs = ['apply', 'login', 'dashboard'];
-            tabs.forEach(t => {
-                const elemView = document.getElementById(`view-${t}`);
-                const elemTab = document.getElementById(`tab-${t}`);
-                if (elemView) elemView.classList.add('hidden');
-                if (elemTab) {
-                    elemTab.classList.remove('tab-active');
-                    elemTab.setAttribute('aria-selected', 'false');
-                }
-            });
-
-            const targetView = document.getElementById(`view-${tabName}`);
-            const targetTab = document.getElementById(`tab-${tabName}`);
-
-            if (targetView) targetView.classList.remove('hidden');
-            if (targetTab) {
-                targetTab.classList.add('tab-active');
-                targetTab.setAttribute('aria-selected', 'true');
-            }
-
-        }
-
-        // No live dashboard, account records, or credential controls are available without a verified backend.
-
-        // Partner Login Handler
-        function handlePartnerLogin(e) {
-            if (e) e.preventDefault();
-            alert("Secure sign-in is not configured on this standalone page. No credentials were checked. Please contact EWF through the official channels.");
         }
 
         // Application Submission Handler

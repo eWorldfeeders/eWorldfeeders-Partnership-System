@@ -1,2191 +1,646 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#063B2A">
-    <meta name="color-scheme" content="light"><title>EWF AGROTECH PARTNERSHIP | eWorldfeeders Global Link</title>
-
-<meta name="description" content="EWF AgroTech Partnership connects agricultural producers, regional distributors, and enterprise partners with project-specific agricultural and AgroTech collaboration opportunities. Applications are subject to review and written terms.">
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://ewfpartners.netlify.app">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="EWF AGROTECH PARTNERSHIP | eWorldfeeders Global Link">
-<meta property="og:description" content="Explore agricultural production, regional distribution, and enterprise collaboration opportunities through EWF AgroTech Partnership. All applications are assessed individually and subject to project-specific terms.">
-<meta property="og:url" content="https://ewfpartners.netlify.app">
-
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Lucide Icons -->
-<script src="https://unpkg.com/lucide@latest"></script>
-
-<!-- Official eWorldfeeders Global Link Brand Colours -->
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    ewf: {
-                        green: '#00843D',
-                        brightgreen: '#00A651',
-                        darkgreen: '#063B2A',
-                        forest: '#075E3F',
-                        gold: '#D4A017',
-                        brightgold: '#F3C64D',
-                        dark: '#071C17',
-                        light: '#F8FAF7',
-                        lightgreen: '#EEF7F1',
-                        slate: '#2c3e50'
-                    }
-                }
-            }
-        }
-    };
-</script>
-
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#123d2f">
+  <title>EWF AgroTech Partnership | Agricultural Collaboration</title>
+  <meta name="description" content="Explore agricultural production, contract planting, product distribution and enterprise collaboration through EWF AgroTech Partnership. Every proposal is reviewed individually.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ewfpartners.netlify.app">
+  <meta property="og:title" content="EWF AgroTech Partnership">
+  <meta property="og:description" content="Agricultural production, distribution and enterprise collaboration through considered partnerships.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ewfpartners.netlify.app">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
     :root {
-        --ewf-green: #00843D;
-        --ewf-brightgreen: #00A651;
-        --ewf-darkgreen: #063B2A;
-        --ewf-forest: #075E3F;
-        --ewf-gold: #D4A017;
-        --ewf-brightgold: #F3C64D;
-        --ewf-dark: #071C17;
-        --ewf-light: #F8FAF7;
-        --ewf-lightgreen: #EEF7F1;
+      color-scheme: light;
+      --forest: #123d2f;
+      --forest-deep: #0b2b22;
+      --forest-mid: #1d5a43;
+      --leaf: #2e7d52;
+      --leaf-soft: #eaf2e9;
+      --gold: #d9aa45;
+      --gold-light: #f2d995;
+      --ink: #17231d;
+      --muted: #5d6a62;
+      --paper: #f8f8f3;
+      --white: #fff;
+      --line: #dfe6dc;
+      --shadow: 0 18px 48px rgba(11, 43, 34, .09);
+      --radius: 20px;
+      --content: 1160px;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
     }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 94px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; }
+    a { color: inherit; }
+    button, input, select, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+    .skip-link { position: fixed; z-index: 100; top: 12px; left: 12px; padding: 12px 16px; transform: translateY(-160%); border-radius: 8px; background: var(--white); color: var(--forest-deep); font-weight: 700; box-shadow: var(--shadow); }
+    .skip-link:focus { transform: translateY(0); }
+    .wrap { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+    .topline { background: var(--forest-deep); color: rgba(255,255,255,.88); font-size: .78rem; }
+    .topline-inner { min-height: 38px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .topline-links { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
+    .topline a { text-decoration: none; transition: color .2s ease; }
+    .topline a:hover { color: var(--gold-light); }
+    .topline .apply-mini { color: var(--gold-light); font-weight: 800; }
+    .site-header { position: sticky; z-index: 50; top: 0; border-bottom: 1px solid rgba(18,61,47,.08); background: rgba(255,255,255,.96); backdrop-filter: blur(14px); }
+    .nav-row { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
+    .brand-mark { width: 45px; height: 45px; display: grid; place-items: center; position: relative; overflow: hidden; border-radius: 14px; background: var(--forest); color: var(--gold-light); box-shadow: inset 0 0 0 1px rgba(242,217,149,.44); }
+    .brand-mark svg { width: 26px; height: 26px; }
+    .brand-name { display: block; color: var(--forest); font-size: 1.19rem; font-weight: 900; letter-spacing: -.055em; line-height: 1; }
+    .brand-sub { display: block; margin-top: 5px; color: #66736a; font-size: .62rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: clamp(16px, 2.2vw, 30px); font-size: .86rem; font-weight: 700; color: #46534b; }
+    .nav-links a { text-decoration: none; white-space: nowrap; transition: color .2s ease; }
+    .nav-links a:hover { color: var(--leaf); }
+    .nav-links .nav-cta { padding: 11px 17px; border-radius: 999px; background: var(--forest); color: white; }
+    .nav-links .nav-cta:hover { background: var(--forest-mid); color: white; }
+    .menu-toggle { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 12px; background: white; color: var(--forest); cursor: pointer; }
+    .menu-toggle svg { width: 21px; height: 21px; }
+    .mobile-links { display: none; padding: 8px 0 17px; border-top: 1px solid var(--line); }
+    .mobile-links a { display: block; padding: 12px 4px; text-decoration: none; color: var(--ink); font-size: .92rem; font-weight: 700; }
+    .notice { padding: 11px 20px; background: #f2e4bc; color: #493a18; text-align: center; font-size: .79rem; line-height: 1.5; }
+    .notice strong { margin-right: 5px; text-transform: uppercase; letter-spacing: .07em; font-size: .72rem; }
 
-    html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 6rem;
+    .hero { position: relative; min-height: 610px; display: flex; align-items: center; overflow: hidden; background: var(--forest-deep); color: white; }
+    .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,37,28,.96) 0%, rgba(8,37,28,.86) 43%, rgba(8,37,28,.28) 100%), url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85") center 52%/cover no-repeat; }
+    .hero::after { content: ""; position: absolute; inset: auto 0 0; height: 100px; background: linear-gradient(transparent, rgba(7,31,23,.38)); pointer-events: none; }
+    .hero-inner { position: relative; z-index: 1; width: min(var(--content), calc(100% - 48px)); margin: 0 auto; padding: 88px 0 105px; }
+    .hero-copy { max-width: 680px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--gold-light); font-size: .73rem; font-weight: 850; letter-spacing: .15em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 27px; height: 1px; background: currentColor; }
+    .hero h1 { margin: 22px 0 0; max-width: 760px; font-family: var(--serif); font-size: clamp(3.2rem, 7.2vw, 6.25rem); font-weight: 500; letter-spacing: -.055em; line-height: .98; }
+    .hero h1 em { color: var(--gold-light); font-style: normal; }
+    .hero-lede { max-width: 585px; margin: 25px 0 0; color: rgba(255,255,255,.84); font-size: clamp(1rem, 1.4vw, 1.15rem); line-height: 1.8; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .button { min-height: 49px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 20px; border: 1px solid transparent; border-radius: 999px; text-decoration: none; font-size: .9rem; font-weight: 800; transition: transform .2s ease, background .2s ease, border-color .2s ease; cursor: pointer; }
+    .button:hover { transform: translateY(-2px); }
+    .button-gold { background: var(--gold-light); color: var(--forest-deep); }
+    .button-gold:hover { background: #ffe7a2; }
+    .button-outline { border-color: rgba(255,255,255,.42); background: rgba(255,255,255,.06); color: white; }
+    .button-outline:hover { background: rgba(255,255,255,.14); border-color: white; }
+    .arrow { font-size: 1.1rem; line-height: 1; }
+    .hero-note { margin-top: 27px; color: rgba(255,255,255,.7); font-size: .76rem; }
+    .hero-note strong { color: white; }
+    .offer-band { position: relative; z-index: 2; margin-top: -34px; }
+    .offer-list { display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; border: 1px solid rgba(18,61,47,.1); border-radius: 18px; background: white; box-shadow: var(--shadow); }
+    .offer-item { min-height: 97px; display: flex; align-items: center; gap: 15px; padding: 21px 27px; }
+    .offer-item + .offer-item { border-left: 1px solid var(--line); }
+    .offer-number { color: var(--gold); font-family: var(--serif); font-size: 1.75rem; line-height: 1; }
+    .offer-item strong { display: block; color: var(--forest); font-size: .95rem; }
+    .offer-item span:last-child { display: block; margin-top: 3px; color: var(--muted); font-size: .74rem; }
+
+    .section { padding: 96px 0; }
+    .section-white { background: white; }
+    .section-soft { background: var(--paper); }
+    .section-dark { background: var(--forest-deep); color: white; }
+    .section-head { max-width: 730px; margin-bottom: 42px; }
+    .section-head.center { margin-inline: auto; text-align: center; }
+    .section-kicker { color: var(--leaf); font-size: .72rem; font-weight: 850; letter-spacing: .15em; text-transform: uppercase; }
+    .section-dark .section-kicker { color: var(--gold-light); }
+    .section h2 { margin: 10px 0 0; color: var(--forest); font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 500; letter-spacing: -.045em; line-height: 1.09; }
+    .section-dark h2 { color: white; }
+    .section-intro { margin: 16px 0 0; color: var(--muted); font-size: 1rem; line-height: 1.8; }
+    .section-dark .section-intro { color: rgba(255,255,255,.7); }
+    .area-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .area-card { min-height: 218px; padding: 25px 23px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+    .area-card:hover { transform: translateY(-4px); border-color: rgba(217,170,69,.75); box-shadow: var(--shadow); }
+    .area-symbol { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 14px; background: var(--leaf-soft); color: var(--forest); font-family: var(--serif); font-size: 1.35rem; }
+    .area-card h3 { margin: 18px 0 0; color: var(--forest); font-size: 1.08rem; letter-spacing: -.02em; }
+    .area-card p { margin: 9px 0 0; color: var(--muted); font-size: .85rem; line-height: 1.72; }
+
+    .category-grid { display: grid; grid-template-columns: repeat(3, 1fr); align-items: stretch; gap: 18px; }
+    .category-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: white; box-shadow: 0 8px 24px rgba(11,43,34,.035); }
+    .category-card.featured { border: 2px solid var(--gold); box-shadow: 0 16px 38px rgba(110,78,14,.1); }
+    .category-ribbon { padding: 9px 20px; background: var(--gold-light); color: var(--forest-deep); text-align: center; font-size: .69rem; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+    .category-content { flex: 1; padding: 29px 27px 23px; }
+    .category-number { color: var(--leaf); font-size: .7rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+    .category-card h3 { margin: 8px 0 0; color: var(--forest); font-family: var(--serif); font-size: 1.85rem; font-weight: 500; letter-spacing: -.035em; line-height: 1.1; }
+    .category-desc { min-height: 72px; margin: 12px 0 0; color: var(--muted); font-size: .88rem; line-height: 1.7; }
+    .category-fit { margin: 20px 0 0; padding: 15px 0; border-block: 1px solid var(--line); }
+    .category-fit strong { display: block; color: var(--forest); font-size: .88rem; }
+    .category-fit span { display: block; margin-top: 3px; color: var(--muted); font-size: .75rem; }
+    .category-points { display: grid; gap: 12px; margin: 18px 0 0; padding: 0; list-style: none; color: #4e5d53; font-size: .81rem; line-height: 1.58; }
+    .category-points li { display: grid; grid-template-columns: 16px 1fr; gap: 9px; }
+    .category-points li::before { content: "✓"; color: var(--leaf); font-weight: 900; }
+    .category-action { padding: 0 27px 26px; }
+    .category-action .button { width: 100%; }
+    .button-green { background: var(--forest); color: white; }
+    .button-green:hover { background: var(--forest-mid); }
+    .button-light { border-color: var(--line); background: white; color: var(--forest); }
+    .button-light:hover { border-color: var(--gold); background: #fffdf7; }
+    .fine-note { max-width: 900px; margin: 24px auto 0; color: var(--muted); text-align: center; font-size: .82rem; line-height: 1.7; }
+
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; counter-reset: step; }
+    .step { min-height: 180px; position: relative; padding: 26px 24px; border: 1px solid var(--line); border-radius: 17px; background: var(--paper); counter-increment: step; }
+    .step::before { content: "0" counter(step); display: inline-flex; width: 37px; height: 37px; align-items: center; justify-content: center; border-radius: 50%; background: var(--forest); color: white; font-size: .76rem; font-weight: 850; }
+    .step h3 { margin: 16px 0 0; color: var(--forest); font-size: 1rem; }
+    .step p { margin: 7px 0 0; color: var(--muted); font-size: .82rem; line-height: 1.7; }
+    .process-note { margin: 22px 0 0; color: var(--muted); font-size: .82rem; text-align: center; }
+
+    .application-layout { display: grid; grid-template-columns: minmax(250px, .75fr) minmax(0, 1.25fr); gap: 54px; align-items: start; }
+    .application-aside { position: sticky; top: 120px; }
+    .application-aside h2 { max-width: 390px; }
+    .application-aside p { color: rgba(255,255,255,.74); font-size: .94rem; line-height: 1.8; }
+    .form-reminder { margin-top: 26px; padding: 18px 19px; border: 1px solid rgba(242,217,149,.25); border-radius: 15px; background: rgba(255,255,255,.055); color: rgba(255,255,255,.78); font-size: .8rem; line-height: 1.7; }
+    .form-reminder strong { color: var(--gold-light); }
+    .form-card { padding: clamp(22px, 4vw, 38px); border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius); background: #123b2e; box-shadow: 0 22px 54px rgba(0,0,0,.15); }
+    .form-card h3 { margin: 0; color: white; font-size: 1.25rem; }
+    .form-caption { margin: 7px 0 26px; color: rgba(255,255,255,.66); font-size: .82rem; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 19px 16px; }
+    .field { min-width: 0; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { display: block; margin-bottom: 7px; color: rgba(255,255,255,.91); font-size: .77rem; font-weight: 750; }
+    .required { color: var(--gold-light); }
+    .field input, .field select, .field textarea { width: 100%; min-height: 47px; border: 1px solid #416957; border-radius: 10px; background: #0c3025; color: white; padding: 11px 13px; font-size: .85rem; transition: border-color .2s ease, box-shadow .2s ease; }
+    .field textarea { min-height: 125px; resize: vertical; }
+    .field input::placeholder, .field textarea::placeholder { color: #a4b6aa; }
+    .field select:invalid { color: #a4b6aa; }
+    .field select option { color: white; background: #0c3025; }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--gold-light); box-shadow: 0 0 0 3px rgba(242,217,149,.13); }
+    .consents { display: grid; gap: 14px; margin-top: 22px; padding: 17px; border: 1px solid rgba(255,255,255,.12); border-radius: 13px; background: rgba(6,34,25,.56); color: rgba(255,255,255,.8); font-size: .78rem; line-height: 1.65; }
+    .consent-row { display: grid; grid-template-columns: 17px 1fr; gap: 11px; align-items: start; }
+    .consent-row input { width: 16px; height: 16px; margin: 3px 0 0; accent-color: var(--gold); }
+    .form-feedback { margin: 18px 0 0; padding: 14px 16px; border: 1px solid transparent; border-radius: 10px; font-size: .84rem; line-height: 1.65; }
+    .form-feedback[hidden] { display: none; }
+    .form-feedback.success { border-color: #467f56; background: rgba(46,125,82,.18); color: #d9f2df; }
+    .form-feedback.error { border-color: #b96961; background: rgba(160,50,44,.19); color: #ffe1dc; }
+    .submit-button { width: 100%; margin-top: 18px; border: 0; }
+    .submit-button:disabled { opacity: .72; cursor: wait; transform: none; }
+    .form-footnote { margin: 13px 0 0; color: rgba(255,255,255,.53); font-size: .72rem; text-align: center; }
+    .direct-contact { margin-top: 23px; padding-top: 19px; border-top: 1px solid rgba(255,255,255,.12); text-align: center; }
+    .direct-contact p { margin: 0; color: rgba(255,255,255,.58); font-size: .76rem; }
+    .direct-contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 12px; }
+    .direct-contact-links a { padding: 9px 14px; border: 1px solid rgba(255,255,255,.13); border-radius: 999px; color: white; text-decoration: none; font-size: .75rem; font-weight: 750; }
+    .direct-contact-links a:hover { border-color: var(--gold); }
+
+    .info-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 19px; }
+    .info-panel { padding: 29px; border: 1px solid var(--line); border-radius: var(--radius); background: white; }
+    .info-panel h3 { margin: 7px 0 0; color: var(--forest); font-family: var(--serif); font-size: 1.75rem; font-weight: 500; letter-spacing: -.03em; }
+    .info-list { display: grid; gap: 13px; margin: 20px 0 0; padding: 0; list-style: none; color: #4c5c52; font-size: .82rem; line-height: 1.7; }
+    .info-list li { display: grid; grid-template-columns: 14px 1fr; gap: 10px; }
+    .info-list li::before { content: "•"; color: var(--leaf); font-size: 1.15rem; line-height: 1.25; }
+    .legal-note { margin: 21px 0 0; padding-top: 16px; border-top: 1px solid var(--line); color: #738078; font-size: .73rem; line-height: 1.7; }
+    .contact-intro { margin: 12px 0 0; color: var(--muted); font-size: .84rem; }
+    .contact-list { display: grid; gap: 17px; margin-top: 23px; }
+    .contact-item { display: grid; grid-template-columns: 42px 1fr; gap: 13px; align-items: center; }
+    .contact-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; background: var(--leaf-soft); color: var(--forest); font-size: 1rem; font-weight: 900; }
+    .contact-label { display: block; color: #77837b; font-size: .66rem; font-weight: 850; letter-spacing: .11em; text-transform: uppercase; }
+    .contact-item a { display: inline-block; margin-top: 2px; color: var(--forest); font-size: .82rem; font-weight: 750; overflow-wrap: anywhere; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .other-services { display: flex; align-items: center; justify-content: space-between; gap: 25px; margin-top: 19px; padding: 27px 30px; border-radius: var(--radius); background: var(--forest); color: white; }
+    .other-services h3 { margin: 0; font-family: var(--serif); font-size: 1.65rem; font-weight: 500; }
+    .other-services p { max-width: 730px; margin: 6px 0 0; color: rgba(255,255,255,.72); font-size: .82rem; line-height: 1.7; }
+    .other-services .button { flex-shrink: 0; }
+
+    .footer { padding: 55px 0 22px; background: #091f19; color: rgba(255,255,255,.75); }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 30px; }
+    .footer .brand-name { color: white; font-size: 1rem; }
+    .footer .brand-sub { color: rgba(255,255,255,.57); }
+    .footer .brand-mark { width: 40px; height: 40px; border-radius: 12px; }
+    .footer-about { max-width: 290px; margin: 15px 0 0; color: rgba(255,255,255,.55); font-size: .77rem; line-height: 1.75; }
+    .footer h3 { margin: 4px 0 0; color: white; font-size: .82rem; }
+    .footer ul { display: grid; gap: 10px; margin: 15px 0 0; padding: 0; list-style: none; font-size: .75rem; line-height: 1.55; }
+    .footer a { color: rgba(255,255,255,.68); text-decoration: none; overflow-wrap: anywhere; }
+    .footer a:hover { color: var(--gold-light); }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 15px; margin-top: 38px; padding-top: 17px; border-top: 1px solid rgba(255,255,255,.11); color: rgba(255,255,255,.44); font-size: .7rem; }
+    .whatsapp-float { position: fixed; z-index: 40; right: 22px; bottom: 22px; width: 54px; height: 54px; display: grid; place-items: center; border: 2px solid var(--gold-light); border-radius: 50%; background: var(--forest); color: white; box-shadow: 0 8px 25px rgba(0,0,0,.2); text-decoration: none; transition: transform .2s ease, background .2s ease; }
+    .whatsapp-float:hover { transform: translateY(-3px); background: var(--forest-mid); }
+    .whatsapp-float svg { width: 24px; height: 24px; }
+
+    @media (max-width: 960px) {
+      .nav-links { gap: 15px; font-size: .8rem; }
+      .nav-links .optional-link { display: none; }
+      .area-grid { grid-template-columns: repeat(2, 1fr); }
+      .category-grid { gap: 13px; }
+      .category-content { padding: 24px 21px 20px; }
+      .category-action { padding-inline: 21px; }
+      .application-layout { grid-template-columns: .7fr 1.3fr; gap: 30px; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
     }
-
-    body {
-        background-color: var(--ewf-light);
-        min-width: 320px;
+    @media (max-width: 720px) {
+      html { scroll-padding-top: 76px; }
+      .wrap, .hero-inner { width: min(100% - 36px, var(--content)); }
+      .topline { display: none; }
+      .nav-row { min-height: 68px; }
+      .nav-links { display: none; }
+      .menu-toggle { display: grid; place-items: center; }
+      .mobile-links.open { display: block; }
+      .notice { padding: 10px 17px; text-align: left; font-size: .74rem; }
+      .notice strong { display: block; margin: 0 0 2px; }
+      .hero { min-height: 560px; }
+      .hero::before { background-image: linear-gradient(90deg, rgba(8,37,28,.93), rgba(8,37,28,.65)), url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=82"); background-position: center; }
+      .hero-inner { padding: 76px 0 88px; }
+      .hero h1 { font-size: clamp(3.1rem, 13vw, 5rem); }
+      .hero-lede { font-size: .98rem; }
+      .offer-band { margin-top: -24px; }
+      .offer-list { grid-template-columns: 1fr; }
+      .offer-item { min-height: 76px; padding: 15px 20px; }
+      .offer-item + .offer-item { border-top: 1px solid var(--line); border-left: 0; }
+      .offer-number { width: 29px; font-size: 1.45rem; }
+      .section { padding: 72px 0; }
+      .section-head { margin-bottom: 30px; }
+      .area-grid { gap: 12px; }
+      .area-card { min-height: 0; padding: 20px 17px; }
+      .area-card h3 { margin-top: 14px; font-size: .98rem; }
+      .area-card p { font-size: .78rem; }
+      .category-grid { grid-template-columns: 1fr; gap: 15px; }
+      .category-desc { min-height: 0; }
+      .steps { grid-template-columns: repeat(2, 1fr); gap: 11px; }
+      .step { min-height: 168px; padding: 19px 17px; }
+      .step h3 { font-size: .91rem; }
+      .step p { font-size: .77rem; }
+      .application-layout { grid-template-columns: 1fr; gap: 26px; }
+      .application-aside { position: static; }
+      .application-aside h2 { max-width: 560px; }
+      .application-aside p { max-width: 620px; margin-bottom: 0; }
+      .form-reminder { margin-top: 16px; }
+      .info-grid { grid-template-columns: 1fr; }
+      .other-services { align-items: flex-start; flex-direction: column; padding: 24px; }
+      .footer-grid { gap: 28px 18px; }
+      .footer-bottom { flex-direction: column; }
     }
-
-    section[id] {
-        scroll-margin-top: 6rem;
+    @media (max-width: 440px) {
+      .hero-actions { align-items: stretch; flex-direction: column; max-width: 340px; }
+      .button { width: 100%; }
+      .area-grid { grid-template-columns: 1fr; }
+      .area-card { display: grid; grid-template-columns: 44px 1fr; column-gap: 13px; align-items: start; }
+      .area-symbol { grid-row: span 2; }
+      .area-card h3 { margin: 1px 0 0; }
+      .area-card p { grid-column: 2; margin-top: 5px; }
+      .steps { grid-template-columns: 1fr; }
+      .step { min-height: 0; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .info-panel { padding: 23px 20px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid > div:first-child { grid-column: 1 / -1; }
+      .whatsapp-float { right: 14px; bottom: 14px; width: 49px; height: 49px; }
     }
-
-    .hero-overlay {
-        background:
-            linear-gradient(
-                135deg,
-                rgba(6, 59, 42, 0.91),
-                rgba(7, 28, 23, 0.96)
-            ),
-            url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80');
-
-        background-size: cover;
-        background-position: center;
-    }
-
-    .tab-active {
-        border-bottom: 3px solid var(--ewf-gold);
-        color: var(--ewf-brightgold) !important;
-    }
-
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    select:focus-visible,
-    textarea:focus-visible {
-        outline: 3px solid var(--ewf-brightgold);
-        outline-offset: 3px;
-    }
-
-    .ewf-brand-gradient {
-        background: linear-gradient(
-            135deg,
-            var(--ewf-darkgreen),
-            var(--ewf-forest)
-        );
-    }
-
-    .ewf-gold-border {
-        border-color: var(--ewf-gold);
-    }
-
-    .ewf-form-control {
-        background-color: #0D3024;
-        border: 1px solid #286348;
-        color: #FFFFFF;
-        min-height: 44px;
-    }
-
-    .ewf-form-control::placeholder {
-        color: #C4D5CB;
-        opacity: 1;
-    }
-
-    .ewf-form-control:focus {
-        border-color: var(--ewf-brightgold);
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(243, 198, 77, 0.22);
-    }
-
-    .ewf-form-control option {
-        background-color: var(--ewf-darkgreen);
-        color: #FFFFFF;
-    }
-
-    .ewf-gold-button {
-        background-color: var(--ewf-gold);
-        color: var(--ewf-darkgreen);
-        transition:
-            background-color 0.2s ease,
-            transform 0.2s ease,
-            box-shadow 0.2s ease;
-    }
-
-    .ewf-gold-button:hover {
-        background-color: var(--ewf-brightgold);
-        box-shadow: 0 6px 18px rgba(7, 28, 23, 0.15);
-    }
-
-    .ewf-green-button {
-        background-color: var(--ewf-green);
-        color: #FFFFFF;
-        transition:
-            background-color 0.2s ease,
-            transform 0.2s ease;
-    }
-
-    .ewf-green-button:hover {
-        background-color: var(--ewf-darkgreen);
-    }
-
-    .ewf-card {
-        background-color: #FFFFFF;
-        border-color: #DDE9E0;
-        transition:
-            border-color 0.2s ease,
-            box-shadow 0.2s ease,
-            transform 0.2s ease;
-    }
-
-    .ewf-card:hover {
-        border-color: rgba(212, 160, 23, 0.8);
-        transform: translateY(-3px);
-    }
-
-    .ewf-section-label {
-        letter-spacing: 0.16em;
-    }
-
-    .ewf-status-message:empty {
-        display: none;
-    }
-
-    .ewf-brand-mark {
-        background: linear-gradient(
-            145deg,
-            var(--ewf-green),
-            var(--ewf-darkgreen)
-        );
-    }
-
-    @media (max-width: 640px) {
-        .hero-overlay {
-            background-position: center;
-        }
-    }
-
     @media (prefers-reduced-motion: reduce) {
-        html {
-            scroll-behavior: auto;
-        }
-
-        *,
-        *::before,
-        *::after {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-            scroll-behavior: auto !important;
-        }
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     }
-</style>
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-</head><body class="bg-ewf-light text-gray-800 font-sans antialiased"><!-- Accessibility: Skip to Main Content -->
-<a href="#main-content"
-   class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:text-ewf-darkgreen focus:px-4 focus:py-3 focus:rounded-lg focus:shadow-lg">
-    Skip to main content
-</a>
-
-<!-- Floating WhatsApp Action Button -->
-<a href="https://wa.me/2348062331041?text=Hello%20EWF%20AgroTech%20Partnership.%20I%20would%20like%20information%20about%20agricultural%20partnership%20opportunities."
-   target="_blank"
-   rel="noopener noreferrer"
-   class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 bg-ewf-green hover:bg-ewf-darkgreen text-white p-4 rounded-full shadow-2xl z-50 flex items-center justify-center transition-all transform hover:scale-110 border-2 border-ewf-gold"
-   title="Contact EWF AgroTech Partnership on WhatsApp"
-   aria-label="Contact EWF AgroTech Partnership on WhatsApp">
-
-    <i data-lucide="message-circle" class="w-7 h-7" aria-hidden="true"></i>
-</a>
-
-<!-- Top Navigation Information Bar -->
-<div class="bg-ewf-darkgreen text-white text-xs py-2 px-6 hidden md:block border-b border-ewf-forest">
-    <div class="max-w-7xl mx-auto flex justify-between items-center gap-4">
-
-        <div class="flex items-center space-x-6">
-
-            <a href="mailto:eworldfeedersgloballink@gmail.com"
-               class="flex items-center gap-1 hover:text-ewf-brightgold transition">
-
-                <i data-lucide="mail" class="w-3.5 h-3.5 text-ewf-gold" aria-hidden="true"></i>
-                eworldfeedersgloballink@gmail.com
-            </a>
-
-            <a href="https://wa.me/2348062331041?text=Hello%20EWF%20AgroTech%20Partnership.%20I%20have%20an%20agricultural%20partnership%20enquiry."
-               target="_blank"
-               rel="noopener noreferrer"
-               class="flex items-center gap-1 hover:text-ewf-brightgold transition">
-
-                <i data-lucide="phone" class="w-3.5 h-3.5 text-ewf-gold" aria-hidden="true"></i>
-                +234 806 233 1041
-            </a>
-
-            <a href="https://www.facebook.com/eworldfeedersgloballink"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="flex items-center gap-1 hover:text-ewf-brightgold transition">
-
-                <i data-lucide="facebook" class="w-3.5 h-3.5 text-ewf-gold" aria-hidden="true"></i>
-                Facebook Official Page
-            </a>
-
-        </div>
-
-        <div class="flex items-center space-x-4 shrink-0">
-
-            <a href="#portal"
-               onclick="switchTab('login'); return false;"
-               class="hover:text-ewf-brightgold transition">
-                Partner Login
-            </a>
-
-            <span aria-hidden="true">|</span>
-
-            <a href="#portal"
-               onclick="navigateToRegistration(); return false;"
-               class="hover:text-ewf-brightgold transition">
-                Register / Apply Now
-            </a>
-
-        </div>
+  <div class="topline">
+    <div class="wrap topline-inner">
+      <div class="topline-links">
+        <a href="mailto:eworldfeedersgloballink@gmail.com">eworldfeedersgloballink@gmail.com</a>
+        <a href="https://wa.me/2348062331041" target="_blank" rel="noopener noreferrer">WhatsApp: +234 806 233 1041</a>
+        <a href="https://www.facebook.com/eworldfeedersgloballink" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </div>
+      <a class="apply-mini" href="#application">Make an enquiry <span aria-hidden="true">→</span></a>
     </div>
-</div>
+  </div>
 
-<!-- Main Navigation Header -->
-<nav class="sticky top-0 z-40 bg-white shadow-md border-b border-ewf-lightgreen"
-     aria-label="Main navigation">
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <div class="flex justify-between items-center min-h-20 py-3 gap-4">
-
-            <!-- EWF AgroTech Partnership Brand -->
-            <a href="#main-content"
-               class="flex items-center space-x-3 shrink-0"
-               aria-label="EWF AgroTech Partnership homepage">
-
-                <div class="ewf-brand-mark p-2 rounded-lg text-white border border-ewf-gold/50 shadow-sm">
-
-                    <i data-lucide="sprout"
-                       class="w-8 h-8 text-ewf-brightgold"
-                       aria-hidden="true"></i>
-
-                </div>
-
-                <div>
-                    <span class="text-xl sm:text-2xl font-black tracking-tight text-ewf-green block leading-none">
-                        EWF
-                    </span>
-
-                    <span class="text-xs font-bold tracking-widest text-ewf-gold uppercase block mt-1">
-                        AgroTech Partnership
-                    </span>
-
-                    <span class="text-[10px] font-semibold tracking-wide text-gray-500 block mt-1">
-                        eWorldfeeders Global Link
-                    </span>
-                </div>
-
-            </a>
-
-            <!-- Desktop Navigation -->
-            <div class="hidden lg:flex items-center gap-6 text-sm font-semibold text-gray-700">
-
-                <a href="#about" class="hover:text-ewf-green transition">
-                    About
-                </a>
-
-                <a href="#strategies" class="hover:text-ewf-green transition">
-                    Partnership Areas
-                </a>
-
-                <a href="#tiers" class="hover:text-ewf-green transition">
-                    Categories
-                </a>
-
-                <a href="#process" class="hover:text-ewf-green transition">
-                    How It Works
-                </a>
-
-                <a href="https://www.facebook.com/eworldfeedersgloballink"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="hover:text-ewf-green transition flex items-center gap-1">
-
-                    <i data-lucide="facebook"
-                       class="w-4 h-4 text-ewf-green"
-                       aria-hidden="true"></i>
-                    Facebook
-                </a>
-
-                <a href="https://wa.me/2348062331041?text=Hello%20EWF%20AgroTech%20Partnership.%20I%20would%20like%20to%20discuss%20an%20agricultural%20partnership."
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="ewf-green-button px-4 py-2.5 rounded-md transition flex items-center gap-2">
-
-                    <i data-lucide="message-square"
-                       class="w-4 h-4 text-ewf-brightgold"
-                       aria-hidden="true"></i>
-                    WhatsApp Desk
-                </a>
-
-                <a href="#portal"
-                   onclick="accessProtectedFeature('dashboard'); return false;"
-                   class="bg-ewf-darkgreen text-white px-4 py-2.5 rounded-md hover:bg-ewf-forest transition flex items-center gap-2">
-
-                    <i data-lucide="layout-dashboard"
-                       class="w-4 h-4 text-ewf-brightgold"
-                       aria-hidden="true"></i>
-                    Partner Portal
-                </a>
-
-            </div>
-
-            <!-- Mobile Quick Action -->
-            <a href="https://wa.me/2348062331041?text=Hello%20EWF%20AgroTech%20Partnership.%20I%20would%20like%20more%20information."
-               target="_blank"
-               rel="noopener noreferrer"
-               class="lg:hidden ewf-green-button px-3 py-2 rounded-lg flex items-center gap-2 text-sm font-semibold">
-
-                <i data-lucide="message-circle" class="w-4 h-4" aria-hidden="true"></i>
-                Contact
-            </a>
-
-        </div>
+  <header class="site-header">
+    <nav class="wrap nav-row" aria-label="Main navigation">
+      <a class="brand" href="#overview" aria-label="EWF AgroTech Partnership home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M19.5 4.5c-7.8.2-12.2 2.1-13.7 6.2-1 2.7.2 5.7 2.8 6.3 3.5.8 7.2-2.5 10.9-12.5Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 20c2.1-4.7 5.5-7.8 10.2-9.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </span>
+        <span><span class="brand-name">EWF</span><span class="brand-sub">AgroTech Partnership</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#areas">Partnership areas</a>
+        <a href="#categories">Categories</a>
+        <a class="optional-link" href="#process">How it works</a>
+        <a class="nav-cta" href="#application">Enquire now <span aria-hidden="true">↗</span></a>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-links" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+    <div class="wrap mobile-links" id="mobile-links">
+      <a href="#overview">Overview</a>
+      <a href="#areas">Partnership areas</a>
+      <a href="#categories">Partnership categories</a>
+      <a href="#process">How it works</a>
+      <a href="#important">Important information</a>
+      <a href="#application">Apply for partnership</a>
     </div>
-</nav>
+  </header>
 
-<!-- Strategic Alert Bar -->
-<div class="bg-ewf-gold text-ewf-darkgreen font-semibold text-xs sm:text-sm py-3 px-4 text-center border-b border-ewf-brightgold">
+  <div class="notice" role="note">
+    <strong>Partnership notice</strong>
+    All applications are reviewed individually. Submission does not guarantee approval, land allocation, distributorship or commercial terms.
+  </div>
 
-    <span class="font-extrabold uppercase tracking-wider">
-        EWF AgroTech Partnership:
-    </span>
-
-    Applications are reviewed individually. Submission does not confirm approval, land allocation, distributorship, or commercial terms.
-
-</div>
-
-<!-- Hero Section -->
-<main id="main-content">
-
-    <section id="about"
-             class="hero-overlay text-white py-20 sm:py-24 px-4 sm:px-6 lg:px-8">
-
-        <div class="max-w-7xl mx-auto text-center">
-
-            <span class="inline-flex items-center gap-2 bg-ewf-gold/15 text-ewf-brightgold text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider border border-ewf-gold/50">
-
-                <i data-lucide="sprout" class="w-4 h-4" aria-hidden="true"></i>
-                EWF AGROTECH PARTNERSHIP
-
-            </span>
-
-            <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-
-                Grow Agricultural Opportunities with
-
-                <span class="text-ewf-brightgold block mt-2">
-                    EWF AgroTech Partnership
-                </span>
-
-            </h1>
-
-            <p class="mt-6 text-base sm:text-lg lg:text-xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed">
-
-                Connecting agricultural production, technology, and enterprise collaboration for sustainable growth. Explore contract planting, agricultural product distribution, and enterprise partnerships through eWorldfeeders Global Link.
-
-            </p>
-
-            <p class="mt-4 text-sm text-gray-300 max-w-2xl mx-auto">
-                Every proposal is assessed individually. Project availability, responsibilities, and commercial terms must be confirmed before any partnership begins.
-            </p>
-
-            <div class="mt-9 flex justify-center gap-4 flex-wrap">
-
-                <button type="button"
-                        onclick="navigateToRegistration()"
-                        class="ewf-gold-button font-bold px-6 sm:px-8 py-4 rounded-md shadow-lg transition text-base sm:text-lg flex items-center gap-2 justify-center">
-
-                    Explore Partnership Opportunities
-
-                    <i data-lucide="arrow-right" class="w-5 h-5" aria-hidden="true"></i>
-
-                </button>
-
-                <button type="button"
-                        onclick="navigateToRegistration()"
-                        class="ewf-green-button font-semibold px-6 sm:px-8 py-4 rounded-md transition text-base sm:text-lg flex items-center gap-2 border border-ewf-brightgold/50 justify-center">
-
-                    <i data-lucide="clipboard-list"
-                       class="w-5 h-5 text-ewf-brightgold"
-                       aria-hidden="true"></i>
-
-                    Submit an Enquiry
-
-                </button>
-
-            </div>
-
-            <div class="mt-12 flex flex-wrap justify-center gap-3 text-xs sm:text-sm text-gray-200">
-
-                <span class="border border-white/20 bg-white/5 rounded-full px-4 py-2">
-                    Agricultural Production
-                </span>
-
-                <span class="border border-white/20 bg-white/5 rounded-full px-4 py-2">
-                    Regional Distribution
-                </span>
-
-                <span class="border border-white/20 bg-white/5 rounded-full px-4 py-2">
-                    Enterprise Collaboration
-                </span>
-
-            </div>
-
+  <main id="main-content">
+    <section class="hero" id="overview" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">Agricultural opportunities &amp; collaboration</span>
+          <h1 id="hero-title">Growing opportunity, <em>together.</em></h1>
+          <p class="hero-lede">EWF AgroTech Partnership connects agricultural production, product distribution and enterprise collaboration. Bring us your proposal for a considered, project-specific discussion.</p>
+          <div class="hero-actions">
+            <a class="button button-gold" href="#categories">Explore partnership options <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="button button-outline" href="#areas">See where we collaborate</a>
+          </div>
+          <p class="hero-note"><strong>Every proposal is assessed individually.</strong> Specific responsibilities and terms are confirmed in writing.</p>
         </div>
+      </div>
     </section>
 
-    <!-- Strategic Partnership Areas -->
-    <section id="strategies"
-             class="py-16 bg-white border-b border-ewf-lightgreen">
+    <div class="wrap offer-band" aria-label="Partnership focus areas">
+      <div class="offer-list">
+        <div class="offer-item"><span class="offer-number" aria-hidden="true">01</span><div><strong>Agricultural production</strong><span>Explore suitable planting proposals</span></div></div>
+        <div class="offer-item"><span class="offer-number" aria-hidden="true">02</span><div><strong>Product distribution</strong><span>Discuss product and territory proposals</span></div></div>
+        <div class="offer-item"><span class="offer-number" aria-hidden="true">03</span><div><strong>Enterprise collaboration</strong><span>Present projects and institutional ideas</span></div></div>
+      </div>
+    </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div class="text-center max-w-3xl mx-auto mb-12">
-
-                <span class="text-ewf-green font-bold text-xs uppercase ewf-section-label">
-                    Our Agricultural Focus
-                </span>
-
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-ewf-darkgreen mt-3">
-                    Agricultural Partnership Areas
-                </h2>
-
-                <p class="text-gray-600 mt-4 text-sm sm:text-base leading-relaxed">
-                    This portal is dedicated to agricultural enquiries and proposals. Specific projects, resources, and commercial terms are assessed and confirmed individually.
-                </p>
-
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                <!-- Contract Planting -->
-                <article class="p-6 bg-ewf-light border border-ewf-lightgreen rounded-xl transition hover:border-ewf-gold hover:shadow-lg">
-
-                    <div class="w-12 h-12 bg-ewf-green/10 text-ewf-green rounded-xl flex items-center justify-center mb-5">
-
-                        <i data-lucide="sprout" class="w-6 h-6" aria-hidden="true"></i>
-
-                    </div>
-
-                    <h3 class="font-bold text-ewf-dark text-lg mb-3">
-                        Contract Planting
-                    </h3>
-
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                        Submit interest in suitable crop-production or contract-planting arrangements. Land, inputs, responsibilities, and terms depend on the approved project.
-                    </p>
-
-                </article>
-
-                <!-- Product Distribution -->
-                <article class="p-6 bg-ewf-light border border-ewf-lightgreen rounded-xl transition hover:border-ewf-gold hover:shadow-lg">
-
-                    <div class="w-12 h-12 bg-ewf-green/10 text-ewf-green rounded-xl flex items-center justify-center mb-5">
-
-                        <i data-lucide="boxes" class="w-6 h-6" aria-hidden="true"></i>
-
-                    </div>
-
-                    <h3 class="font-bold text-ewf-dark text-lg mb-3">
-                        Product Distribution
-                    </h3>
-
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                        Propose distribution of approved agricultural products within a suitable territory. Product availability, pricing, and commercial terms require written confirmation.
-                    </p>
-
-                </article>
-
-                <!-- Enterprise Collaboration -->
-                <article class="p-6 bg-ewf-light border border-ewf-lightgreen rounded-xl transition hover:border-ewf-gold hover:shadow-lg">
-
-                    <div class="w-12 h-12 bg-ewf-green/10 text-ewf-green rounded-xl flex items-center justify-center mb-5">
-
-                        <i data-lucide="globe-2" class="w-6 h-6" aria-hidden="true"></i>
-
-                    </div>
-
-                    <h3 class="font-bold text-ewf-dark text-lg mb-3">
-                        Enterprise Collaboration
-                    </h3>
-
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                        Discuss production, supply networks, irrigation, processing, logistics, infrastructure, market access, or institutional agricultural projects.
-                    </p>
-
-                </article>
-
-                <!-- Assessment -->
-                <article class="p-6 bg-ewf-light border border-ewf-lightgreen rounded-xl transition hover:border-ewf-gold hover:shadow-lg">
-
-                    <div class="w-12 h-12 bg-ewf-green/10 text-ewf-green rounded-xl flex items-center justify-center mb-5">
-
-                        <i data-lucide="clipboard-check" class="w-6 h-6" aria-hidden="true"></i>
-
-                    </div>
-
-                    <h3 class="font-bold text-ewf-dark text-lg mb-3">
-                        Assessment & Discussion
-                    </h3>
-
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                        EWF reviews proposals based on suitability, location, capacity, available resources, project feasibility, and operational requirements.
-                    </p>
-
-                </article>
-
-            </div>
+    <section class="section section-white" id="areas" aria-labelledby="areas-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">Where we can collaborate</span>
+          <h2 id="areas-title">Agricultural partnership areas</h2>
+          <p class="section-intro">Start with an enquiry or proposal. Project availability, resources, responsibilities and terms are assessed and confirmed individually.</p>
         </div>
+        <div class="area-grid">
+          <article class="area-card"><span class="area-symbol" aria-hidden="true">✳</span><h3>Contract planting</h3><p>Submit interest in approved crop-production arrangements. Land, inputs, duties, timelines and terms depend on the specific project.</p></article>
+          <article class="area-card"><span class="area-symbol" aria-hidden="true">⌂</span><h3>Product distribution</h3><p>Propose distribution of available agricultural products in a suggested territory. Pricing and commercial terms require written confirmation.</p></article>
+          <article class="area-card"><span class="area-symbol" aria-hidden="true">↗</span><h3>Enterprise collaboration</h3><p>Discuss production, supply networks, irrigation, infrastructure, processing, logistics, market access and institutional projects.</p></article>
+          <article class="area-card"><span class="area-symbol" aria-hidden="true">✓</span><h3>Assessment &amp; discussion</h3><p>Proposals are assessed for suitability, location, capacity, resources and project availability before any terms are agreed.</p></article>
+        </div>
+      </div>
     </section>
 
-    <!-- Partnership Categories -->
-    <section id="tiers" class="py-20 bg-ewf-light">
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div class="text-center max-w-3xl mx-auto mb-14">
-
-                <span class="text-ewf-green font-bold text-xs uppercase ewf-section-label">
-                    Find Your Partnership Path
-                </span>
-
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-ewf-darkgreen mt-3">
-                    AgroTech Partnership Categories
-                </h2>
-
-                <p class="text-gray-600 mt-4 leading-relaxed">
-                    Choose the category that best matches your agricultural proposal. An application expresses interest only and is subject to review, availability, and written approval.
-                </p>
-
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-
-                <!-- Category I: Contract Planter -->
-                <article class="ewf-card rounded-xl shadow-md border overflow-hidden flex flex-col">
-
-                    <div class="p-7 sm:p-8 flex-grow">
-
-                        <span class="text-ewf-green font-bold uppercase tracking-wider text-xs bg-ewf-lightgreen inline-flex px-3 py-2 rounded-full">
-                            Category I
-                        </span>
-
-                        <h3 class="text-2xl font-bold text-ewf-dark mt-5">
-                            Contract Planter
-                        </h3>
-
-                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            For applicants interested in approved agricultural production or contract-planting arrangements.
-                        </p>
-
-                        <div class="my-6 border-t border-b border-ewf-lightgreen py-4">
-
-                            <span class="text-xl font-extrabold text-ewf-darkgreen block">
-                                Project-specific
-                            </span>
-
-                            <span class="text-gray-500 text-sm">
-                                Assessment and written terms
-                            </span>
-
-                        </div>
-
-                        <ul class="space-y-4 text-sm text-gray-600">
-
-                            <li class="flex items-start gap-2">
-
-                                <i data-lucide="check-circle-2"
-                                   class="w-5 h-5 text-ewf-green mt-0.5 shrink-0"
-                                   aria-hidden="true"></i>
-
-                                <span>
-                                    Assessment may consider crop type, location, land availability, experience, operational capacity, and resources.
-                                </span>
-
-                            </li>
-
-                            <li class="flex items-start gap-2">
-
-                                <i data-lucide="check-circle-2"
-                                   class="w-5 h-5 text-ewf-green mt-0.5 shrink-0"
-                                   aria-hidden="true"></i>
-
-                                <span>
-                                    Responsibilities, budget, timelines, inputs, and other terms must be discussed and documented.
-                                </span>
-
-                            </li>
-
-                            <li class="flex items-start gap-2">
-
-                                <i data-lucide="check-circle-2"
-                                   class="w-5 h-5 text-ewf-green mt-0.5 shrink-0"
-                                   aria-hidden="true"></i>
-
-                                <span>
-                                    No guaranteed farm access, harvest, produce purchase, or profit.
-                                </span>
-
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="p-6 bg-ewf-lightgreen border-t border-ewf-lightgreen">
-
-                        <button type="button"
-                                onclick="handleTierApplication('Tier I: Contract Planter')"
-                                class="w-full ewf-green-button py-3 rounded-lg font-semibold transition">
-
-                            Apply as Contract Planter
-
-                        </button>
-
-                    </div>
-                </article>
-
-                <!-- Category II: Regional Distributor -->
-                <article class="bg-white rounded-xl shadow-lg border-2 border-ewf-gold overflow-hidden flex flex-col relative">
-
-                    <div class="bg-ewf-gold text-ewf-darkgreen text-xs font-bold text-center py-3 uppercase tracking-widest">
-
-                        Agricultural Distribution
-
-                    </div>
-
-                    <div class="p-7 sm:p-8 flex-grow">
-
-                        <span class="text-ewf-green font-bold uppercase tracking-wider text-xs bg-ewf-lightgreen inline-flex px-3 py-2 rounded-full">
-                            Category II
-                        </span>
-
-                        <h3 class="text-2xl font-bold text-ewf-dark mt-5">
-                            Regional Distributor
-                        </h3>
-
-                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            For individuals or businesses proposing to distribute approved agricultural products within an agreed territory.
-                        </p>
-
-                        <div class="my-6 border-t border-b border-ewf-lightgreen py-4">
-
-                            <span class="text-xl font-extrabold text-ewf-darkgreen block">
-                                Terms confirmed
-                            </span>
-
-                            <span class="text-gray-500 text-sm">
-                                In writing for each product or project
-                            </span>
-
-                        </div>
-
-                        <ul class="space-y-4 text-sm text-gray-600">
-
-                            <li class="flex items-start gap-2">
-
-                                <i data-lucide="check-circle-2"
-                                   class="w-5 h-5 text-ewf-green mt-0.5 shrink-0"
-                                   aria-hidden="true"></i>
-
-                                <span>
-                                    Assessment may consider territory, customer access, market experience, storage, and delivery capacity.
-                                </span>
-
-                            </li>
-
-                            <li class="flex items-start gap-2">
-
-                                <i data-lucide="check-circle-2"
-                                   class="w-5 h-5 text-ewf-green mt-0.5 shrink-0"
-                                   aria-hidden="true"></i>
-
-                                <span>
-                                    Pricing, margins, minimum orders, inventory, payment arrangements, and exclusivity are not assumed.
-                                </span>
-
-                            </li>
-
-                            <li class="flex items-start gap-2">
-
-                                <i data-lucide="check-circle-2"
-                                   class="w-5 h-5 text-ewf-green mt-0.5 shrink-0"
-                                   aria-hidden="true"></i>
-
-                                <span>
-                                    A distribution application does not itself grant territory rights or distributorship approval.
-                                </span>
-
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="p-6 bg-ewf-lightgreen border-t border-ewf-lightgreen">
-
-                        <button type="button"
-                                onclick="handleTierApplication('Tier II: Regional Distributor')"
-                                class="w-full ewf-gold-button py-3 rounded-lg font-bold transition">
-
-                            Apply as Regional Distributor
-
-                        </button>
-
-                    </div>
-                </article>
-
-                <!-- Category III: Enterprise Partner -->
-                <article class="ewf-card rounded-xl shadow-md border overflow-hidden flex flex-col">
-
-                    <div class="p-7 sm:p-8 flex-grow">
-
-                        <span class="text-ewf-green font-bold uppercase tracking-wider text-xs bg-ewf-lightgreen inline-flex px-3 py-2 rounded-full">
-                            Category III
-                        </span>
-
-                        <h3 class="text-2xl font-bold text-ewf-dark mt-5">
-                            Enterprise Partner
-                        </h3>
-
-                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            For organizations, businesses, project sponsors, institutions, and parties proposing larger agricultural collaborations.
-                        </p>
-
-                        <div class="my-6 border-t border-b border-ewf-lightgreen py-4">
-
-                            <span class="text-xl font-extrabold text-ewf-darkgreen block">
-                                Proposal-based
-                            </span>
-
-                            <span class="text-gray-500 text-sm">
-                                Feasibility and suitability review
-                            </span>
-
-                        </div>
-
-                        <ul class="space-y-4 text-sm text-gray-600">
-
-                            <li class="flex items-start gap-2">
-
-                                <i data-lucide="check-circle-2"
-                                   class="w-5 h-5 text-ewf-green mt-0.5 shrink-0"
-                                   aria-hidden="true"></i>
-
-                                <span>
-                                    Potential areas include production, irrigation, infrastructure, processing, logistics, and market access.
-                                </span>
-
-                            </li>
-
-                            <li class="flex items-start gap-2">
-
-                                <i data-lucide="check-circle-2"
-                                   class="w-5 h-5 text-ewf-green mt-0.5 shrink-0"
-                                   aria-hidden="true"></i>
-
-                                <span>
-                                    Each proposal and any proposed capital, equipment, land, or resource contribution requires assessment.
-                                </span>
-
-                            </li>
-
-                            <li class="flex items-start gap-2">
-
-                                <i data-lucide="check-circle-2"
-                                   class="w-5 h-5 text-ewf-green mt-0.5 shrink-0"
-                                   aria-hidden="true"></i>
-
-                                <span>
-                                    An application alone creates no investment, ownership, revenue-sharing, or return entitlement.
-                                </span>
-
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="p-6 bg-ewf-lightgreen border-t border-ewf-lightgreen">
-
-                        <button type="button"
-                                onclick="handleTierApplication('Tier III: Enterprise Partner')"
-                                class="w-full bg-ewf-darkgreen text-white py-3 rounded-lg font-semibold hover:bg-ewf-forest transition">
-
-                            Propose Enterprise Collaboration
-
-                        </button>
-
-                    </div>
-                </article>
-
-            </div>
-
-            <div class="mt-8 bg-white border border-ewf-lightgreen rounded-xl p-5 sm:p-6">
-
-                <div class="flex items-start gap-3">
-
-                    <i data-lucide="info"
-                       class="w-6 h-6 text-ewf-green shrink-0 mt-0.5"
-                       aria-hidden="true"></i>
-
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                        Commercial terms—including wholesale prices, distributor margins, territory, payment arrangements, minimum orders, responsibilities, and incentives—must be confirmed for the relevant product or project before activation. No fixed margin, exclusive territory, or financial return is promised by this page.
-                    </p>
-
-                </div>
-
-            </div>
-
+    <section class="section section-soft" id="categories" aria-labelledby="categories-title">
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="section-kicker">Choose your path</span>
+          <h2 id="categories-title">Find the right partnership category</h2>
+          <p class="section-intro">Select the category that best matches your proposal. Applying expresses interest only; every proposal is subject to review and written confirmation.</p>
         </div>
+        <div class="category-grid">
+          <article class="category-card">
+            <div class="category-content">
+              <span class="category-number">Category I</span>
+              <h3>Contract Planter</h3>
+              <p class="category-desc">For applicants interested in suitable agricultural production or contract-planting arrangements.</p>
+              <div class="category-fit"><strong>Project-specific</strong><span>Assessment, responsibilities and terms</span></div>
+              <ul class="category-points">
+                <li>Assessment may consider crop, location, land access, experience, capacity and resources.</li>
+                <li>Budgets, responsibilities, timelines and obligations must be discussed and documented.</li>
+                <li>No guaranteed farm access, harvest, produce purchase or profit.</li>
+              </ul>
+            </div>
+            <div class="category-action"><button class="button button-green category-button" type="button" data-tier="Tier I: Contract Planter">Apply as Contract Planter <span aria-hidden="true">→</span></button></div>
+          </article>
+          <article class="category-card featured">
+            <div class="category-ribbon">Agricultural distribution</div>
+            <div class="category-content">
+              <span class="category-number">Category II</span>
+              <h3>Regional Distributor</h3>
+              <p class="category-desc">For individuals and businesses proposing to distribute approved agricultural products in an agreed area.</p>
+              <div class="category-fit"><strong>Written terms required</strong><span>Product, territory and commercial conditions</span></div>
+              <ul class="category-points">
+                <li>Assessment may consider territory, customer access, market experience, storage and delivery capacity.</li>
+                <li>Pricing, margins, payment terms, minimum orders and exclusivity are not assumed.</li>
+                <li>An application does not grant distributorship or exclusive territory rights.</li>
+              </ul>
+            </div>
+            <div class="category-action"><button class="button button-green category-button" type="button" data-tier="Tier II: Regional Distributor">Apply as Regional Distributor <span aria-hidden="true">→</span></button></div>
+          </article>
+          <article class="category-card">
+            <div class="category-content">
+              <span class="category-number">Category III</span>
+              <h3>Enterprise Partner</h3>
+              <p class="category-desc">For organizations, businesses, institutional partners and project sponsors proposing larger collaborations.</p>
+              <div class="category-fit"><strong>Proposal-based</strong><span>Assessment and structured discussion</span></div>
+              <ul class="category-points">
+                <li>Potential areas include production, infrastructure, irrigation, processing, logistics and market access.</li>
+                <li>Proposals and any capital or resource contribution require separate assessment.</li>
+                <li>No investment, ownership, revenue share or return arises from an application alone.</li>
+              </ul>
+            </div>
+            <div class="category-action"><button class="button button-light category-button" type="button" data-tier="Tier III: Enterprise Partner">Propose enterprise collaboration <span aria-hidden="true">→</span></button></div>
+          </article>
+        </div>
+        <p class="fine-note">Wholesale prices, distributor margins, territory, payment arrangements, minimum orders, responsibilities and any incentives must be confirmed in writing for the relevant product or project before activation.</p>
+      </div>
     </section>
 
-    <!-- Partnership Process -->
-    <section id="process" class="py-16 bg-white">
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div class="text-center max-w-3xl mx-auto mb-12">
-
-                <span class="text-ewf-green font-bold text-xs uppercase ewf-section-label">
-                    From Enquiry to Collaboration
-                </span>
-
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-ewf-darkgreen mt-3">
-                    How the Partnership Process Works
-                </h2>
-
-                <p class="text-gray-600 mt-4">
-                    These are general stages. The actual process depends on the project, verification requirements, and agreed conditions. No fixed approval timeline is promised.
-                </p>
-
-            </div>
-
-            <ol class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-
-                <li class="p-6 rounded-xl border border-ewf-lightgreen bg-ewf-light">
-
-                    <span class="w-10 h-10 flex items-center justify-center rounded-lg bg-ewf-green text-white font-bold">
-                        01
-                    </span>
-
-                    <h3 class="font-bold text-ewf-darkgreen mt-4">
-                        Select a Category
-                    </h3>
-
-                    <p class="mt-2 text-sm text-gray-600 leading-relaxed">
-                        Choose Contract Planter, Regional Distributor, Enterprise Partner, or another supported category.
-                    </p>
-
-                </li>
-
-                <li class="p-6 rounded-xl border border-ewf-lightgreen bg-ewf-light">
-
-                    <span class="w-10 h-10 flex items-center justify-center rounded-lg bg-ewf-green text-white font-bold">
-                        02
-                    </span>
-
-                    <h3 class="font-bold text-ewf-darkgreen mt-4">
-                        Submit Your Enquiry
-                    </h3>
-
-                    <p class="mt-2 text-sm text-gray-600 leading-relaxed">
-                        Provide accurate contact information and relevant details about your agricultural proposal.
-                    </p>
-
-                </li>
-
-                <li class="p-6 rounded-xl border border-ewf-lightgreen bg-ewf-light">
-
-                    <span class="w-10 h-10 flex items-center justify-center rounded-lg bg-ewf-green text-white font-bold">
-                        03
-                    </span>
-
-                    <h3 class="font-bold text-ewf-darkgreen mt-4">
-                        Application Review
-                    </h3>
-
-                    <p class="mt-2 text-sm text-gray-600 leading-relaxed">
-                        EWF reviews suitability, location, experience, capacity, available resources, and project alignment.
-                    </p>
-
-                </li>
-
-                <li class="p-6 rounded-xl border border-ewf-lightgreen bg-ewf-light">
-
-                    <span class="w-10 h-10 flex items-center justify-center rounded-lg bg-ewf-green text-white font-bold">
-                        04
-                    </span>
-
-                    <h3 class="font-bold text-ewf-darkgreen mt-4">
-                        Verification & Discussion
-                    </h3>
-
-                    <p class="mt-2 text-sm text-gray-600 leading-relaxed">
-                        Additional information may be requested, and the proposed arrangement can be discussed.
-                    </p>
-
-                </li>
-
-                <li class="p-6 rounded-xl border border-ewf-lightgreen bg-ewf-light">
-
-                    <span class="w-10 h-10 flex items-center justify-center rounded-lg bg-ewf-green text-white font-bold">
-                        05
-                    </span>
-
-                    <h3 class="font-bold text-ewf-darkgreen mt-4">
-                        Written Terms & Approval
-                    </h3>
-
-                    <p class="mt-2 text-sm text-gray-600 leading-relaxed">
-                        If suitable, the parties document responsibilities, costs, timelines, commercial terms, and conditions.
-                    </p>
-
-                </li>
-
-                <li class="p-6 rounded-xl border border-ewf-lightgreen bg-ewf-light">
-
-                    <span class="w-10 h-10 flex items-center justify-center rounded-lg bg-ewf-green text-white font-bold">
-                        06
-                    </span>
-
-                    <h3 class="font-bold text-ewf-darkgreen mt-4">
-                        Project Activation
-                    </h3>
-
-                    <p class="mt-2 text-sm text-gray-600 leading-relaxed">
-                        Work begins only after required approvals, documentation, and applicable arrangements are complete.
-                    </p>
-
-                </li>
-
-            </ol>
-
+    <section class="section section-white" id="process" aria-labelledby="process-title">
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="section-kicker">From enquiry to agreement</span>
+          <h2 id="process-title">A clear process, step by step</h2>
+          <p class="section-intro">These are general stages. Requirements and timelines may vary by project, and acceptance is not guaranteed.</p>
         </div>
+        <ol class="steps">
+          <li class="step"><h3>Select a category</h3><p>Choose Contract Planter, Regional Distributor, Enterprise Partner or discuss a relevant proposal.</p></li>
+          <li class="step"><h3>Submit your enquiry</h3><p>Provide accurate contact details and information relevant to your agricultural proposal.</p></li>
+          <li class="step"><h3>Application review</h3><p>The proposal may be assessed for suitability, location, experience, resources and project availability.</p></li>
+          <li class="step"><h3>Verification &amp; discussion</h3><p>Additional information may be requested and the proposed arrangement discussed.</p></li>
+          <li class="step"><h3>Agree written terms</h3><p>If suitable, clarify responsibilities, costs, commercial terms, timelines and conditions in writing.</p></li>
+          <li class="step"><h3>Activate the arrangement</h3><p>Work begins only after required approvals, documentation and applicable requirements are complete.</p></li>
+        </ol>
+      </div>
     </section>
 
-    <!-- Agricultural Partnership Application Portal -->
-    <section id="portal" class="py-16 bg-ewf-dark text-white">
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div class="text-center mb-10">
-
-                <span class="text-ewf-brightgold text-xs font-bold uppercase ewf-section-label">
-                    EWF AGROTECH PARTNERSHIP
-                </span>
-
-                <h2 class="text-3xl sm:text-4xl font-extrabold mt-3">
-                    Apply for an AgroTech Partnership
-                </h2>
-
-                <p class="text-gray-300 text-sm mt-4 max-w-2xl mx-auto leading-relaxed">
-                    Submit your agricultural proposal for assessment. An application is an expression of interest only and does not confirm approval or create a partnership agreement.
-                </p>
-
-            </div>
-
-            <!-- Portal Navigation Tabs -->
-            <div class="flex flex-wrap justify-center border-b border-ewf-forest mb-8 gap-x-8 gap-y-3 text-sm font-semibold"
-                 role="tablist"
-                 aria-label="Partnership portal sections">
-
-                <button id="tab-apply"
-                        type="button"
-                        role="tab"
-                        aria-controls="view-apply"
-                        aria-selected="true"
-                        tabindex="0"
-                        onclick="switchTab('apply')"
-                        class="pb-3 text-gray-400 hover:text-white tab-active">
-
-                    Partnership Enquiry
-
-                </button>
-
-                <button id="tab-login"
-                        type="button"
-                        role="tab"
-                        aria-controls="view-login"
-                        aria-selected="false"
-                        tabindex="-1"
-                        onclick="switchTab('login')"
-                        class="pb-3 text-gray-400 hover:text-white">
-
-                    Partner Sign-In
-
-                </button>
-
-                <button id="tab-dashboard"
-                        type="button"
-                        role="tab"
-                        aria-controls="view-dashboard"
-                        aria-selected="false"
-                        tabindex="-1"
-                        onclick="accessProtectedFeature('dashboard')"
-                        class="pb-3 text-gray-400 hover:text-white">
-
-                    Partner Console
-
-                </button>
-
-            </div>
-
-            <!-- TAB 1: Partnership Registration -->
-            <div id="view-apply"
-                 role="tabpanel"
-                 aria-labelledby="tab-apply"
-                 class="bg-ewf-darkgreen rounded-xl p-6 sm:p-8 border border-ewf-forest max-w-3xl mx-auto shadow-2xl">
-
-                <h3 class="text-xl font-bold text-white mb-2">
-                    Agricultural Partnership Enquiry
-                </h3>
-
-                <p class="text-sm text-gray-300 mb-6 leading-relaxed">
-                    Tell us about your proposal. Only provide information relevant to your enquiry. Do not submit passwords, bank details, or unnecessary sensitive identity documents.
-                </p>
-
-                <form id="ewfPartnerForm"
-                      onsubmit="handleApplySubmit(event)"
-                      class="space-y-5">
-
-                    <!-- Applicant Details -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-
-                        <div>
-
-                            <label for="partner_name"
-                                   class="block text-xs uppercase font-bold text-gray-300 mb-2">
-                                Full Name <span class="text-ewf-brightgold">*</span>
-                            </label>
-
-                            <input type="text"
-                                   id="partner_name"
-                                   name="name"
-                                   autocomplete="name"
-                                   maxlength="120"
-                                   required
-                                   class="ewf-form-control w-full rounded-lg px-3 py-3 text-sm"
-                                   placeholder="e.g. John Doe">
-
-                        </div>
-
-                        <div>
-
-                            <label for="partner_email"
-                                   class="block text-xs uppercase font-bold text-gray-300 mb-2">
-                                Email Address <span class="text-ewf-brightgold">*</span>
-                            </label>
-
-                            <input type="email"
-                                   id="partner_email"
-                                   name="email"
-                                   autocomplete="email"
-                                   maxlength="254"
-                                   required
-                                   class="ewf-form-control w-full rounded-lg px-3 py-3 text-sm"
-                                   placeholder="you@example.com">
-
-                        </div>
-
-                    </div>
-
-                    <!-- Contact and Organization -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-
-                        <div>
-
-                            <label for="partner_phone"
-                                   class="block text-xs uppercase font-bold text-gray-300 mb-2">
-                                Phone / Mobile <span class="text-ewf-brightgold">*</span>
-                            </label>
-
-                            <input type="tel"
-                                   id="partner_phone"
-                                   name="phone"
-                                   autocomplete="tel"
-                                   maxlength="40"
-                                   required
-                                   class="ewf-form-control w-full rounded-lg px-3 py-3 text-sm"
-                                   placeholder="+234 800 000 0000">
-
-                        </div>
-
-                        <div>
-
-                            <label for="partner_org"
-                                   class="block text-xs uppercase font-bold text-gray-300 mb-2">
-                                Organization / Enterprise
-                            </label>
-
-                            <input type="text"
-                                   id="partner_org"
-                                   name="organization"
-                                   autocomplete="organization"
-                                   maxlength="160"
-                                   class="ewf-form-control w-full rounded-lg px-3 py-3 text-sm"
-                                   placeholder="Your organization name">
-
-                        </div>
-
-                    </div>
-
-                    <!-- Category and Capacity -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-
-                        <div>
-
-                            <label for="partner_tier"
-                                   class="block text-xs uppercase font-bold text-gray-300 mb-2">
-                                Preferred Partnership Category <span class="text-ewf-brightgold">*</span>
-                            </label>
-
-                            <select id="partner_tier"
-                                    name="tier"
-                                    required
-                                    class="ewf-form-control w-full rounded-lg px-3 py-3 text-sm">
-
-                                <option value="Tier I: Contract Planter">
-                                    Tier I: Contract Planter
-                                </option>
-
-                                <option value="Tier II: Regional Distributor">
-                                    Tier II: Regional Distributor
-                                </option>
-
-                                <option value="Tier III: Enterprise Partner">
-                                    Tier III: Enterprise Partner
-                                </option>
-
-                            </select>
-
-                        </div>
-
-                        <div>
-
-                            <label for="partner_capacity"
-                                   class="block text-xs uppercase font-bold text-gray-300 mb-2">
-                                Capacity / Land / Market
-                            </label>
-
-                            <input type="text"
-                                   id="partner_capacity"
-                                   name="capacity"
-                                   maxlength="250"
-                                   class="ewf-form-control w-full rounded-lg px-3 py-3 text-sm"
-                                   placeholder="Relevant land, equipment, or market capacity">
-
-                        </div>
-
-                    </div>
-
-                    <!-- Proposal -->
-                    <div>
-
-                        <label for="partner_message"
-                               class="block text-xs uppercase font-bold text-gray-300 mb-2">
-                            Project Summary / Requirements
-                        </label>
-
-                        <textarea id="partner_message"
-                                  name="message"
-                                  rows="5"
-                                  maxlength="5000"
-                                  class="ewf-form-control w-full rounded-lg px-3 py-3 text-sm"
-                                  placeholder="Describe your location, proposed agricultural activity or product, relevant experience or resources, and the collaboration you have in mind."></textarea>
-
-                    </div>
-
-                    <!-- Consent and Acknowledgement -->
-                    <div class="space-y-4 rounded-lg border border-ewf-forest bg-ewf-dark p-4 sm:p-5 text-sm text-gray-200">
-
-                        <label for="application_consent"
-                               class="flex items-start gap-3 cursor-pointer">
-
-                            <input id="application_consent"
-                                   name="application_consent"
-                                   type="checkbox"
-                                   required
-                                   class="mt-1 h-4 w-4 accent-yellow-400 shrink-0">
-
-                            <span>
-                                I consent to EWF using the details I submit to review this agricultural enquiry and contact me about it. I will not include unnecessary sensitive personal information.
-                            </span>
-
-                        </label>
-
-                        <label for="application_review_ack"
-                               class="flex items-start gap-3 cursor-pointer">
-
-                            <input id="application_review_ack"
-                                   name="application_review_ack"
-                                   type="checkbox"
-                                   required
-                                   class="mt-1 h-4 w-4 accent-yellow-400 shrink-0">
-
-                            <span>
-                                I understand that this is an expression of interest only. Acceptance, farm access, products, distribution rights, income, and investment returns are not guaranteed.
-                            </span>
-
-                        </label>
-
-                    </div>
-
-                    <!-- Submission Feedback -->
-                    <p id="application-feedback"
-                       class="ewf-status-message hidden text-sm rounded-lg p-4"
-                       role="status"
-                       aria-live="polite"></p>
-
-                    <!-- Submit -->
-                    <button id="application-submit"
-                            type="submit"
-                            class="w-full ewf-gold-button font-bold py-4 rounded-lg transition flex items-center justify-center gap-2 text-base shadow-lg">
-
-                        <i data-lucide="send" class="w-5 h-5" aria-hidden="true"></i>
-
-                        Submit Partnership Enquiry
-
-                    </button>
-
-                    <p class="text-xs text-gray-400 text-center leading-relaxed">
-                        Submitting this form does not create an agreement. Please ensure that your contact details are accurate.
-                    </p>
-
-                </form>
-
-                <!-- Direct Contact -->
-                <div class="mt-7 pt-6 border-t border-ewf-forest text-center">
-
-                    <p class="text-sm text-gray-300">
-                        Prefer to contact our team directly?
-                    </p>
-
-                    <div class="mt-4 flex flex-wrap justify-center gap-3">
-
-                        <a href="https://wa.me/2348062331041?text=Hello%20EWF%20AgroTech%20Partnership.%20I%20would%20like%20to%20discuss%20an%20agricultural%20partnership."
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="inline-flex items-center gap-2 bg-ewf-green hover:bg-ewf-forest text-white font-semibold text-sm px-5 py-3 rounded-md transition">
-
-                            <i data-lucide="message-circle"
-                               class="w-4 h-4 text-ewf-brightgold"
-                               aria-hidden="true"></i>
-
-                            WhatsApp EWF
-
-                        </a>
-
-                        <a href="https://www.facebook.com/eworldfeedersgloballink"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-5 py-3 rounded-md transition border border-white/10">
-
-                            <i data-lucide="facebook"
-                               class="w-4 h-4 text-ewf-brightgold"
-                               aria-hidden="true"></i>
-
-                            Facebook Page
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- TAB 2: Partner Sign-In -->
-            <div id="view-login"
-                 role="tabpanel"
-                 aria-labelledby="tab-login"
-                 class="hidden bg-ewf-darkgreen rounded-xl p-6 sm:p-8 border border-ewf-forest max-w-xl mx-auto shadow-2xl">
-
-                <div class="w-14 h-14 rounded-xl bg-ewf-gold/10 border border-ewf-gold/30 flex items-center justify-center mx-auto">
-
-                    <i data-lucide="shield-check"
-                       class="w-7 h-7 text-ewf-brightgold"
-                       aria-hidden="true"></i>
-
-                </div>
-
-                <h3 class="text-xl font-bold text-white mt-5 mb-4 text-center">
-                    Partner Portal Sign-In
-                </h3>
-
-                <div class="rounded-lg border border-ewf-gold/70 bg-ewf-dark p-5 text-sm text-gray-200"
-                     role="status">
-
-                    <strong class="text-ewf-brightgold">
-                        Secure partner sign-in is not yet connected.
-                    </strong>
-
-                    <p class="mt-3 leading-relaxed">
-                        This standalone webpage does not currently verify partner credentials or connect to a live account service. Do not enter or send a password here.
-                    </p>
-
-                    <p class="mt-3 leading-relaxed">
-                        Submitting an agricultural enquiry does not automatically create a partner account or grant portal access.
-                    </p>
-
-                    <a href="mailto:eworldfeedersgloballink@gmail.com?subject=EWF%20AgroTech%20Partnership%20Enquiry"
-                       class="mt-5 inline-flex items-center gap-2 text-ewf-brightgold hover:underline">
-
-                        <i data-lucide="mail" class="w-4 h-4" aria-hidden="true"></i>
-
-                        Contact EWF about your enquiry
-
-                    </a>
-
-                </div>
-
-                <div class="mt-5 text-center">
-
-                    <button type="button"
-                            onclick="navigateToRegistration()"
-                            class="text-sm text-ewf-brightgold hover:underline">
-
-                        Submit a New Partnership Enquiry
-
-                    </button>
-
-                </div>
-
-            </div>
-
-            <!-- TAB 3: Partner Console -->
-            <div id="view-dashboard"
-                 role="tabpanel"
-                 aria-labelledby="tab-dashboard"
-                 class="hidden max-w-3xl mx-auto rounded-xl border border-ewf-forest bg-ewf-darkgreen p-6 sm:p-8 shadow-2xl"
-                 role="status">
-
-                <div class="w-14 h-14 rounded-xl bg-ewf-gold/10 border border-ewf-gold/30 flex items-center justify-center">
-
-                    <i data-lucide="layout-dashboard"
-                       class="w-7 h-7 text-ewf-brightgold"
-                       aria-hidden="true"></i>
-
-                </div>
-
-                <h3 class="text-xl font-bold text-white mt-5">
-                    Partner Console
-                </h3>
-
-                <p class="mt-3 text-sm text-gray-300 leading-relaxed">
-                    A secure account service and live partner database are not connected to this standalone page. Account status, farm allocations, inventory, sales, earnings, contracts, and project records cannot be verified here.
-                </p>
-
-                <p class="mt-3 text-sm text-gray-300 leading-relaxed">
-                    Contact EWF using the official channels for assistance. Do not treat this page as proof of application approval, account status, or commercial rights.
-                </p>
-
-                <div class="mt-6 flex flex-wrap gap-3">
-
-                    <a href="mailto:eworldfeedersgloballink@gmail.com?subject=EWF%20AgroTech%20Partnership%20Enquiry"
-                       class="rounded-md ewf-gold-button px-5 py-3 font-semibold">
-
-                        Email EWF
-
-                    </a>
-
-                    <a href="https://wa.me/2348062331041?text=Hello%20EWF%20AgroTech%20Partnership.%20I%20would%20like%20assistance%20with%20an%20agricultural%20partnership%20enquiry."
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="rounded-md ewf-green-button px-5 py-3 font-semibold">
-
-                        WhatsApp EWF
-
-                    </a>
-
-                </div>
-
-            </div>
-
+    <section class="section section-dark" id="application" aria-labelledby="application-title">
+      <div class="wrap application-layout">
+        <div class="application-aside">
+          <span class="section-kicker">Start a conversation</span>
+          <h2 id="application-title">Tell us about your proposal.</h2>
+          <p>Complete the enquiry form with accurate information. Your submission is an expression of interest only; it does not confirm approval or create an agreement.</p>
+          <div class="form-reminder"><strong>A little preparation helps.</strong><br>Share the category, location or territory, capacity and collaboration you have in mind. Please do not include passwords, bank details or unnecessary sensitive identity documents.</div>
         </div>
+        <div class="form-card">
+          <h3>Agricultural partnership enquiry</h3>
+          <p class="form-caption">Fields marked with <span class="required">*</span> are required.</p>
+          <form id="ewfPartnerForm" action="https://formspree.io/f/maqrqdra" method="POST">
+            <input type="hidden" name="_subject" value="New EWF AgroTech Partnership Enquiry">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">
+            <div class="form-grid">
+              <div class="field"><label for="partner_name">Full name <span class="required">*</span></label><input type="text" id="partner_name" name="name" autocomplete="name" maxlength="120" required placeholder="Enter your full name"></div>
+              <div class="field"><label for="partner_email">Email address <span class="required">*</span></label><input type="email" id="partner_email" name="email" autocomplete="email" maxlength="160" required placeholder="you@example.com"></div>
+              <div class="field"><label for="partner_phone">Phone / WhatsApp <span class="required">*</span></label><input type="tel" id="partner_phone" name="phone" autocomplete="tel" maxlength="40" required placeholder="+234 800 000 0000"></div>
+              <div class="field"><label for="partner_org">Organization / business</label><input type="text" id="partner_org" name="organization" autocomplete="organization" maxlength="160" placeholder="Optional"></div>
+              <div class="field"><label for="partner_tier">Partnership category <span class="required">*</span></label><select id="partner_tier" name="tier" required><option value="" disabled selected>Select a category</option><option value="Tier I: Contract Planter">Category I: Contract Planter</option><option value="Tier II: Regional Distributor">Category II: Regional Distributor</option><option value="Tier III: Enterprise Partner">Category III: Enterprise Partner</option></select></div>
+              <div class="field"><label for="partner_capacity">Capacity / land area <span class="required">*</span></label><input type="text" id="partner_capacity" name="capacity" maxlength="300" required placeholder="Land, equipment, market or operating capacity"></div>
+              <div class="field full"><label for="partner_location">Location / proposed territory</label><input type="text" id="partner_location" name="location" maxlength="200" placeholder="Town, state or proposed distribution territory (optional)"></div>
+              <div class="field full"><label for="partner_message">Project summary / requirements</label><textarea id="partner_message" name="message" rows="5" maxlength="3000" placeholder="Describe your agricultural activity or product, relevant experience or resources, and the collaboration you have in mind."></textarea></div>
+            </div>
+            <div class="consents">
+              <label class="consent-row"><input id="application_consent" name="application_consent" type="checkbox" value="Yes" required><span>I consent to the information submitted being used to review this enquiry and contact me about it. I will not include unnecessary sensitive personal information.</span></label>
+              <label class="consent-row"><input id="application_review_ack" name="application_review_ack" type="checkbox" value="Acknowledged" required><span>I understand this is an expression of interest only. It does not guarantee acceptance, land, products, distribution rights, income or investment returns.</span></label>
+            </div>
+            <div id="application-feedback" class="form-feedback" role="status" aria-live="polite" hidden></div>
+            <button class="button button-gold submit-button" id="application-submit" type="submit">Submit partnership enquiry <span aria-hidden="true">→</span></button>
+            <p class="form-footnote">Please submit one enquiry unless your proposal changes materially.</p>
+          </form>
+          <div class="direct-contact">
+            <p>Prefer to contact the team directly?</p>
+            <div class="direct-contact-links">
+              <a href="mailto:eworldfeedersgloballink@gmail.com?subject=AgroTech%20Partnership%20Enquiry">Send an email</a>
+              <a href="https://wa.me/2348062331041?text=Hello%2C%20I%20have%20an%20enquiry%20about%20EWF%20AgroTech%20Partnership." target="_blank" rel="noopener noreferrer">WhatsApp desk</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Partnership Terms, Privacy and Main Website -->
-    <section id="before-you-apply" class="py-16 bg-ewf-lightgreen">
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8">
-
-            <!-- Important Partnership Information -->
-            <article class="rounded-xl bg-white p-6 sm:p-8 shadow-sm border border-ewf-green/20">
-
-                <div class="w-12 h-12 bg-ewf-green/10 text-ewf-green rounded-xl flex items-center justify-center">
-
-                    <i data-lucide="file-check-2"
-                       class="w-6 h-6"
-                       aria-hidden="true"></i>
-
-                </div>
-
-                <h2 class="text-2xl font-extrabold text-ewf-darkgreen mt-5">
-                    Important Partnership Information
-                </h2>
-
-                <ul class="mt-5 space-y-4 text-sm text-gray-700 list-disc pl-5 leading-relaxed">
-
-                    <li>
-                        All applications are subject to review and approval. An application alone creates no partnership, agency, employment, distributorship, investment, or ownership relationship.
-                    </li>
-
-                    <li>
-                        No applicant is automatically entitled to farm allocation, a distribution territory, commission, salary, profit share, or investment return.
-                    </li>
-
-                    <li>
-                        Payments, margins, fees, revenue sharing, compensation, responsibilities, deliverables, timelines, and risks must be expressly agreed in writing by authorized representatives before work begins.
-                    </li>
-
-                    <li>
-                        Availability and terms may vary by location, product, season, budget, and operational capacity. Agricultural outcomes, yields, sales, profits, and returns are not guaranteed.
-                    </li>
-
-                    <li>
-                        Applicants must provide accurate information and use EWF's name, logo, and materials only with appropriate authorization.
-                    </li>
-
-                </ul>
-
-                <p class="mt-5 text-xs text-gray-600 leading-relaxed">
-                    Website content is general information. Specific rights and obligations are determined by the applicable agreement. Have final legal terms reviewed by a qualified legal professional familiar with the relevant jurisdiction.
-                </p>
-
-            </article>
-
-            <!-- Privacy and Contact -->
-            <article class="rounded-xl bg-white p-6 sm:p-8 shadow-sm border border-ewf-green/20">
-
-                <div class="w-12 h-12 bg-ewf-green/10 text-ewf-green rounded-xl flex items-center justify-center">
-
-                    <i data-lucide="shield-check"
-                       class="w-6 h-6"
-                       aria-hidden="true"></i>
-
-                </div>
-
-                <h2 class="text-2xl font-extrabold text-ewf-darkgreen mt-5">
-                    Privacy and Official Contact
-                </h2>
-
-                <p class="mt-4 text-sm text-gray-700 leading-relaxed">
-                    Information submitted through the enquiry form is intended for assessment and follow-up about your proposal. Do not submit passwords, banking information, or unnecessary sensitive identity information. Contact EWF to ask about the handling of your application information.
-                </p>
-
-                <div class="mt-6 space-y-5">
-
-                    <div class="flex items-start gap-3">
-
-                        <i data-lucide="mail"
-                           class="w-5 h-5 text-ewf-green mt-0.5 shrink-0"
-                           aria-hidden="true"></i>
-
-                        <div>
-
-                            <strong class="block text-sm text-ewf-darkgreen">
-                                Official Email
-                            </strong>
-
-                            <a class="text-sm text-ewf-green underline hover:text-ewf-darkgreen break-all"
-                               href="mailto:eworldfeedersgloballink@gmail.com">
-
-                                eworldfeedersgloballink@gmail.com
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <div class="flex items-start gap-3">
-
-                        <i data-lucide="message-circle"
-                           class="w-5 h-5 text-ewf-green mt-0.5 shrink-0"
-                           aria-hidden="true"></i>
-
-                        <div>
-
-                            <strong class="block text-sm text-ewf-darkgreen">
-                                Official WhatsApp
-                            </strong>
-
-                            <a class="text-sm text-ewf-green underline hover:text-ewf-darkgreen"
-                               href="https://wa.me/2348062331041?text=Hello%20EWF%20AgroTech%20Partnership.%20I%20would%20like%20information%20about%20agricultural%20partnership%20opportunities."
-                               target="_blank"
-                               rel="noopener noreferrer">
-
-                                +234 806 233 1041
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <div class="flex items-start gap-3">
-
-                        <i data-lucide="facebook"
-                           class="w-5 h-5 text-ewf-green mt-0.5 shrink-0"
-                           aria-hidden="true"></i>
-
-                        <div>
-
-                            <strong class="block text-sm text-ewf-darkgreen">
-                                Official Facebook Page
-                            </strong>
-
-                            <a class="text-sm text-ewf-green underline hover:text-ewf-darkgreen"
-                               href="https://www.facebook.com/eworldfeedersgloballink"
-                               target="_blank"
-                               rel="noopener noreferrer">
-
-                                EWorldfeeders Global Link
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-            <!-- Main EWF Website Cross-Link -->
-            <div class="lg:col-span-2 rounded-xl bg-ewf-darkgreen p-6 sm:p-8 text-white flex flex-col md:flex-row md:items-center md:justify-between gap-6 border border-ewf-gold/40 shadow-sm">
-
-                <div class="max-w-3xl">
-
-                    <span class="text-ewf-brightgold text-xs font-bold uppercase ewf-section-label">
-                        Explore the Wider EWF Network
-                    </span>
-
-                    <h2 class="text-xl sm:text-2xl font-bold text-white mt-3">
-                        Looking for Opportunities Beyond Agriculture?
-                    </h2>
-
-                    <p class="mt-3 text-sm text-gray-200 leading-relaxed">
-                        This portal is dedicated to agricultural partnerships. Visit the main eWorldfeeders Global Link website for general partnerships and collaboration, advertising and marketing, technology solutions, learning opportunities, clean energy, and other innovative services.
-                    </p>
-
-                </div>
-
-                <a href="https://eworldfeedersgloballink.netlify.app"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="inline-flex shrink-0 items-center justify-center gap-2 rounded-md ewf-gold-button px-6 py-3.5 font-bold">
-
-                    Visit Main EWF Website
-
-                    <i data-lucide="external-link" class="h-4 w-4" aria-hidden="true"></i>
-
-                </a>
-
-            </div>
-
-        </div>
-    </section>
-
-</main>
-
-<!-- Footer -->
-<footer class="bg-ewf-dark text-gray-300 py-12 border-t border-ewf-green/40">
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-9">
-
-        <!-- Brand -->
-        <div>
-
-            <span class="text-xl font-black text-white block">
-                EWF AGROTECH PARTNERSHIP
-            </span>
-
-            <span class="text-xs text-ewf-brightgold block mt-2">
-                An agricultural partnership initiative of eWorldfeeders Global Link
-            </span>
-
-            <p class="mt-4 text-xs text-ewf-brightgold font-semibold">
-                Living for Humanity Is Our Number One.
-            </p>
-
-            <p class="mt-3 text-xs text-gray-400 leading-relaxed">
-                Connecting agricultural opportunities, technology, and partnerships for sustainable growth. Project availability and terms are confirmed individually.
-            </p>
-
-            <div class="flex items-center space-x-4 mt-5">
-
-                <a href="https://www.facebook.com/eworldfeedersgloballink"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="EWF Official Facebook page"
-                   class="text-gray-400 hover:text-ewf-brightgold transition">
-
-                    <i data-lucide="facebook" class="w-5 h-5" aria-hidden="true"></i>
-
-                </a>
-
-                <a href="https://wa.me/2348062331041?text=Hello%20EWF%20AgroTech%20Partnership.%20I%20would%20like%20information%20about%20agricultural%20partnership%20opportunities."
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Contact EWF AgroTech Partnership on WhatsApp"
-                   class="text-gray-400 hover:text-ewf-brightgold transition">
-
-                    <i data-lucide="message-circle" class="w-5 h-5" aria-hidden="true"></i>
-
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- Quick Navigation -->
-        <div>
-
-            <h2 class="text-white font-bold mb-4">
-                Quick Navigation
-            </h2>
-
-            <ul class="space-y-3 text-xs">
-
-                <li>
-                    <a href="#about" class="hover:text-ewf-brightgold hover:underline">
-                        About the Portal
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#strategies" class="hover:text-ewf-brightgold hover:underline">
-                        Partnership Areas
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#tiers" class="hover:text-ewf-brightgold hover:underline">
-                        Partnership Categories
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#process" class="hover:text-ewf-brightgold hover:underline">
-                        How the Process Works
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#before-you-apply" class="hover:text-ewf-brightgold hover:underline">
-                        Important Information
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#portal"
-                       onclick="navigateToRegistration(); return false;"
-                       class="hover:text-ewf-brightgold hover:underline">
-
-                        Apply for Partnership
-
-                    </a>
-                </li>
-
+    <section class="section section-soft" id="important" aria-labelledby="important-title">
+      <div class="wrap">
+        <div class="info-grid">
+          <article class="info-panel">
+            <span class="section-kicker">Please read</span>
+            <h3 id="important-title">Important partnership information</h3>
+            <ul class="info-list">
+              <li>All applications are subject to review and approval. An application alone creates no partnership, agency, employment, distributorship, investment or ownership relationship.</li>
+              <li>No applicant is automatically entitled to farm allocation, a distribution territory, commission, salary, profit share or investment return.</li>
+              <li>Payments, margins, fees, revenue shares, responsibilities, deliverables, timing and risks must be expressly agreed in writing by authorized representatives before work begins.</li>
+              <li>Availability and terms may vary by location, product, season, budget and operational capacity. No yield, sales, profit or return is guaranteed.</li>
+              <li>Provide accurate information and use EWF's name, logo or materials only with appropriate authorization.</li>
             </ul>
-
+            <p class="legal-note">Website content is general information. Specific rights and obligations are determined by the applicable written agreement. Have final legal terms reviewed by a qualified legal professional familiar with the relevant jurisdiction.</p>
+          </article>
+          <aside class="info-panel" aria-labelledby="contact-title">
+            <span class="section-kicker">Get in touch</span>
+            <h3 id="contact-title">Contact the partnership desk</h3>
+            <p class="contact-intro">Contact the official team for enquiries about application requirements, project suitability or your submitted proposal.</p>
+            <div class="contact-list">
+              <div class="contact-item"><span class="contact-icon" aria-hidden="true">@</span><div><span class="contact-label">Email</span><a href="mailto:eworldfeedersgloballink@gmail.com">eworldfeedersgloballink@gmail.com</a></div></div>
+              <div class="contact-item"><span class="contact-icon" aria-hidden="true">↗</span><div><span class="contact-label">WhatsApp</span><a href="https://wa.me/2348062331041" target="_blank" rel="noopener noreferrer">+234 806 233 1041</a></div></div>
+              <div class="contact-item"><span class="contact-icon" aria-hidden="true">f</span><div><span class="contact-label">Facebook</span><a href="https://www.facebook.com/eworldfeedersgloballink" target="_blank" rel="noopener noreferrer">Official Facebook Page</a></div></div>
+            </div>
+          </aside>
         </div>
+        <div class="other-services">
+          <div>
+            <span class="section-kicker">Beyond agriculture</span>
+            <h3>Explore other EWF services</h3>
+            <p>This portal focuses on agricultural partnerships. Visit the main website to explore wider business collaboration, technology solutions, learning opportunities, clean energy and other initiatives.</p>
+          </div>
+          <a class="button button-gold" href="https://eworldfeedersgloballink.netlify.app" target="_blank" rel="noopener noreferrer">Visit main website <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        <!-- Official Contact -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
         <div>
-
-            <h2 class="text-white font-bold mb-4">
-                Official Contact
-            </h2>
-
-            <ul class="space-y-3 text-xs">
-
-                <li>
-                    <a href="mailto:eworldfeedersgloballink@gmail.com"
-                       class="hover:text-ewf-brightgold hover:underline break-all">
-
-                        eworldfeedersgloballink@gmail.com
-
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://wa.me/2348062331041"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="hover:text-ewf-brightgold hover:underline">
-
-                        WhatsApp: +234 806 233 1041
-
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.facebook.com/eworldfeedersgloballink"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="hover:text-ewf-brightgold hover:underline">
-
-                        Facebook Official Page
-
-                    </a>
-                </li>
-
-            </ul>
-
+          <a class="brand" href="#overview" aria-label="EWF AgroTech Partnership home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M19.5 4.5c-7.8.2-12.2 2.1-13.7 6.2-1 2.7.2 5.7 2.8 6.3 3.5.8 7.2-2.5 10.9-12.5Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 20c2.1-4.7 5.5-7.8 10.2-9.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span><span class="brand-name">EWF</span><span class="brand-sub">AgroTech Partnership</span></span></a>
+          <p class="footer-about">Agricultural production, distribution and enterprise collaboration through considered partnerships.</p>
         </div>
-
-        <!-- Other EWF Services -->
-        <div>
-
-            <h2 class="text-white font-bold mb-4">
-                Other EWF Services
-            </h2>
-
-            <ul class="space-y-3 text-xs">
-
-                <li>
-                    <a href="https://eworldfeedersgloballink.netlify.app"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="hover:text-ewf-brightgold hover:underline">
-
-                        eWorldfeeders Global Link
-
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://ewfsolutionmarketplace.netlify.app"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="hover:text-ewf-brightgold hover:underline">
-
-                        EWF Solution Marketplace
-
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://ewf-edu.netlify.app"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="hover:text-ewf-brightgold hover:underline">
-
-                        EWF Learning & Development
-
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
-
+        <div><h3>Quick navigation</h3><ul><li><a href="#overview">Overview</a></li><li><a href="#areas">Partnership areas</a></li><li><a href="#categories">Partnership categories</a></li><li><a href="#process">How it works</a></li><li><a href="#important">Important information</a></li><li><a href="#application">Apply for partnership</a></li></ul></div>
+        <div><h3>Official contact</h3><ul><li><a href="mailto:eworldfeedersgloballink@gmail.com">eworldfeedersgloballink@gmail.com</a></li><li><a href="https://wa.me/2348062331041" target="_blank" rel="noopener noreferrer">WhatsApp: +234 806 233 1041</a></li><li><a href="https://www.facebook.com/eworldfeedersgloballink" target="_blank" rel="noopener noreferrer">Official Facebook Page</a></li></ul></div>
+        <div><h3>Other EWF services</h3><ul><li><a href="https://eworldfeedersgloballink.netlify.app" target="_blank" rel="noopener noreferrer">Main EWF Website</a></li><li><a href="https://ewfsolutionmarketplace.netlify.app" target="_blank" rel="noopener noreferrer">EWF Solution Marketplace</a></li><li><a href="https://ewf-edu.netlify.app" target="_blank" rel="noopener noreferrer">EWF Learning &amp; Development</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="footer-year"></span> EWF AgroTech Partnership. All rights reserved.</span><span>A project of eWorldfeeders Global Link.</span></div>
     </div>
+  </footer>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-9 pt-5 border-t border-ewf-forest text-xs text-gray-400 flex flex-col sm:flex-row justify-between gap-3">
+  <a class="whatsapp-float" href="https://wa.me/2348062331041?text=Hello%2C%20I%20have%20an%20enquiry%20about%20EWF%20AgroTech%20Partnership." target="_blank" rel="noopener noreferrer" aria-label="Contact the AgroTech Partnership Desk on WhatsApp" title="Contact us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L3 20l1.2-4.8a8.2 8.2 0 1 1 16-3.5Z"/><path d="M8.4 8.3c.3-.7.7-.7 1-.7h.4c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4 0 .6l-.5.7c-.2.2-.3.4-.1.7.3.5.8 1.2 1.5 1.8.8.7 1.5 1 1.9 1.2.3.1.5.1.7-.2l.8-.9c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5 0 .2-.1 1-.7 1.4-.6.5-1.3.7-2 .6-.7-.1-1.7-.4-2.9-1-1.2-.6-2.2-1.5-3-2.4-.8-.9-1.3-1.9-1.5-2.6-.3-.7-.2-1.4.4-2.6Z"/></svg>
+  </a>
 
-        <p>
-            © <span id="footer-year"></span> EWF AgroTech Partnership.
-        </p>
+  <script>
+    (function () {
+      const year = document.getElementById('footer-year');
+      if (year) year.textContent = new Date().getFullYear();
 
-        <p>
-            An initiative of eWorldfeeders Global Link. Living for Humanity Is Our Number One.
-        </p>
-
-    </div>
-
-</footer>
-
-<!-- JavaScript Application Logic -->
-<script>
-    'use strict';
-
-    // Initialize Lucide icons safely.
-    function refreshIcons() {
-        if (window.lucide && typeof window.lucide.createIcons === 'function') {
-            window.lucide.createIcons();
-        }
-    }
-
-    refreshIcons();
-
-    // Dynamic footer year.
-    const footerYear = document.getElementById('footer-year');
-
-    if (footerYear) {
-        footerYear.textContent = new Date().getFullYear();
-    }
-
-    // Navigate to the application form.
-    function navigateToRegistration() {
-        switchTab('apply');
-
-        const portalElement = document.getElementById('portal');
-
-        if (portalElement) {
-            portalElement.scrollIntoView({
-                behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-                    ? 'auto'
-                    : 'smooth',
-                block: 'start'
-            });
-        }
-
-        const firstInput = document.getElementById('partner_name');
-
-        if (firstInput) {
-            window.setTimeout(() => {
-                firstInput.focus({ preventScroll: true });
-            }, 350);
-        }
-    }
-
-    // Protected features require a real authentication service.
-    function accessProtectedFeature(targetTab) {
-        if (targetTab === 'dashboard') {
-            switchTab('dashboard');
-
-            const portalElement = document.getElementById('portal');
-
-            if (portalElement) {
-                portalElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-
-            return false;
-        }
-
-        switchTab(targetTab);
-
-        return true;
-    }
-
-    // Preselect the category chosen by an applicant.
-    function handleTierApplication(tierName) {
-        const select = document.getElementById('partner_tier');
-
-        if (select) {
-            const optionExists = Array.from(select.options).some(
-                option => option.value === tierName
-            );
-
-            if (optionExists) {
-                select.value = tierName;
-            }
-        }
-
-        navigateToRegistration();
-    }
-
-    // Portal tab switcher with accessible state updates.
-    function switchTab(tabName) {
-        const tabs = ['apply', 'login', 'dashboard'];
-
-        if (!tabs.includes(tabName)) {
-            return;
-        }
-
-        tabs.forEach(tab => {
-            const view = document.getElementById(`view-${tab}`);
-            const button = document.getElementById(`tab-${tab}`);
-
-            if (view) {
-                view.classList.add('hidden');
-            }
-
-            if (button) {
-                button.classList.remove('tab-active');
-                button.setAttribute('aria-selected', 'false');
-                button.setAttribute('tabindex', '-1');
-            }
+      const menuButton = document.getElementById('menu-toggle');
+      const mobileLinks = document.getElementById('mobile-links');
+      function closeMenu() {
+        if (!menuButton || !mobileLinks) return;
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open navigation menu');
+        mobileLinks.classList.remove('open');
+      }
+      if (menuButton && mobileLinks) {
+        menuButton.addEventListener('click', function () {
+          const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+          menuButton.setAttribute('aria-expanded', String(!isOpen));
+          menuButton.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+          mobileLinks.classList.toggle('open', !isOpen);
         });
-
-        const targetView = document.getElementById(`view-${tabName}`);
-        const targetButton = document.getElementById(`tab-${tabName}`);
-
-        if (targetView) {
-            targetView.classList.remove('hidden');
-        }
-
-        if (targetButton) {
-            targetButton.classList.add('tab-active');
-            targetButton.setAttribute('aria-selected', 'true');
-            targetButton.setAttribute('tabindex', '0');
-        }
-
-        refreshIcons();
-    }
-
-    // Keyboard navigation for portal tabs.
-    document.querySelectorAll('[role="tab"]').forEach(tab => {
-        tab.addEventListener('keydown', event => {
-            const tabs = Array.from(
-                document.querySelectorAll('[role="tab"]')
-            );
-
-            const currentIndex = tabs.indexOf(event.currentTarget);
-
-            let nextIndex = currentIndex;
-
-            if (event.key === 'ArrowRight') {
-                nextIndex = (currentIndex + 1) % tabs.length;
-            } else if (event.key === 'ArrowLeft') {
-                nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
-            } else if (event.key === 'Home') {
-                nextIndex = 0;
-            } else if (event.key === 'End') {
-                nextIndex = tabs.length - 1;
-            } else {
-                return;
-            }
-
-            event.preventDefault();
-
-            const nextTab = tabs[nextIndex];
-
-            nextTab.focus();
-
-            const tabName = nextTab.id.replace('tab-', '');
-
-            if (tabName === 'dashboard') {
-                accessProtectedFeature('dashboard');
-            } else {
-                switchTab(tabName);
-            }
+        mobileLinks.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', closeMenu);
         });
-    });
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape') closeMenu();
+        });
+      }
 
-    // No live dashboard or credential validation is available
-    // without a verified backend service.
+      const tierSelect = document.getElementById('partner_tier');
+      document.querySelectorAll('.category-button').forEach(function (button) {
+        button.addEventListener('click', function () {
+          if (tierSelect) tierSelect.value = button.dataset.tier;
+          const formSection = document.getElementById('application');
+          if (formSection) formSection.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+          window.setTimeout(function () {
+            const nameField = document.getElementById('partner_name');
+            if (nameField) nameField.focus({ preventScroll: true });
+          }, 350);
+        });
+      });
 
-    // Show accessible application feedback.
-    function showApplicationFeedback(message, success) {
-        const feedback = document.getElementById('application-feedback');
-
-        if (!feedback) {
-            return;
-        }
-
-        feedback.textContent = message;
-
-        feedback.className =
-            'ewf-status-message text-sm rounded-lg p-4 border ' +
-            (
-                success
-                    ? 'bg-green-900/50 text-green-200 border-green-700'
-                    : 'bg-red-900/50 text-red-200 border-red-700'
-            );
-
-        feedback.setAttribute(
-            'role',
-            success ? 'status' : 'alert'
-        );
-    }
-
-    // Application Submission Handler.
-    async function handleApplySubmit(event) {
-        event.preventDefault();
-
-        const form = event.currentTarget;
-
-        if (!form || !form.reportValidity()) {
-            return;
-        }
-
-        const submitButton = document.getElementById('application-submit');
-
-        if (!submitButton || submitButton.disabled) {
-            return;
-        }
-
-        const originalButtonContent =
-            '<i data-lucide="send" class="w-5 h-5" aria-hidden="true"></i> Submit Partnership Enquiry';
-
-        const payload = {
-            _subject:
-                'EWF AgroTech Partnership Enquiry - ' +
-                document.getElementById('partner_tier').value,
-
-            Portal_Name: 'EWF AgroTech Partnership',
-
-            Partner_Name:
-                document.getElementById('partner_name').value.trim(),
-
-            Partner_Email:
-                document.getElementById('partner_email').value.trim(),
-
-            Partner_Phone:
-                document.getElementById('partner_phone').value.trim(),
-
-            Organization:
-                document.getElementById('partner_org').value.trim() ||
-                'Not provided',
-
-            Target_Tier:
-                document.getElementById('partner_tier').value,
-
-            Capacity:
-                document.getElementById('partner_capacity').value.trim() ||
-                'Not provided',
-
-            Project_Notes:
-                document.getElementById('partner_message').value.trim() ||
-                'No additional notes provided',
-
-            Application_Review_Acknowledged:
-                document.getElementById('application_review_ack').checked,
-
-            Data_Processing_Consent:
-                document.getElementById('application_consent').checked
-        };
-
-        submitButton.disabled = true;
-        submitButton.setAttribute('aria-busy', 'true');
-        submitButton.classList.add('opacity-70', 'cursor-wait');
-
-        submitButton.innerHTML =
-            '<i data-lucide="loader-circle" class="w-5 h-5 animate-spin" aria-hidden="true"></i> Sending enquiry…';
-
-        refreshIcons();
-
-        const feedback = document.getElementById('application-feedback');
-
-        if (feedback) {
-            feedback.textContent = '';
-            feedback.className = 'ewf-status-message hidden';
-        }
-
-        try {
-            /*
-             * IMPORTANT:
-             * Replace the endpoint below with the actual Formspree
-             * form endpoint for your verified form.
-             *
-             * The supplied value is retained for continuity, but
-             * it appears to be an email address rather than a
-             * standard Formspree form ID and may not work.
-             *
-             * Do not treat a successful HTTP response as evidence
-             * of partnership approval.
-             */
-
-            const formspreeEndpoint =
-                'https://formspree.io/f/eworldfeedersgloballink@gmail.com';
-
-            const response = await fetch(formspreeEndpoint, {
-                method: 'POST',
-
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-
-                body: JSON.stringify(payload)
+      const form = document.getElementById('ewfPartnerForm');
+      const feedback = document.getElementById('application-feedback');
+      const submit = document.getElementById('application-submit');
+      if (form && feedback && submit) {
+        form.addEventListener('submit', async function (event) {
+          event.preventDefault();
+          if (!form.reportValidity() || submit.disabled) return;
+          submit.disabled = true;
+          submit.setAttribute('aria-busy', 'true');
+          submit.textContent = 'Sending enquiry…';
+          feedback.hidden = true;
+          feedback.className = 'form-feedback';
+          try {
+            const response = await fetch(form.action, {
+              method: 'POST',
+              body: new FormData(form),
+              headers: { Accept: 'application/json' }
             });
-
             if (!response.ok) {
-                let detail = '';
-
-                try {
-                    const result = await response.json();
-
-                    detail = Array.isArray(result.errors)
-                        ? result.errors
-                            .map(item => item.message)
-                            .filter(Boolean)
-                            .join(' ')
-                        : '';
-                } catch (_) {
-                    // The service may return a non-JSON error.
+              let message = 'The form service could not accept the enquiry. Please try again.';
+              try {
+                const result = await response.json();
+                if (Array.isArray(result.errors) && result.errors.length) {
+                  message = result.errors.map(function (item) { return item.message; }).join(' ');
                 }
-
-                throw new Error(
-                    detail ||
-                    `The application service returned status ${response.status}.`
-                );
+              } catch (_) { /* Use the general message if no JSON response is available. */ }
+              throw new Error(message);
             }
-
-            showApplicationFeedback(
-                'Your enquiry was accepted by the form service. This is not an approval or partnership agreement. EWF will follow up using the contact details you provided if appropriate.',
-                true
-            );
-
             form.reset();
-
-        } catch (error) {
-            console.error(
-                'EWF AgroTech Partnership enquiry submission failed:',
-                error
-            );
-
-            showApplicationFeedback(
-                'We could not confirm receipt of your enquiry. Please try again later or contact EWF at eworldfeedersgloballink@gmail.com or +234 806 233 1041. No partnership approval has been issued.',
-                false
-            );
-
-        } finally {
-            submitButton.disabled = false;
-            submitButton.removeAttribute('aria-busy');
-
-            submitButton.classList.remove(
-                'opacity-70',
-                'cursor-wait'
-            );
-
-            submitButton.innerHTML = originalButtonContent;
-
-            refreshIcons();
-        }
-    }
-</script>
-
+            feedback.textContent = 'Thank you. Your enquiry has been submitted to the form service. It remains subject to review and is not an approval or partnership agreement. The team may contact you using the details provided.';
+            feedback.classList.add('success');
+            feedback.setAttribute('role', 'status');
+          } catch (error) {
+            console.error('AgroTech enquiry submission failed:', error);
+            feedback.textContent = 'We could not confirm submission of your enquiry. Please try again or contact eworldfeedersgloballink@gmail.com or WhatsApp +234 806 233 1041. No partnership approval has been issued.';
+            feedback.classList.add('error');
+            feedback.setAttribute('role', 'alert');
+          } finally {
+            feedback.hidden = false;
+            submit.disabled = false;
+            submit.removeAttribute('aria-busy');
+            submit.innerHTML = 'Submit partnership enquiry <span aria-hidden="true">→</span>';
+          }
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
